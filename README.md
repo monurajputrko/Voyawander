@@ -1,5 +1,32 @@
 # Getting Started with Create React App
 
+
+Pages:
+Signup /login - Gaurav
+Home page, header, footer (responsiveness is must) - Nishal
+Hotels, flights - Vamsi
+holidays, individual product page - Alam
+Checkout, payments (redux) - Monu
+
+Functionality:
+Search in homepage
+Sort and filter in Hotels, flights, holidays
+Login and signup using firebase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
