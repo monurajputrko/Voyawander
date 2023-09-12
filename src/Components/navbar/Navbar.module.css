@@ -7,12 +7,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.navouter {
+  position: fixed;
+  width: 100%;
+  z-index: 0;
 }
 
 .navbar {
-  height: 60px;
-  background-color: transparent;
+  z-index: 1;
   display: flex;
+  height: 70px;
+  background-color: transparent;
   align-items: center;
 }
 
@@ -34,6 +43,7 @@
   position: fixed;
   height: 100vh;
   width: 100%;
+  z-index: 0;
 }
 
 .mobile_sidebar {
@@ -47,7 +57,7 @@
   background-color: white;
   padding: 40px 20px;
   gap: 10px;
-  left: -80%;
+  left: -100%;
 }
 
 .sidebar_anima {
@@ -73,7 +83,7 @@
     left: 0;
   }
   100% {
-    left: -80%;
+    left: -100%;
   }
 }
 
