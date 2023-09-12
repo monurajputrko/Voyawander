@@ -1,17 +1,18 @@
 # Getting Started with Create React App
 
+<h1>
+Pages:</h1>
 
-Pages:
-Signup /login - Gaurav
-Home page, header, footer (responsiveness is must) - Nishal
-Hotels, flights - Vamsi
-holidays, individual product page - Alam
-Checkout, payments (redux) - Monu
+<h3> Signup /login - Gaurav </h3>
+<h3>Home page, header, footer (responsiveness is must) - Nishal</h3>
+<h3>Hotels, flights - Vamsi</h3>
+<h3>holidays, individual product page - Alam</h3>
+<h3>Checkout, payments (redux) - Monu</h3>
 
-Functionality:
+<p>Functionality:
 Search in homepage
 Sort and filter in Hotels, flights, holidays
-Login and signup using firebase
+Login and signup using firebase</p>
 
 
 
