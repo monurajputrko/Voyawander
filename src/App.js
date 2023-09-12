@@ -1,11 +1,11 @@
-
-import './App.css';
-import Navbar from './components/Navbar';
+import "./App.css";
+import Navbar from "./Components/navbar/Navbar";
+import "./Components/common-styles/index.css";
 
 function App() {
   return (
     <div className="App">
-       <Navbar />
+      <Navbar isOfferVisible={true} />
     </div>
   );
 }
