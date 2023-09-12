@@ -1,0 +1,104 @@
+.discount {
+  height: 32px;
+  background: linear-gradient(to right, rgb(0, 163, 255), rgb(0, 163, 255));
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.navouter {
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+
+.navbar {
+  z-index: 1;
+  display: flex;
+  height: 70px;
+  background-color: transparent;
+  align-items: center;
+}
+
+.link_active_desk {
+  color: rgb(0, 163, 255);
+}
+
+.desk_links a {
+  transition-duration: 300ms;
+}
+
+.desk_links a:hover {
+  color: rgb(0, 163, 255);
+}
+
+.blank_screen {
+  background-color: black;
+  opacity: 0.4;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.mobile_sidebar {
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  height: 100vh;
+  width: 280px;
+  top: 0;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px 20px;
+  gap: 10px;
+  left: -100%;
+}
+
+.sidebar_anima {
+  animation-name: side_anime;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+}
+
+.sidebar_backward {
+  animation-name: side_back;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes side_anime {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes side_back {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.mobile_sidebar a {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.mobile_sidebar a:hover {
+  background-color: rgb(239, 239, 239);
+}
+
+.mobile_sidebar a.mobile_active_link {
+  background-color: rgb(239, 239, 239);
+}
+
+.logo {
+  margin: 0px 0px 20px 0px;
+}
