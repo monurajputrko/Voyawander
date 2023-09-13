@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./HomePage.module.css";
 import roundImage from "./images/roundtwoimage.png";
+import Filter from "./filter/Filter";
 
 function HomePage() {
   return (
     <>
+      {/* first section  */}
       <div className={styles.first_section}>
         <div className={styles.left_side_first}>
           <img src={roundImage} className={styles.rounded_image_first} />
@@ -27,6 +29,11 @@ function HomePage() {
           </p>
           <button>Learn more</button>
         </div>
+      </div>
+
+      {/* second section */}
+      <div className={styles.second_section}>
+        <Filter />
       </div>
     </>
   );

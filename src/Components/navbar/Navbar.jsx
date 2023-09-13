@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
+  const store = useSelector((state) => state.home);
+  console.log(store);
   const [sideBarHidden, setSideBarHidden] = useState(null);
   const [isAuth, setIsAuth] = useState(false);
   const email = undefined;
@@ -36,7 +38,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         <div
           className={`${styles.navbar} max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4`}>
           <div>
-            <span className="text-2xl font-semibold whitespace-nowrap">
+            <span className="text-3xl font-semibold whitespace-nowrap">
               Voyawander
             </span>
           </div>
