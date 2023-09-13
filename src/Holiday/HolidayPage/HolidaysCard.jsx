@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Holidays.module.css";
-import HolidayFooter from "./HolidayFooter/HolidayFooter";
+import HolidayFooter from "../HolidayFooter/HolidayFooter";
+import HolidaySearch from "./HolidaySearch";
 const HolidaysCard = ({
   image,
   image1,
@@ -27,17 +28,16 @@ const HolidaysCard = ({
         </div>
         <div className={styles.title}>
           <h1>{title}</h1>
-          <p>
-            {stay} days / {stay+1}/Nights <span>Seller : VoyaWander.com</span>{" "}
+          <p style={{fontSize:"15px"}}>
+            {stay} Days / {stay + 1}Nights <span style={{fontSize:"15px", color:"darkcyan"}}>Seller : VoyaWander.com</span>{" "}
           </p>
-          <h3>{place}</h3>
-        </div>
-        <div className={styles.details}>
-          <h2> &#8377; {price}/person </h2>
-          <button>View Details</button>
+          <h3> Place : {place}</h3>
+          <div className={styles.details}>
+            <h2> &#8377; {price}/person </h2>
+            <button>View Details</button>
+          </div>
         </div>
       </div>
-      
     </div>
   );
 };
