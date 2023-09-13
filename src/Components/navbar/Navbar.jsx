@@ -41,6 +41,10 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
     setSideBarHidden(true);
   };
 
+  const handleLinkClick = () => {
+    handleShowSideMenu();
+  };
+
   return (
     <>
       <div
@@ -137,6 +141,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         <p className={`${styles.logo}`}>Voyawander</p>
 
         <Link
+          onClick={handleLinkClick}
           to={"/"}
           className={`${
             location.pathname === "/" ? styles.mobile_active_link : ""
@@ -145,6 +150,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         </Link>
 
         <Link
+          onClick={handleLinkClick}
           to={"/"}
           className={`${
             location.pathname === "/aboutus" ? styles.mobile_active_link : ""
@@ -153,6 +159,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         </Link>
 
         <Link
+          onClick={handleLinkClick}
           to={"/hostel"}
           className={`${
             location.pathname === "/hostel" ? styles.mobile_active_link : ""
@@ -161,6 +168,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         </Link>
 
         <Link
+          onClick={handleLinkClick}
           to={"/flights"}
           className={`${
             location.pathname === "/flights" ? styles.mobile_active_link : ""
@@ -169,6 +177,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         </Link>
 
         <Link
+          onClick={handleLinkClick}
           to={"/contactus"}
           className={`${
             location.pathname === "/contactus" ? styles.mobile_active_link : ""
