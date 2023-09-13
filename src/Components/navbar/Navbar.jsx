@@ -90,6 +90,14 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             </Link>
 
             <Link
+              to={"/holidays"}
+              className={`${
+                location.pathname === "/holidays" ? styles.link_active_desk : ""
+              } font-semibold`}>
+              Holidays 
+            </Link>
+
+            <Link
               to={"/flights"}
               className={`${
                 location.pathname === "/flights" ? styles.link_active_desk : ""
