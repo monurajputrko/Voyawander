@@ -19,3 +19,17 @@
   display: flex;
   gap: 30px;
 }
+
+@media only screen and (max-width: 570px) {
+  .footer {
+    text-align: center;
+    display: flex;
+    gap: 45px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer > div > p:nth-child(2) {
+    text-align: left;
+  }
+}
