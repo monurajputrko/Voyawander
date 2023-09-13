@@ -416,6 +416,11 @@
     padding: 0px 5%;
   }
 
+  .map_wrapper > img {
+    height: auto;
+    width: 100%;
+  }
+
   .right_side_first p,
   .right_side_first h1 {
     width: auto;

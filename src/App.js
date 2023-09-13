@@ -10,11 +10,13 @@ function App() {
   const isWhite = location.pathname !== "/" ? true : false;
 
   return (
-    <div className="App">
-      <Navbar isWhiteBackground={isWhite} isOfferVisible={!isWhite} />
-      <AllRoutes />
+    <>
+      <div className="App">
+        <Navbar isWhiteBackground={isWhite} isOfferVisible={!isWhite} />
+        <AllRoutes />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
