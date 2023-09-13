@@ -47,15 +47,20 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           sideBarHidden || sideBarHidden === null ? "hidden" : ""
         }`}
         onClick={handleBlankScreen}></div>
-      {isOfferVisible && !colorChange && (
+      {/* {isOfferVisible && !colorChange && (
         <div className={styles.discount}>
           <p>Upto 50% of on your trips</p>
         </div>
-      )}
+      )} */}
       <div
         className={styles.navouter}
         style={
-          isWhiteBackground || colorChange ? { backgroundColor: "white" } : {}
+          isWhiteBackground || colorChange
+            ? {
+                backgroundColor: "white",
+                boxShadow: " rgba(17, 17, 26, 0.1) 0px 1px 0px",
+              }
+            : {}
         }>
         <div
           className={`${styles.navbar} max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4`}>
