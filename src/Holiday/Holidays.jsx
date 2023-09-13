@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import HolidaysCard from "./HolidaysCard";
+import HolidayFooter from "./HolidayFooter/HolidayFooter";
 
 const Holidays = () => {
   const [data, setData] = useState([]);
@@ -23,7 +24,7 @@ const Holidays = () => {
     {data.map((holi)=>{
     return    <HolidaysCard key={holi.id} {...holi} />
     })}
-     
+    <HolidayFooter/>
     </div>
   );
 };
