@@ -4,9 +4,11 @@ import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
-  const [colorChange, setColorchange] = useState(false);
   const store = useSelector((state) => state.home);
+
+  const [colorChange, setColorchange] = useState(false);
   const [sideBarHidden, setSideBarHidden] = useState(null);
+
   const [isAuth, setIsAuth] = useState(false);
 
   console.log(store);
@@ -15,7 +17,6 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
   const name = undefined;
 
   const location = useLocation();
-  console.log(location);
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 30) {
@@ -47,17 +48,18 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           sideBarHidden || sideBarHidden === null ? "hidden" : ""
         }`}
         onClick={handleBlankScreen}></div>
-      {/* {isOfferVisible && !colorChange && (
+      {isOfferVisible && !colorChange && (
         <div className={styles.discount}>
           <p>Upto 50% of on your trips</p>
         </div>
-      )} */}
+      )}
       <div
         className={styles.navouter}
         style={
           isWhiteBackground || colorChange
             ? {
                 backgroundColor: "white",
+                top: "0",
                 boxShadow: " rgba(17, 17, 26, 0.1) 0px 1px 0px",
               }
             : {}
