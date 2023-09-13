@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(to right, rgb(210, 239, 255), white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.footer > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.footer > div:last-child {
+  display: flex;
+  gap: 30px;
+}

@@ -179,7 +179,10 @@ function HomePage() {
           and make your travelk dreams a reality.
         </p>
         <div className={styles.contact_form}>
-          <form onSubmit={() => {}}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}>
             <div>
               <input type="email" placeholder="Email" />
               <input type="phone" placeholder="Mobile" />
@@ -189,7 +192,6 @@ function HomePage() {
           </form>
         </div>
       </div>
-      <br></br>
     </>
   );
 }
