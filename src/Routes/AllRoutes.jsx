@@ -4,14 +4,18 @@ import HomePage from "../Components/homepage/HomePage";
 import ContactUs from "../Components/contact-us/ContactUs";
 import Holidays from "../Holiday/HolidayPage/Holidays";
 import HolidaySingleProduct from "../Holiday/HolidaySingleProductPage/HolidaySingleProduct";
+import { Login } from "../components/Login/Login";
+import { Signup } from "../components/Signup/Signup";
 
 function AllRoutes() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />}></Route>
       <Route path="/contactus" element={<ContactUs />}></Route>
-      <Route path="/holidays" element={<Holidays/>}></Route>
-      <Route path="/singleproductpage" element={<HolidaySingleProduct/> } />
+      <Route path="/holidays" element={<Holidays />}></Route>
+      <Route path="/singleproductpage" element={<HolidaySingleProduct />} />
+      <Route path="/login" element={<Login />}></Route>
+      <Route path="/Signup" element={<Signup />}></Route>
     </Routes>
   );
 }

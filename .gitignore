@@ -8,6 +8,7 @@
 /.netlify
 /.vercel
 .pnp.js
+package-lock.json
 
 # testing
 /coverage
