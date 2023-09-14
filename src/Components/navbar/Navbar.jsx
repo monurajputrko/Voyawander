@@ -98,7 +98,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               About Us
             </Link>
             <Link
-              to={"/hostel"}
+              to={"/hotel"}
               className={`${
                 location.pathname.includes("/hotel")
                   ? styles.link_active_desk
