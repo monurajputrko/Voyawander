@@ -1,20 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
-  const store = useSelector((state) => state.home);
-
   const [colorChange, setColorchange] = useState(false);
   const [sideBarHidden, setSideBarHidden] = useState(null);
 
   const [isAuth, setIsAuth] = useState(false);
-
-  console.log(store);
-
-  const email = undefined;
-  const name = undefined;
 
   const location = useLocation();
 
@@ -43,6 +35,11 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
 
   const handleLinkClick = () => {
     handleShowSideMenu();
+  };
+
+  const handleLogOut = (e) => {
+    e.preventDefault();
+    setIsAuth(false);
   };
 
   return (
@@ -90,7 +87,6 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               } font-semibold`}>
               Home
             </Link>
-
             <Link
               to={"/"}
               className={`${
@@ -98,7 +94,6 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               } font-semibold`}>
               About Us
             </Link>
-
             <Link
               to={"/hostel"}
               className={`${
@@ -106,7 +101,6 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               } font-semibold`}>
               Hostels
             </Link>
-
             <Link
               to={"/holidays"}
               className={`${
@@ -122,7 +116,6 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               } font-semibold`}>
               Flights
             </Link>
-
             <Link
               to={"/contactus"}
               className={`${
@@ -132,6 +125,24 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               } font-semibold`}>
               Contact Us
             </Link>
+            {!isAuth && (
+              <Link
+                to={"/login"}
+                className={`${
+                  location.pathname === "/login" ? styles.link_active_desk : ""
+                } font-semibold`}>
+                Login
+              </Link>
+            )}
+            {isAuth && (
+              <Link
+                onClick={handleLogOut}
+                className={`${
+                  location.pathname === "/login" ? styles.link_active_desk : ""
+                } font-semibold`}>
+                Logout
+              </Link>
+            )}
           </div>
         </div>
       </div>
