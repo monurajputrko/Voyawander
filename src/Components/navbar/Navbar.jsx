@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../Images/logo_navbar.jpg";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
   const [colorChange, setColorchange] = useState(false);
@@ -172,8 +173,11 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             ? ""
             : `${styles.sidebar_backward}`
         } z-50`}>
-        <p className={`${styles.logo}`}>Voyawander</p>
-
+        <div className={styles.logoouter}>
+          <img src={logo} />
+          <h2 className={`${styles.logo}`}>Voyawander</h2>
+        </div>
+        <div className={styles.hor_line}></div>
         <Link
           onClick={handleLinkClick}
           to={"/"}
@@ -182,7 +186,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           } font-semibold`}>
           Home
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
           onClick={handleLinkClick}
           to={"/"}
@@ -191,7 +195,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           } font-semibold`}>
           About Us
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
           onClick={handleLinkClick}
           to={"/hostel"}
@@ -202,7 +206,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           } font-semibold`}>
           Hotels
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
           onClick={handleLinkClick}
           to={"/flights"}
@@ -213,7 +217,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           } font-semibold`}>
           Flights
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
           to={"/holiday"}
           className={`${
@@ -223,7 +227,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           } font-semibold`}>
           Holidays
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
           onClick={handleLinkClick}
           to={"/contactus"}
@@ -232,6 +236,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           } font-semibold`}>
           Contact Us
         </Link>
+        <div className={styles.hor_line}></div>
       </div>
     </>
   );
