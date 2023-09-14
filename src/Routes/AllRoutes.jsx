@@ -7,6 +7,7 @@ import HolidaySingleProduct from "../Holiday/HolidaySingleProductPage/HolidaySin
 import { Login } from "../Components/Login/Login";
 import { Signup } from "../Components/Signup/Signup";
 import Payment from "../Components/Payment/Payment"
+import Thankyou from "../Components/Payment/Thankyou";
 
 function AllRoutes() {
   return (
@@ -17,9 +18,10 @@ function AllRoutes() {
       <Route path="/singleproductpage" element={<HolidaySingleProduct />} />
       <Route path="/login" element={<Login />}></Route>
       <Route path="/Signup" element={<Signup />}></Route>
-       <Route path="/Payment" element={<Payment />}></Route>
+      <Route path="/Payment" element={<Payment />}></Route>
+      <Route path="/payment-successful" element={<Thankyou />} />
     </Routes>
-  );
+      );
 }
 
 export default AllRoutes;
