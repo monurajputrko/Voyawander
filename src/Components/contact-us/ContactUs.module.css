@@ -1,0 +1,116 @@
+.third_section {
+  margin-top: 100px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 10px;
+}
+.third_section > h1 {
+  text-align: center;
+}
+
+.third_section > p {
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.fifth_section {
+  width: 100%;
+  overflow: auto;
+  padding: 0;
+}
+
+.fifth_section > img {
+  width: 100%;
+}
+
+.contact_form {
+  margin-top: 50px;
+  width: 40%;
+}
+
+.contact_form > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact_form > form input {
+  padding: 10px 3px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.contact_form > form > div {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.contact_form > form > div input {
+  width: 50%;
+}
+
+.contact_form > form > button {
+  height: inherit;
+  width: 150px;
+  background: linear-gradient(to left, rgb(0, 168, 255), rgb(2, 232, 255));
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0px;
+}
+
+.contact_form > form > button:hover {
+  animation-name: animate_search_button;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 867px) {
+  .third_section > p {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 738px) {
+  .contact_form {
+    margin-top: 50px;
+    width: 70%;
+  }
+
+  .third_section > p {
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  .contact_form > form > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact_form > form > div > input {
+    width: 100%;
+  }
+
+  .contact_form {
+    margin-top: 50px;
+    width: 80%;
+  }
+}

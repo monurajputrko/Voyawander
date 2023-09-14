@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/.netlify
+/.vercel
 /.pnp
 .pnp.js
 
@@ -21,3 +23,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.vercel
+
+# Local Netlify folder
+.netlify
