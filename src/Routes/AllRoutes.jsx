@@ -4,8 +4,8 @@ import HomePage from "../Components/homepage/HomePage";
 import ContactUs from "../Components/contact-us/ContactUs";
 import Holidays from "../Holiday/HolidayPage/Holidays";
 import HolidaySingleProduct from "../Holiday/HolidaySingleProductPage/HolidaySingleProduct";
-import { Login } from "../components/Login/Login";
-import { Signup } from "../components/Signup/Signup";
+import { Login } from "../Components/Login/Login";
+import { Signup } from "../Components/Signup/Signup";
 
 function AllRoutes() {
   return (
