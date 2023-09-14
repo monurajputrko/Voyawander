@@ -198,7 +198,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         <div className={styles.hor_line}></div>
         <Link
           onClick={handleLinkClick}
-          to={"/hostel"}
+          to={"/hotel"}
           className={`${
             location.pathname.includes("/hotel")
               ? styles.mobile_active_link
