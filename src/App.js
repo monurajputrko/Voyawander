@@ -12,10 +12,12 @@ function App() {
   return (
     <>
       <div className="App">
-        <Navbar isWhiteBackground={isWhite} isOfferVisible={!isWhite} />
+        {location.pathname !== "/login" && (
+          <Navbar isWhiteBackground={isWhite} isOfferVisible={!isWhite} />
+        )}
         <AllRoutes />
       </div>
-      <Footer />
+      {location.pathname !== "/login" && <Footer />}
     </>
   );
 }
