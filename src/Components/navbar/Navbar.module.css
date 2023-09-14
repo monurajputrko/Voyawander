@@ -108,18 +108,34 @@
   color: black;
   font-size: 17px;
 }
+
+.hor_line {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  margin: -5px 0px;
+}
+
 .mobile_sidebar a:hover {
-  background-color: rgb(239, 239, 239);
+  background: linear-gradient(to right, rgb(0, 163, 255), rgb(81, 162, 208));
+  color: white;
 }
 
 .mobile_sidebar a.mobile_active_link {
-  background-color: rgb(239, 239, 239);
+  background: linear-gradient(to right, rgb(0, 163, 255), rgb(81, 162, 208));
+  color: white;
 }
 
-.logo {
-  margin: 0px 0px 20px 0px;
-  font-size: 25px;
-  font-weight: 400;
+.logoouter {
+  width: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.logoouter > img {
+  width: 70px;
 }
 
 .sidebar_icon {
