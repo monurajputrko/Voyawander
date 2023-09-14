@@ -6,6 +6,7 @@ import Holidays from "../Holiday/HolidayPage/Holidays";
 import HolidaySingleProduct from "../Holiday/HolidaySingleProductPage/HolidaySingleProduct";
 import { Login } from "../Components/Login/Login";
 import { Signup } from "../Components/Signup/Signup";
+import Payment from "../Components/Payment/Payment"
 
 function AllRoutes() {
   return (
@@ -16,6 +17,7 @@ function AllRoutes() {
       <Route path="/singleproductpage" element={<HolidaySingleProduct />} />
       <Route path="/login" element={<Login />}></Route>
       <Route path="/Signup" element={<Signup />}></Route>
+       <Route path="/Payment" element={<Payment />}></Route>
     </Routes>
   );
 }
