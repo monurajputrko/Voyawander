@@ -6,7 +6,6 @@ import logo from "../../Images/logo_navbar.png";
 function Navbar({ isWhiteBackground, isOfferVisible }) {
   const [colorChange, setColorchange] = useState(false);
   const [sideBarHidden, setSideBarHidden] = useState(null);
-
   const [isAuth, setIsAuth] = useState(false);
 
   const location = useLocation();
