@@ -1,0 +1,37 @@
+.holidayImage img{
+    width: 400px;
+    height: 300px;
+   
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.holidayDiv{
+    border: 2px solid rgb(191, 225, 225);
+    width: 70%;
+    display: flex;
+    margin-left: 15%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+}
+.holidayDiv button{
+    background-color: rgb(59, 174, 236);
+    border: 2px solid rgb(32, 196, 218);
+    color:"white";
+    font-size: small;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.HolidaysCard{
+    padding-top: 100px;
+}
+.details{
+    margin-top: 50px;
+    padding-left: 10%;
+   
+}
+.title{
+    margin-top: 50px;
+    padding-left: 10%;
+}
