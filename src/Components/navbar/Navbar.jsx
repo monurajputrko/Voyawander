@@ -90,16 +90,20 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             <Link
               to={"/"}
               className={`${
-                location.pathname === "/aboutus" ? styles.link_active_desk : ""
+                location.pathname.includes("/aboutus")
+                  ? styles.link_active_desk
+                  : ""
               } font-semibold`}>
               About Us
             </Link>
             <Link
               to={"/hostel"}
               className={`${
-                location.pathname === "/hostel" ? styles.link_active_desk : ""
+                location.pathname.includes("/hotel")
+                  ? styles.link_active_desk
+                  : ""
               } font-semibold`}>
-              Hostels
+              Hotels
             </Link>
             <Link
               to={"/holidays"}
@@ -112,9 +116,20 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             <Link
               to={"/flights"}
               className={`${
-                location.pathname === "/flights" ? styles.link_active_desk : ""
+                location.pathname.includes("/flight")
+                  ? styles.link_active_desk
+                  : ""
               } font-semibold`}>
               Flights
+            </Link>
+            <Link
+              to={"/holiday"}
+              className={`${
+                location.pathname.includes("/holiday")
+                  ? styles.link_active_desk
+                  : ""
+              } font-semibold`}>
+              Holidays
             </Link>
             <Link
               to={"/contactus"}
@@ -181,18 +196,32 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           onClick={handleLinkClick}
           to={"/hostel"}
           className={`${
-            location.pathname === "/hostel" ? styles.mobile_active_link : ""
+            location.pathname.includes("/hotel")
+              ? styles.mobile_active_link
+              : ""
           } font-semibold`}>
-          Hostels
+          Hotels
         </Link>
 
         <Link
           onClick={handleLinkClick}
           to={"/flights"}
           className={`${
-            location.pathname === "/flights" ? styles.mobile_active_link : ""
+            location.pathname.includes("/flight")
+              ? styles.mobile_active_link
+              : ""
           } font-semibold`}>
           Flights
+        </Link>
+
+        <Link
+          to={"/holiday"}
+          className={`${
+            location.pathname.includes("/holiday")
+              ? styles.mobile_active_link
+              : ""
+          } font-semibold`}>
+          Holidays
         </Link>
 
         <Link
