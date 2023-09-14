@@ -2,7 +2,14 @@ import React, { useContext } from "react";
 import styles from "./HolidayPlaces.module.css";
 import HolidayContext from "../HolidayContext";
 const HolidayPlaces = () => {
-  const { handlePlace, handlePrice ,handleSearch,handleSearchSubmit,handlePlaceFor } = useContext(HolidayContext);
+  const {
+    handlePlace,
+    handlePrice,
+    handleSearch,
+    handleSearchSubmit,
+    handlePlaceFor,
+    handleRating
+  } = useContext(HolidayContext);
   return (
     <div className={styles.HolidayPlaces_Div}>
       <div className={styles.place}>
@@ -24,18 +31,21 @@ const HolidayPlaces = () => {
       </div>
 
       <div>
-
         <div>
           <select style={{ borderRadius: "10px" }} onChange={handlePrice}>
             <option>Sort By Price</option>
             <option value="desc">High Price</option>
-            <option value="asc">Low Price</option>
+            <option value="asc" >Low Price</option>
           </select>
         </div>
 
         <div>
-        <label>Search Place : ----- </label>
-          <input placeholder="search places" style={{border:"2px solid black"}} onChange={handleSearch} />
+          <label>Search Place : ----- </label>
+          <input
+            placeholder="search places"
+            style={{ border: "2px solid black" }}
+            onChange={handleSearch}
+          />
           <button onClick={handleSearchSubmit}>Search</button>
         </div>
 
@@ -44,12 +54,17 @@ const HolidayPlaces = () => {
             <option value="friends">Friends</option>
             <option value="family">Family</option>
             <option value="honeymoon">Honeymoon</option>
-            
           </select>
         </div>
 
+        <div>
+          <select onChange={handleRating}>
+            <option > Sort By Rating</option>
+            <option value="desc" >High Rating</option> 
+            <option value="asc" >Low Rating</option>
+          </select>
+        </div>
       </div>
-
     </div>
   );
 };

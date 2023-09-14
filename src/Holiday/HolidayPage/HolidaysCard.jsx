@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Holidays.module.css";
 import HolidayFooter from "../HolidayFooter/HolidayFooter";
 import HolidaySearch from "./HolidaySearch";
+import HolidayContext from "../HolidayContext";
+import { Link } from "react-router-dom";
+import HolidaySingleProduct from "../HolidaySingleProductPage/HolidaySingleProduct";
 const HolidaysCard = ({
   image,
   image1,
@@ -20,6 +23,10 @@ const HolidaysCard = ({
   rating,
   stay,
 }) => {
+
+const {fetchDataId} = useContext(HolidayContext)
+
+
   return (
     <div className={styles.HolidaysCard}>
       <div className={styles.holidayDiv}>
@@ -32,9 +39,10 @@ const HolidaysCard = ({
             {stay} Days / {stay + 1}Nights <span style={{fontSize:"15px", color:"darkcyan"}}>Seller : VoyaWander.com</span>{" "}
           </p>
           <h3> Place : {place}</h3>
+          <h3>Rating : {rating} </h3>
           <div className={styles.details}>
             <h2> &#8377; {price}/person </h2>
-            <button>View Details</button>
+            <button onClick={()=>fetchDataId(id)}> <Link to="/singleproductpage" element={<HolidaySingleProduct/> } > View Details</Link> </button>
           </div>
         </div>
       </div>
