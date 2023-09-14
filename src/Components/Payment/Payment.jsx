@@ -71,7 +71,7 @@ function Payment() {
         <HStack w={{ base: "95%", md: "95%", lg: '76%' }} m={'auto'} >
           <Flex alignItems={"center"}>
             {/* <Image src={Logo} alt='logo' w={"70px"} px={"8px"} /> */}
-            <Text fontSize={"1.2rem"} fontWeight={"800"} >Adventour.</Text>
+            <Text fontSize={"1.2rem"} fontWeight={"800"} >Voyawondar.</Text>
           </Flex>
           <Spacer />
 
@@ -106,7 +106,7 @@ function Payment() {
                   <Text>Change date</Text>
                 </Box>
                 <Box border={'1px solid gray'} w={{ base: "100%", md: "65%", lg: '65%' }} p={'20px'} borderRadius={{ base: '0 0 15px 15px', md: '0 15px 15px 0', lg: '0 15px 15px 0' }}>
-                  <Flex py={'5px'}><AiFillCheckCircle size={'35px'} /><Text pt={'5px'} px={'10px'}>Only ₹{(storedata?.price_per_day)?.toLocaleString("en-US")} upfront per person The remaining amount will be due on July 1st, 2023</Text></Flex>
+                  <Flex py={'5px'}><AiFillCheckCircle size={'35px'} /><Text pt={'5px'} px={'10px'}>Only ₹{(storedata?.price_per_day)?.toLocaleString("en-US")} upfront per person The remaining amount will be due on Oct 1st, 2023</Text></Flex>
                   <Flex py={'5px'}><FaUserFriends size={'25px'} /><Text px={'10px'}>6 spaces left and yours is reserved for the next 10 minutes</Text></Flex>
                   <Flex py={'5px'}><BsLightningChargeFill size={'22px'} /><Text px={'10px'}>Instant Book: Your spaces will be instantly secured.</Text></Flex>
                   <Flex py={'5px'}><AiFillTag size={'22px'} /><Text px={'10px'}>Special deal. See details</Text></Flex>
@@ -284,7 +284,7 @@ function Payment() {
             <Box my={'25px'} p={'20px'} borderRadius={'15px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'}>
               <HStack>
                 <BsFill3SquareFill size={'30px'} />
-                <Text pb={'5px'} fontWeight={'700'} fontSize={'20px'} px={'10px'}>Adventour Savings</Text>
+                <Text pb={'5px'} fontWeight={'700'} fontSize={'20px'} px={'10px'}>Voyawondar Savings</Text>
               </HStack>
               <Text mt={'30px'} mb={'8px'} color={'blue.500'} cursor={'pointer'} onClick={()=>{
                 toast({
@@ -344,7 +344,7 @@ function Payment() {
                 <Box mt={'20px'}>
                   <Flex>
                     <Checkbox size='md' onChange={()=>{setchk(!chk)}}></Checkbox>
-                    <Text pl={'15px'} mt={'45px'} fontSize={{ base: "14px", md: "16px", lg: '16px' }}>I accept Adventour's <span style={{ color: "#008cc9" }}>Terms & Conditions</span>  and <span style={{ color: "#008cc9" }}> Privacy Policy;</span> and
+                    <Text pl={'15px'} mt={'45px'} fontSize={{ base: "14px", md: "16px", lg: '16px' }}>I accept Voyawondar's <span style={{ color: "#008cc9" }}>Terms & Conditions</span>  and <span style={{ color: "#008cc9" }}> Privacy Policy;</span> and
                       Realistic Journey's <span style={{ color: "#008cc9" }}> payment,cancellation and refund conditions,</span> and <span style={{ color: "#008cc9" }}>Credit for Future Tours <br /> Terms & Conditions.</span>
                     </Text>
                   </Flex>
@@ -378,7 +378,7 @@ function Payment() {
                     <ModalBody >
                       <VStack>
                         <Text fontSize={'25px'} fontWeight={'600'}>OTP Verification</Text>
-                        <Text fontSize={'15px'}>Thank You for booking on Adventour.</Text>
+                        <Text fontSize={'15px'}>Thank You for booking on Voyawondar.</Text>
                         <Text fontSize={'15px'} pb={'20px'}>Enter the OTP shared with you.</Text>
                         <HStack mt={3} mx={3} >
                           <PinInput>
@@ -427,7 +427,7 @@ function Payment() {
                 <Box w={'50%'} m={'auto'} textAlign={'center'} mt={'20px'}>
                   <Text fontSize={'13px'} fontWeight={'700'}>
                     No booking fees! <span style={{ fontWeight: "500" }}>You will be charged</span> ₹{(storedata?.act_price)?.toLocaleString("en-US")} <span style={{ fontWeight: "500" }}>now.
-                      The remaining balance is due on</span> 1 Jul, 2023.
+                      The remaining balance is due on</span> 1 Oct, 2023.
                   </Text>
                 </Box>
               </Box>
@@ -437,8 +437,8 @@ function Payment() {
             </Box>
             <Box my={'25px'} p={'20px'} borderRadius={'15px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'}>
               <Text mt={'15px'} fontWeight={'700'} fontSize={'17px'}>Terms & Conditions</Text>
-              <Text mt={'25px'} lineHeight={'19px'} fontSize={'13px'}>Adventour is an authorised Agent of Expat Explore Travel. Please familiarise yourself with the Expat Explore Travel payment,
-                cancellation and refund policies and Adventour's Terms & Conditions. Adventour will charge you in the stated currency and we do
+              <Text mt={'25px'} lineHeight={'19px'} fontSize={'13px'}>Voyawondar is an authorised Agent of Expat Explore Travel. Please familiarise yourself with the Expat Explore Travel payment,
+                cancellation and refund policies and Voyawondar's Terms & Conditions. Voyawondar will charge you in the stated currency and we do
                 not charge any booking fees.
               </Text>
               <Flex justifyContent={'space-between'} w={'70%'} direction={{ base: "column", md: "row", lg: "row" }}>
@@ -447,7 +447,7 @@ function Payment() {
                   <Text fontSize={'12px'}>London</Text>
                 </Box>
                 <Box lineHeight={'23px'}>
-                  <Text mt={'15px'} fontWeight={'700'} fontSize={'15px'}>Agent: Adventour</Text>
+                  <Text mt={'15px'} fontWeight={'700'} fontSize={'15px'}>Agent: Voyawondar</Text>
                   <Text fontSize={'12px'}>Kärntner Ring 5-7, Top 304-306</Text>
                   <Text fontSize={'12px'}>1010 Vienna, AUSTRIA</Text>
                 </Box>
@@ -510,7 +510,7 @@ function Pricediv({ theme, storedata, traveller }) {
         <Text fontWeight={'700'}>₹ {(traveller * storedata?.price_per_day)?.toLocaleString("en-US")}</Text>
       </Flex>
       <Flex>
-        <Text>Due on 1 Jul, 2023</Text>
+        <Text>Due on 1 Oct, 2023</Text>
         <Spacer />
         <Text>₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}</Text>
       </Flex>
