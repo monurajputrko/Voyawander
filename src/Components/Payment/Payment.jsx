@@ -79,7 +79,7 @@ function Payment() {
 
     const rzp1 = new window.Razorpay(options);
     rzp1.open();
-  }; 
+  };
 
 
   return (
