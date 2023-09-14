@@ -18,6 +18,7 @@ function Payment() {
   const len = storedata?.destinations?.length
   const [traveller, settraveller] = useState(1);
   const toast = useToast()
+  const [RazorPay , setRazorPay] = useState(false)
   const navigate = useNavigate()
   const [chk, setchk]=useState(false)
   const [pin, setpin] = useState({
@@ -60,6 +61,10 @@ function Payment() {
     })
   }, [])
 
+  const handleRadioChange = (value) => {
+    setRazorPay(!RazorPay);
+  };
+
   const handlePayment = () => {
     const Pr = traveller * 100;
     const checkout = Number(Pr * 10);
@@ -72,7 +77,7 @@ function Payment() {
       description: "Payment",
       image: "https://rb.gy/6cdbi",
       handler: function (response) {
-        navigate("/");
+       navigate("/payment-successful");
         // Update the state to indicate payment completion
       },
     };
@@ -123,37 +128,7 @@ function Payment() {
       </Box>
 
       {/* Midbox-start */}
-      <Box w={{ base: "92%", md: "95%", lg: "76%" }} m={"auto"}>
-        {/* Heading flex */}
-        <Flex py={"30px"}>
-          <Text
-            fontSize={{ base: "20px", md: "33px", lg: "33px" }}
-            fontWeight={"600"}
-          >
-            {storedata?.title}
-          </Text>
-          <Spacer />
-          <Button
-            colorScheme="none"
-            bg={theme ? "#191b1d" : "white"}
-            color={theme ? "white" : "blackAlpha.800"}
-            mr={"10px"}
-            borderRadius={"20px"}
-            display={{ base: "none", md: "block", lg: "block" }}
-          >
-            Help
-          </Button>
-          <Button
-            colorScheme="none"
-            bg={theme ? "#191b1d" : "white"}
-            color={theme ? "white" : "blackAlpha.800"}
-            borderRadius={"20px"}
-            display={{ base: "none", md: "block", lg: "block" }}
-          >
-            Share Tour
-          </Button>
-        </Flex>
-
+      <Box mt={"-10"} w={{ base: "92%", md: "95%", lg: "76%" }} m={"auto"}>
         {/* Main content-start */}
         <Flex justifyContent={"space-between"}>
           {/* left box */}
@@ -1057,49 +1032,12 @@ function Payment() {
             <Box
               my={"25px"}
               p={"20px"}
-              borderRadius={"15px"}
-              bg={theme ? "#191b1d" : "white"}
               boxShadow={"md"}
+              bg={theme ? "#191b1d" : "white"}
+              borderRadius={"15px"}
             >
               <HStack>
                 <BsFill3SquareFill size={"30px"} />
-                <Text
-                  pb={"5px"}
-                  fontWeight={"700"}
-                  fontSize={"20px"}
-                  px={"10px"}
-                >
-                  Voyawondar Savings
-                </Text>
-              </HStack>
-              <Text
-                mt={"30px"}
-                mb={"8px"}
-                color={"blue.500"}
-                cursor={"pointer"}
-                onClick={() => {
-                  toast({
-                    title: "No promo code available",
-                    status: "info",
-                    position: "top",
-                    duration: 3000,
-                    isClosable: true,
-                  });
-                }}
-              >
-                Redeem Promo Code
-              </Text>
-            </Box>
-            {/* vivek */}
-            <Box
-              my={"25px"}
-              p={"20px"}
-              boxShadow={"md"}
-              bg={theme ? "#191b1d" : "white"}
-              borderRadius={"15px"}
-            >
-              <HStack>
-                <BsFill4SquareFill size={"30px"} />
                 <Text
                   pb={"5px"}
                   fontWeight={"700"}
@@ -1128,117 +1066,55 @@ function Payment() {
                 </Text>
               </HStack>
               <Box>
-                <Text py={"10px"} fontSize={"16px"}>
-                  Select your payment method:
-                </Text>
-                <Box
-                  boxShadow={"md"}
-                  border={"1px solid silver"}
-                  bg={theme ? "#191b1d" : "white"}
-                  borderRadius={"15px"}
-                >
-                  <HStack
-                    borderBottom={"1px solid silver"}
-                    p={"15px"}
-                    borderRadius={"15px 15px 0 0 "}
+                {RazorPay ? (
+                  ""
+                ) : (
+                  <Box
+                    boxShadow={"md"}
+                    border={"1px solid silver"}
+                    bg={theme ? "#191b1d" : "white"}
+                    borderRadius={"15px"}
                   >
-                    <GrRadialSelected size={"20px"} color={"blue"} />
-                    <Text
-                      px={"10px"}
-                      fontSize={"16px"}
-                      fontWeight={"400"}
-                      color={theme ? "white" : "blackAlpha.800"}
+                    <HStack
+                      borderBottom={"1px solid silver"}
+                      p={"15px"}
+                      borderRadius={"15px 15px 0 0 "}
                     >
-                      Pay by card
-                    </Text>
-                    <Spacer />
-                    <Image
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVIBJ-2rpBUh0gMNNjNhM759BiZ4ZEEC9BQ&usqp=CAU"
-                      width="5%"
-                      height="5%"
-                      mt="22px"
-                      ml="30px"
-                    />
-                    <Image
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkrA_6LJ0DJucgHSZDOYO8v9n7dGNiJ6OPnw&usqp=CAU"
-                      width="7%"
-                      height="7%"
-                      mt="16px"
-                      ml="0px"
-                    />
-                    <Image
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSapt6bCfFKVEeVMsp5NRz4iOLHcGBqzPtPWw&usqp=CAU"
-                      width="4%"
-                      height="4%"
-                      mt="20px"
-                      mr="20px"
-                    />
-                  </HStack>
-
-                  <Box p={"20px 15px 30px 15px"}>
-                    <Flex direction={"column"}>
-                      <label
-                        style={{
-                          marginBottom: "-10px",
-                          marginLeft: "15px",
-                          fontSize: "14px",
-                          fontWeight: "700",
-                          backgroundColor: theme ? "#191b1d" : "white",
-                          zIndex: "4",
-                          width: "125px",
-                          paddingLeft: "5px",
-                        }}
+                      <GrRadialSelected size={"20px"} color={"blue"} />
+                      <Text
+                        px={"10px"}
+                        fontSize={"16px"}
+                        fontWeight={"400"}
+                        color={theme ? "white" : "blackAlpha.800"}
                       >
-                        Cardholder Name
-                      </label>
-                      <Input
-                        autoComplete="on"
-                        onChange={(e) => {
-                          setformdata({
-                            ...formdata,
-                            c_holder: e.target.value,
-                          });
-                        }}
-                        w={{ base: "80%", md: "45%", lg: "45%" }}
-                        size="lg"
-                        border={"1px solid silver"}
+                        Pay by card
+                      </Text>
+                      <Spacer />
+                      <Image
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVIBJ-2rpBUh0gMNNjNhM759BiZ4ZEEC9BQ&usqp=CAU"
+                        width="5%"
+                        height="5%"
+                        mt="22px"
+                        ml="30px"
                       />
-                    </Flex>
-                    <Flex direction={"column"} my={"20px"}>
-                      <label
-                        style={{
-                          marginBottom: "-10px",
-                          marginLeft: "15px",
-                          fontSize: "14px",
-                          fontWeight: "700",
-                          backgroundColor: theme ? "#191b1d" : "white",
-                          zIndex: "4",
-                          width: "110px",
-                          paddingLeft: "5px",
-                        }}
-                      >
-                        Card Number *
-                      </label>
-                      <Input
-                        autoComplete="on"
-                        onChange={(e) => {
-                          setformdata({
-                            ...formdata,
-                            c_number: e.target.value,
-                          });
-                        }}
-                        w={{ base: "80%", md: "45%", lg: "45%" }}
-                        size="lg"
-                        border={"1px solid silver"}
-                        placeholder="**** **** **** ****"
+                      <Image
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkrA_6LJ0DJucgHSZDOYO8v9n7dGNiJ6OPnw&usqp=CAU"
+                        width="7%"
+                        height="7%"
+                        mt="16px"
+                        ml="0px"
                       />
-                    </Flex>
+                      <Image
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSapt6bCfFKVEeVMsp5NRz4iOLHcGBqzPtPWw&usqp=CAU"
+                        width="4%"
+                        height="4%"
+                        mt="20px"
+                        mr="20px"
+                      />
+                    </HStack>
 
-                    <Flex direction={{ base: "column", md: "row", lg: "row" }}>
-                      <Flex
-                        direction={"column"}
-                        w={{ base: "60%", md: "20%", lg: "20%" }}
-                      >
+                    <Box p={"20px 15px 30px 15px"}>
+                      <Flex direction={"column"}>
                         <label
                           style={{
                             marginBottom: "-10px",
@@ -1247,31 +1123,26 @@ function Payment() {
                             fontWeight: "700",
                             backgroundColor: theme ? "#191b1d" : "white",
                             zIndex: "4",
-                            width: "95px",
-                            paddingLeft: "3px",
+                            width: "125px",
+                            paddingLeft: "5px",
                           }}
                         >
-                          Expiry Date *
+                          Cardholder Name
                         </label>
                         <Input
+                          autoComplete="on"
                           onChange={(e) => {
                             setformdata({
                               ...formdata,
-                              exp_day: e.target.value,
+                              c_holder: e.target.value,
                             });
                           }}
-                          w={"100%"}
+                          w={{ base: "80%", md: "45%", lg: "45%" }}
                           size="lg"
                           border={"1px solid silver"}
-                          placeholder="MM / YY"
                         />
                       </Flex>
-                      <Flex
-                        direction={"column"}
-                        w={{ base: "60%", md: "20%", lg: "20%" }}
-                        ml={{ base: "0%", md: "5%", lg: "5%" }}
-                        mt={{ base: "15px", md: "0px", lg: "0px" }}
-                      >
+                      <Flex direction={"column"} my={"20px"}>
                         <label
                           style={{
                             marginBottom: "-10px",
@@ -1280,26 +1151,113 @@ function Payment() {
                             fontWeight: "700",
                             backgroundColor: theme ? "#191b1d" : "white",
                             zIndex: "4",
-                            width: "45px",
-                            paddingLeft: "3px",
+                            width: "110px",
+                            paddingLeft: "5px",
                           }}
                         >
-                          CVV *
+                          Card Number *
                         </label>
                         <Input
+                          autoComplete="on"
                           onChange={(e) => {
-                            setformdata({ ...formdata, cvv: e.target.value });
+                            setformdata({
+                              ...formdata,
+                              c_number: e.target.value,
+                            });
                           }}
-                          w={"100%"}
+                          w={{ base: "80%", md: "45%", lg: "45%" }}
                           size="lg"
                           border={"1px solid silver"}
-                          placeholder="1 2 3"
+                          placeholder="**** **** **** ****"
                         />
                       </Flex>
-                    </Flex>
+
+                      <Flex
+                        direction={{ base: "column", md: "row", lg: "row" }}
+                      >
+                        <Flex
+                          direction={"column"}
+                          w={{ base: "60%", md: "20%", lg: "20%" }}
+                        >
+                          <label
+                            style={{
+                              marginBottom: "-10px",
+                              marginLeft: "15px",
+                              fontSize: "14px",
+                              fontWeight: "700",
+                              backgroundColor: theme ? "#191b1d" : "white",
+                              zIndex: "4",
+                              width: "95px",
+                              paddingLeft: "3px",
+                            }}
+                          >
+                            Expiry Date *
+                          </label>
+                          <Input
+                            onChange={(e) => {
+                              setformdata({
+                                ...formdata,
+                                exp_day: e.target.value,
+                              });
+                            }}
+                            w={"100%"}
+                            size="lg"
+                            border={"1px solid silver"}
+                            placeholder="MM / YY"
+                          />
+                        </Flex>
+                        <Flex
+                          direction={"column"}
+                          w={{ base: "60%", md: "20%", lg: "20%" }}
+                          ml={{ base: "0%", md: "5%", lg: "5%" }}
+                          mt={{ base: "15px", md: "0px", lg: "0px" }}
+                        >
+                          <label
+                            style={{
+                              marginBottom: "-10px",
+                              marginLeft: "15px",
+                              fontSize: "14px",
+                              fontWeight: "700",
+                              backgroundColor: theme ? "#191b1d" : "white",
+                              zIndex: "4",
+                              width: "45px",
+                              paddingLeft: "3px",
+                            }}
+                          >
+                            CVV *
+                          </label>
+                          <Input
+                            onChange={(e) => {
+                              setformdata({ ...formdata, cvv: e.target.value });
+                            }}
+                            w={"100%"}
+                            size="lg"
+                            border={"1px solid silver"}
+                            placeholder="1 2 3"
+                          />
+                        </Flex>
+                      </Flex>
+                    </Box>
                   </Box>
-                </Box>
-                <Box mt={"20px"}>
+                )}
+
+                <Spacer />
+
+                {RazorPay ? (
+                  <RadioGroup onChange={handleRadioChange}>
+                    <HStack direction="column">
+                      <Radio value="option2">Card Pay</Radio>
+                    </HStack>
+                  </RadioGroup>
+                ) : (
+                  <RadioGroup mt={"25px"} onChange={handleRadioChange}>
+                    <HStack direction="column">
+                      <Radio value="option1">Razor Pay</Radio>
+                    </HStack>
+                  </RadioGroup>
+                )}
+
+                <Box>
                   <Flex>
                     <Checkbox
                       size="md"
@@ -1309,7 +1267,7 @@ function Payment() {
                     ></Checkbox>
                     <Text
                       pl={"15px"}
-                      mt={"45px"}
+                      mt={"25px"}
                       fontSize={{ base: "14px", md: "16px", lg: "16px" }}
                     >
                       I accept Voyawondar's{" "}
@@ -1330,62 +1288,91 @@ function Payment() {
                     </Text>
                   </Flex>
                 </Box>
-                <Button
-                  isDisabled={!chk}
-                  w={"100%"}
-                  onClick={() => {
-                    if (
-                      !formdata.first_N ||
-                      !formdata.last_N ||
-                      !formdata.title ||
-                      !formdata.email ||
-                      !formdata.phone ||
-                      !formdata.day ||
-                      !formdata.month ||
-                      !formdata.year ||
-                      !formdata.gender ||
-                      !formdata.nationality ||
-                      !formdata.c_holder ||
-                      !formdata.c_number ||
-                      !formdata.exp_day ||
-                      !formdata.cvv
-                    ) {
-                      toast({
-                        title: "Please fill all details",
-                        status: "warning",
-                        position: "top",
-                        duration: 3000,
-                        isClosable: true,
-                      });
-                    } else {
-                      onOpen();
-                      toast({
-                        description: "Your OTP is 5637",
-                        status: "success",
-                        position: "top",
-                        duration: 3000,
-                        isClosable: true,
-                      });
-                    }
-                  }}
-                  colorScheme="none"
-                  bg={"#008cc9"}
-                  py={"30px"}
-                  mt={"30px"}
-                >
-                  Book Spaces
-                </Button>
-                <Button
-                  w={"100%"}
-                  isDisabled={!chk}
-                  onClick={handlePayment}
-                  colorScheme="none"
-                  bg={"#008cc9"}
-                  py={"30px"}
-                  mt={"30px"}
-                >
-                  Pay Now
-                </Button>
+
+                {RazorPay ? (
+                  <Button
+                    
+                    isDisabled={!chk}
+                    w={"100%"}
+                    onClick={() => {
+                      if (
+                        !formdata.first_N ||
+                        !formdata.last_N ||
+                        !formdata.title ||
+                        !formdata.email ||
+                        !formdata.phone ||
+                        !formdata.day ||
+                        !formdata.month ||
+                        !formdata.year ||
+                        !formdata.gender ||
+                        !formdata.nationality 
+                      ) {
+                        toast({
+                          title: "Please fill all details",
+                          status: "warning",
+                          position: "top",
+                          duration: 3000,
+                          isClosable: true,
+                        });
+                      } else {
+                        handlePayment();
+                      }
+                    }}
+                    colorScheme="none"
+                    bg={"#008cc9"}
+                    py={"30px"}
+                    mt={"30px"}
+                  >
+                    Pay Now
+                  </Button>
+                ) : (
+                  <Button
+                    isDisabled={!chk}
+                    w={"100%"}
+                    onClick={() => {
+                      if (
+                        !formdata.first_N ||
+                        !formdata.last_N ||
+                        !formdata.title ||
+                        !formdata.email ||
+                        !formdata.phone ||
+                        !formdata.day ||
+                        !formdata.month ||
+                        !formdata.year ||
+                        !formdata.gender ||
+                        !formdata.nationality ||
+                        !formdata.c_holder ||
+                        !formdata.c_number ||
+                        !formdata.exp_day ||
+                        !formdata.cvv
+                      ) {
+                        toast({
+                          title: "Please fill all details",
+                          status: "warning",
+                          position: "top",
+                          duration: 3000,
+                          isClosable: true,
+                        });
+                      } else {
+                        onOpen();
+                        toast({
+                          description: "Your OTP is 5637",
+                          status: "success",
+                          position: "top",
+                          duration: 3000,
+                          isClosable: true,
+                        });
+                      }
+                    }}
+                    colorScheme="none"
+                    bg={"#008cc9"}
+                    py={"30px"}
+                    mt={"30px"}
+                  >
+                    Book Spaces
+                  </Button>
+                )}
+
                 <Modal isOpen={isOpen}>
                   <ModalOverlay />
                   <ModalContent w={"350px"} top={"22%"} py={"30px"}>
@@ -1516,25 +1503,6 @@ function Payment() {
                 & Conditions. Voyawondar will charge you in the stated currency
                 and we do not charge any booking fees.
               </Text>
-              <Flex
-                justifyContent={"space-between"}
-                w={"70%"}
-                direction={{ base: "column", md: "row", lg: "row" }}
-              >
-                <Box lineHeight={"23px"}>
-                  <Text mt={"13px"} fontWeight={"700"} fontSize={"15px"}>
-                    Operated by Expat Explore Travel
-                  </Text>
-                  <Text fontSize={"12px"}>London</Text>
-                </Box>
-                <Box lineHeight={"23px"}>
-                  <Text mt={"15px"} fontWeight={"700"} fontSize={"15px"}>
-                    Agent: Voyawondar
-                  </Text>
-                  <Text fontSize={"12px"}>Kärntner Ring 5-7, Top 304-306</Text>
-                  <Text fontSize={"12px"}>1010 Vienna, AUSTRIA</Text>
-                </Box>
-              </Flex>
             </Box>
           </Box>
 
@@ -1602,7 +1570,7 @@ function Payment() {
 }
 
 function Pricediv({ theme, storedata, traveller }) {
-  return <Box p={'20px'} my={'25px'} borderRadius={'15px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'} position={'sticky'} top={'20px'}>
+  return <Box mt={"10%"} p={'20px'} my={'25px'} borderRadius={'15px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'} position={'sticky'} top={'20px'}>
     <Text pb={'20px'} fontSize={'20px'} fontWeight={'700'}>Price Breakdown</Text>
     <Flex justifyContent={'space-between'}>
       <Box pb={'14px'}>
