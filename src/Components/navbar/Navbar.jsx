@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../Images/logo_navbar.jpg";
+import logo from "../../Images/logo_navbar.png";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
   const [colorChange, setColorchange] = useState(false);

@@ -66,12 +66,14 @@
   z-index: 9999;
   display: flex;
   height: 100vh;
-  width: 280px;
+  width: 290px;
   flex-direction: column;
   background-color: white;
   padding: 40px 20px;
   gap: 10px;
   left: -100%;
+  background-color: rgb(25, 163, 241, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .sidebar_anima {
@@ -105,12 +107,14 @@
   padding: 10px 10px;
   border-radius: 5px;
   text-decoration: none;
-  color: black;
+  /* color: black; */
   font-size: 17px;
+  color: white;
 }
 
 .hor_line {
-  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  /* border-bottom: 1px solid rgb(0, 0, 0, 0.1); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin: -5px 0px;
 }
 
@@ -121,6 +125,10 @@
 
 .mobile_sidebar a.mobile_active_link {
   background: linear-gradient(to right, rgb(0, 163, 255), rgb(81, 162, 208));
+  color: white;
+}
+
+.logo {
   color: white;
 }
 
@@ -136,6 +144,7 @@
 
 .logoouter > img {
   width: 70px;
+  mix-blend-mode: color-dodge;
 }
 
 .sidebar_icon {
