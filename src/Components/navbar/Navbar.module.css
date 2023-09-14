@@ -14,7 +14,7 @@
 .navouter {
   position: fixed;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
 }
 
 .navbar {
@@ -23,13 +23,27 @@
   height: 70px;
   background-color: transparent;
   align-items: center;
+  justify-content: space-around;
+}
+
+.navbar > div > span {
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .link_active_desk {
   color: rgb(0, 163, 255);
 }
 
+.desk_links {
+  display: flex;
+  gap: 25px;
+}
+
 .desk_links a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
   transition-duration: 300ms;
 }
 
@@ -43,16 +57,16 @@
   position: fixed;
   height: 100vh;
   width: 100%;
-  z-index: 0;
+  z-index: 2;
 }
 
 .mobile_sidebar {
   position: fixed;
+  top: 0;
+  z-index: 9999;
   display: flex;
-  z-index: 1;
   height: 100vh;
   width: 280px;
-  top: 0;
   flex-direction: column;
   background-color: white;
   padding: 40px 20px;
@@ -88,8 +102,11 @@
 }
 
 .mobile_sidebar a {
-  padding: 5px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
 }
 .mobile_sidebar a:hover {
   background-color: rgb(239, 239, 239);
@@ -101,4 +118,33 @@
 
 .logo {
   margin: 0px 0px 20px 0px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.sidebar_icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .desk_links {
+    display: none;
+  }
+
+  .sidebar_icon {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    z-index: 1;
+    display: flex;
+    height: 70px;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6%;
+  }
 }

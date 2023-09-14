@@ -4,17 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import HolidayContext, {
-  HolidayContextProvider,
-} from "./Holiday/HolidayContext";
+import { Provider } from "react-redux";
+import { store } from "./Redux/store";
+import { HolidayContextProvider } from "./Holiday/HolidayContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <HolidayContextProvider>
+  <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <HolidayContextProvider>
+        <App />
+      </HolidayContextProvider>
     </BrowserRouter>
-  </HolidayContextProvider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
