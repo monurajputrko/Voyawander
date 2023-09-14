@@ -70,8 +70,7 @@ function Payment() {
       currency: "INR",
       name: "Voyawondar",
       description: "Payment",
-      image:
-        "./Screenshot 2023-09-15 012220.png",
+      image: "https://shrtco.de/hGmWAe",
       handler: function (response) {
         navigate("/");
         // Update the state to indicate payment completion
