@@ -6,8 +6,9 @@ import Holidays from "../Holiday/HolidayPage/Holidays";
 import HolidaySingleProduct from "../Holiday/HolidaySingleProductPage/HolidaySingleProduct";
 import { Login } from "../Components/Login/Login";
 import { Signup } from "../Components/Signup/Signup";
-import Payment from "../Components/Payment/Payment"
+import Payment from "../Components/Payment/Payment";
 import Hotel from "../Hotels/Hotel";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function AllRoutes() {
   return (
@@ -19,7 +20,13 @@ function AllRoutes() {
       <Route path="/singleproductpage" element={<HolidaySingleProduct />} />
       <Route path="/login" element={<Login />}></Route>
       <Route path="/Signup" element={<Signup />}></Route>
-       <Route path="/Payment" element={<Payment />}></Route>
+      <Route
+        path="/Payment"
+        element={
+          <ChakraProvider>
+            <Payment />
+          </ChakraProvider>
+        }></Route>
     </Routes>
   );
 }
