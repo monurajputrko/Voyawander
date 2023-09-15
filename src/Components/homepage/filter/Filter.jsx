@@ -22,6 +22,23 @@ function Filter() {
       setLocations(res.data);
     } catch (er) {
       console.error(er);
+      setLocations([
+        "Leh",
+        "Srinagar",
+        "Pangong",
+        "Maldives",
+        "Male",
+        "Mauriitus",
+        "Mauritius",
+        "Dubai",
+        "Manali",
+        "Kargil",
+        "Munnar",
+        "Kochi",
+        "Bangalore",
+        "Mahabalipuram",
+        "Calicut",
+      ]);
     }
   };
 
