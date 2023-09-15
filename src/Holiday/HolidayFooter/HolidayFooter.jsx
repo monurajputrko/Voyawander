@@ -4,7 +4,7 @@ const HolidayFooter = () => {
   return (
     <div className="HolidayFooter">
       <div className={styles.flex}>
-        <div>
+        <div className={styles.footerSection} >
           <h3>Why Book Holidays with Voyawander?</h3>
           <p>
             VoyaWander.com, India's leading online travel company, has a
@@ -18,7 +18,7 @@ const HolidayFooter = () => {
           </p>
         </div>
 
-        <div>
+        <div className={styles.footerSection}>
           <h3>What does VoyaWander Holidays offer?</h3>
           <p>
             VoyaWander offers a hassle-free holiday wherein all your travel
@@ -39,7 +39,7 @@ const HolidayFooter = () => {
       </div>
 
       <div className={styles.flex}>
-        <div>
+        <div className={styles.footerSection}>
           <h3>How to book Holidays with VoyaWander?</h3>
           <p>
             The user-friendly VoyaWander App and website make it easy for
@@ -58,7 +58,7 @@ const HolidayFooter = () => {
           </p>
         </div>
 
-        <div>
+        <div className={styles.footerSection}>
           <h3>The Ultimate Guide to Holidaying in India</h3>
           <p>
             India is a land of history and diversity. As a country that enjoys
@@ -87,7 +87,7 @@ const HolidayFooter = () => {
       <br />
       <br />
       <div className={styles.flex}>
-        <div>
+        <div className={styles.footerSection}>
           <h3>Goa</h3>
           <p>
             The unofficial party place of India, Goa is more than that. It has a
@@ -113,7 +113,7 @@ const HolidayFooter = () => {
           </p>
         </div>
 
-        <div>
+        <div className={styles.footerSection}>
           <h3>Kerala</h3>
           <p>
             God's own country, Kerala has been a popular tourist destination in
@@ -142,7 +142,7 @@ const HolidayFooter = () => {
       </div>
 
       <div className={styles.flex}>
-        <div>
+        <div className={styles.footerSection}>
           <h3>Kashmir</h3>
           <p>
             For decades, the Kashmir valley has attracted tourists from all over
@@ -168,7 +168,7 @@ const HolidayFooter = () => {
           </p>
         </div>
 
-        <div>
+        <div className={styles.footerSection}>
           <h3>Manali</h3>
           <p>
             Manali is synonymous with scintillating India tours, encompassing
@@ -190,7 +190,7 @@ const HolidayFooter = () => {
       </div>
 
       <div className={styles.flex}>
-        <div>
+        <div className={styles.footerSection}>
           <h3>Shimla</h3>
           <p>
             Shimla, the Queen of the Hills, is the stuff that dreamy India tours
@@ -208,7 +208,7 @@ const HolidayFooter = () => {
           </p>
         </div>
 
-        <div>
+        <div className={styles.footerSection}>
           <h3>Uttarakhand</h3>
           <p>
             There are many India tours which keep Uttarakhand at the forefront

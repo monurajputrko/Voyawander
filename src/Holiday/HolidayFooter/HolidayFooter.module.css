@@ -1,7 +1,4 @@
-.flex{
-    display: flex;
-    margin-top: 20px;
-}
+
 h3{
     font-size: 15px;
     font-weight: 600;
@@ -27,3 +24,42 @@ h5{
         font-size: 12px;
         font-weight: 00;
     }
+
+    .HolidayFooter {
+        background-color: #f8f8f8;
+        padding: 20px;
+      }
+      
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .footerSection {
+        flex: 0 0 calc(50% - 20px); /* 50% width with spacing */
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .footerSection h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      
+      .footerSection p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #666;
+      }
+      
+      /* Style individual elements as needed */
+      .footerSection h3 {
+        color: #333;
+        /* Add additional styling for h3 if desired */
+      }
+      
+      /* Add styles for other elements as needed */
+      
