@@ -70,7 +70,7 @@ function Payment() {
       currency: "INR",
       name: "Voyawondar",
       description: "Payment",
-      image: "https://shrtco.de/hGmWAe",
+      image: "https://rb.gy/6cdbi",
       handler: function (response) {
         navigate("/");
         // Update the state to indicate payment completion
@@ -78,7 +78,7 @@ function Payment() {
     };
 
     const rzp1 = new window.Razorpay(options);
-    rzp1.open();
+    rzp1.open();    
   };
 
 
