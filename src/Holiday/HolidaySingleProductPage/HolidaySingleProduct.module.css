@@ -1,0 +1,82 @@
+.HolidaySingleProductComponent{
+ padding-top: 5%;
+ width: 90%;
+ margin-left: 10%;
+}
+.form{
+    display: flex;
+  justify-content: space-evenly;
+    background-color: rgb(218, 234, 246);
+    padding:10px;
+}
+ .form input{
+    gap:10px;
+    height: 40px;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 0px;
+}
+.form button{
+    height: 40px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 200px;
+  
+}
+.flexDetails{
+    display: flex;
+    justify-content: space-between;
+}
+
+  .stay{
+    border: 2px solid rgb(0, 0, 0);
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    background-color: black;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  margin-right:5px ;
+  margin-left: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    height: 40px;
+    margin-top: 10px;
+  }
+  .flexCrousal{
+    display: flex;
+    gap: 40px;
+  }
+  .slide.active{
+   
+    opacity: 1;
+    transition-duration:2s;
+    transform: scale(1.08);
+}
+.slide{
+    
+    opacity: 0;
+   transition-duration: 1s ease;
+
+}
+.crousalImg{
+    width: 800px;
+    height: 450px;
+}
+.about{
+    display: flex;
+    gap:10px
+}
+.about img{
+    margin-top: 35px;
+}

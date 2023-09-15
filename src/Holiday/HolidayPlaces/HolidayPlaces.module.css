@@ -1,22 +1,18 @@
-.HolidayPlaces_Div {
-    padding-top: 5%;
+.place{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.HolidayPlaces_Div{
+    width: 100%;
+    background-color: aliceblue;
     position: fixed;
-    border-bottom: 0.1px solid rgb(111, 102, 102);
+    margin-top: -82px;
+    padding-top: 30px;
     padding-bottom: 20px;
-    margin-left: 20%;
-  }
-  
-  .place {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  button {
+}
+
+
+.button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -24,62 +20,54 @@
     padding: 5px 10px;
     cursor: pointer;
   }
-  
   .functionality {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     align-items: center;
+    margin-top: 10px;
+    margin-left: 100px;
   }
-  
-  .select-container {
-    position: relative;
-  }
-  
-  .select-container select {
-    appearance: none;
-    padding: 5px 30px 5px 10px;
-    border: 2px solid #000;
+.search{
+    margin-left: 20%;
+}
+
+  .search input{
+    height: 30px;
+}
+.search button{
+    height: 30px;
+margin-left: -3px;
+border-radius: 0px;
+}
+
+.select option{
+    height: 20px;
+}
+
+.select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #fff;
+    font-size: 13px;
+    color: #333;
     cursor: pointer;
+    
   }
-  
-  .selectContainer::after {
-    content: "\f078"; /* FontAwesome caret-down icon */
-    font-family: FontAwesome;
+
+  .select::after {
+    content: '\25BC'; /* Unicode character for a down arrow */
     position: absolute;
-    right: 10px;
     top: 50%;
+    right: 10px;
     transform: translateY(-50%);
-    pointer-events: none;
+    font-size: 13px;
+    color: #666;
   }
   
-  input[type="text"] {
-    border: 2px solid #000;
-    border-radius: 5px;
-    padding: 5px;
+  /* Style the select when it's focused */
+  .select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow on focus */
   }
-  
-  input[type="text"]:focus {
-    outline: none;
-  }
-  
-  button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  /* Add media queries for responsiveness as needed */
-  @media (max-width: 768px) {
-    .HolidayPlaces_Div {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .functionality {
-      margin-top: 10px;
-    }
-  }
-  

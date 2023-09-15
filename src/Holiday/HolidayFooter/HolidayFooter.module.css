@@ -28,6 +28,7 @@ h5{
     .HolidayFooter {
         background-color: #f8f8f8;
         padding: 20px;
+        border-top: 2px solid red;
       }
       
       .flex {
