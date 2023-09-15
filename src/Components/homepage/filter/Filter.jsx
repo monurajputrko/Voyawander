@@ -16,7 +16,7 @@ function Filter() {
   const makeRequest = async (value) => {
     try {
       const res = await axios.get(
-        `https://voyawander-json-szvk.onrender.com/${value}`
+        `https://voyawander-json-szvk.onrender.com/${value}Place`
       );
       console.log(res);
       setLocations(res.data);
@@ -71,8 +71,8 @@ function Filter() {
           <option value={""}>Location</option>
           {locations.map((single, i) => {
             return (
-              <option key={i} value={single.place}>
-                {single.place}
+              <option key={i} value={single.toLowerCase()}>
+                {single}
               </option>
             );
           })}
