@@ -11,6 +11,7 @@ export const HolidayContextProvider = ({ children }) => {
   const [place, setPlace] = useState("");
   const [price, setPrice] = useState("");
   const [searchVal, setSearchVal] = useState("");
+  const [page,setPage] = useState(1)
   const [showDestination, setShowDestination] = useState(false);
   const [showPlace, setShowPlace] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
@@ -24,6 +25,28 @@ export const HolidayContextProvider = ({ children }) => {
     setDestination(e.target.value);
     setShowDestination(true);
   };
+
+
+  function handleNextPage (){
+   setPage((pre)=>pre+1)
+  }
+
+  function handlePrevPage (){
+    setPage((pre)=>pre-1)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   function handlePlace(p) {
     setPlace(p);
@@ -88,10 +111,11 @@ useEffect(()=>{
 
 
 
-
+// http://localhost:3000/holiday
   useEffect(() => {
     const fetchData = async (destination, place, searchVal) => {
       let url = `http://localhost:3000/holiday`;
+    
       if (showDestination) {
         url = `http://localhost:3000/holiday?state=${destination}`;
       } else {
@@ -240,7 +264,10 @@ useEffect(()=>{
         handleSearchSubmit,
         handlePlaceFor,
         handleRating,
-        fetchDataId
+        fetchDataId,
+        handleNextPage,
+        handlePrevPage,
+        page
       }}
     >
       {children}

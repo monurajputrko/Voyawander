@@ -6,12 +6,12 @@ import HolidayContext from "../HolidayContext";
 import HolidayPlaces from "../HolidayPlaces/HolidayPlaces";
 
 const Holidays = () => {
-  const { data, destination } = useContext(HolidayContext);
-  const { show } = useContext(HolidayContext);
+  const { data, showDestination } = useContext(HolidayContext);
+  const {  } = useContext(HolidayContext);
   return (
     <div>
     <HolidayPlaces/>
-      {show ? (
+      {!showDestination ? (
         <HolidaySearch />
       ) : (
         <div>
