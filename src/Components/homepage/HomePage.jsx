@@ -3,10 +3,17 @@ import styles from "./HomePage.module.css";
 import roundImage from "./images/roundtwoimage.png";
 import mountains from "./images/mountains.png";
 import Filter from "./filter/Filter";
+import ContactUs from "../contact-us/ContactUs";
+import BorderBox from "../common-styles/BorderBox";
+import { useDispatch } from "react-redux";
+import { updateSingleProduct } from "../../Redux/payment/action-creator";
+import { useNavigate } from "react-router";
 
 function HomePage() {
+  const dispatch = useDispatch();
+  const nagivate = useNavigate();
   return (
-    <>
+    <BorderBox>
       {/* first section  */}
       <div className={styles.first_section}>
         <div className={styles.left_side_first}>
@@ -130,9 +137,25 @@ function HomePage() {
             <div>
               <div>
                 <p>Starts from</p>
-                <h4>₹ 8000 / person</h4>
+                <h4>₹ 3900 / person</h4>
               </div>
-              <button>Book Now</button>
+              <button
+                onClick={() => {
+                  dispatch(
+                    updateSingleProduct({
+                      title: "Magical Maldives",
+                      price_per_day: 3900,
+                      group_size: 1,
+                      act_price: 6900,
+                      tour_length: 10,
+                      save_price: 6900 - 3900,
+                      str_price: 3900,
+                    })
+                  );
+                  nagivate("/payment");
+                }}>
+                Book Now
+              </button>
             </div>
           </div>
           <div className={styles.product_card}>
@@ -144,9 +167,25 @@ function HomePage() {
             <div>
               <div>
                 <p>Starts from</p>
-                <h4>₹ 8000 / person</h4>
+                <h4>₹ 3900 / person</h4>
               </div>
-              <button>Book Now</button>
+              <button
+                onClick={() => {
+                  dispatch(
+                    updateSingleProduct({
+                      title: "Dazzling dubai",
+                      price_per_day: 3900,
+                      group_size: 1,
+                      act_price: 6900,
+                      tour_length: 10,
+                      save_price: 6900 - 3900,
+                      str_price: 3900,
+                    })
+                  );
+                  nagivate("/payment");
+                }}>
+                Book Now
+              </button>
             </div>
           </div>
           <div className={styles.product_card}>
@@ -158,9 +197,25 @@ function HomePage() {
             <div>
               <div>
                 <p>Starts from</p>
-                <h4>₹ 8000 / person</h4>
+                <h4>₹ 3900 / person</h4>
               </div>
-              <button>Book Now</button>
+              <button
+                onClick={() => {
+                  dispatch(
+                    updateSingleProduct({
+                      title: "Royal Rajasthan",
+                      price_per_day: 3900,
+                      group_size: 1,
+                      act_price: 6900,
+                      tour_length: 10,
+                      save_price: 6900 - 3900,
+                      str_price: 3900,
+                    })
+                  );
+                  nagivate("/payment");
+                }}>
+                Book Now
+              </button>
             </div>
           </div>
         </div>
@@ -171,26 +226,8 @@ function HomePage() {
         <div className={styles.fade}></div>
       </div>
       {/* fifth section */}
-      <div className={`${styles.third_section} ${styles.fifth_section}`}>
-        <h1>Get in touch</h1>
-        <p>
-          Don't wait, reach out to us now and let us help your plan your next
-          vacation. Our dedicated team is always here to answer your question
-          and make your travelk dreams a reality.
-        </p>
-        <div className={styles.contact_form}>
-          <form onSubmit={() => {}}>
-            <div>
-              <input type="email" placeholder="Email" />
-              <input type="phone" placeholder="Mobile" />
-            </div>
-            <input type="text" placeholder="Message" />
-            <button>Send</button>
-          </form>
-        </div>
-      </div>
-      <br></br>
-    </>
+      <ContactUs />
+    </BorderBox>
   );
 }
 

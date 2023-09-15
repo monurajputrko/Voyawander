@@ -14,7 +14,7 @@
 .navouter {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar {
@@ -32,7 +32,7 @@
 }
 
 .link_active_desk {
-  color: rgb(0, 163, 255);
+  color: rgb(0, 163, 255) !important;
 }
 
 .desk_links {
@@ -57,7 +57,7 @@
   position: fixed;
   height: 100vh;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .mobile_sidebar {
@@ -66,12 +66,14 @@
   z-index: 9999;
   display: flex;
   height: 100vh;
-  width: 280px;
+  width: 290px;
   flex-direction: column;
-  background-color: white;
+  /* background-color: white; */
   padding: 40px 20px;
   gap: 10px;
   left: -100%;
+  background-color: rgb(25, 163, 241, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .sidebar_anima {
@@ -105,21 +107,44 @@
   padding: 10px 10px;
   border-radius: 5px;
   text-decoration: none;
-  color: black;
+  /* color: black; */
   font-size: 17px;
+  color: white;
 }
+
+.hor_line {
+  /* border-bottom: 1px solid rgb(0, 0, 0, 0.1); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: -5px 0px;
+}
+
 .mobile_sidebar a:hover {
-  background-color: rgb(239, 239, 239);
+  background: linear-gradient(to right, rgb(0, 163, 255), rgb(81, 162, 208));
+  color: white;
 }
 
 .mobile_sidebar a.mobile_active_link {
-  background-color: rgb(239, 239, 239);
+  background: linear-gradient(to right, rgb(0, 163, 255), rgb(81, 162, 208));
+  color: white;
 }
 
 .logo {
-  margin: 0px 0px 20px 0px;
-  font-size: 25px;
-  font-weight: 400;
+  color: white;
+}
+
+.logoouter {
+  width: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.logoouter > img {
+  width: 70px;
+  mix-blend-mode: color-dodge;
 }
 
 .sidebar_icon {

@@ -1,21 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import logo from "../../Images/logo_navbar.png";
+import BorderBox from "../common-styles/BorderBox";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
   const [colorChange, setColorchange] = useState(false);
-  const store = useSelector((state) => state.home);
   const [sideBarHidden, setSideBarHidden] = useState(null);
   const [isAuth, setIsAuth] = useState(false);
 
-  console.log(store);
-
-  const email = undefined;
-  const name = undefined;
-
   const location = useLocation();
-  console.log(location);
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 30) {
@@ -40,24 +34,34 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
     setSideBarHidden(true);
   };
 
+  const handleLinkClick = () => {
+    handleShowSideMenu();
+  };
+
+  const handleLogOut = (e) => {
+    e.preventDefault();
+    setIsAuth(false);
+  };
+
   return (
-    <>
+    <BorderBox>
       <div
         className={`${styles.blank_screen} ${
           sideBarHidden || sideBarHidden === null ? "hidden" : ""
         }`}
         onClick={handleBlankScreen}></div>
-      {/* {isOfferVisible && !colorChange && (
+      {isOfferVisible && !colorChange && (
         <div className={styles.discount}>
           <p>Upto 50% of on your trips</p>
         </div>
-      )} */}
+      )}
       <div
         className={styles.navouter}
         style={
           isWhiteBackground || colorChange
             ? {
                 backgroundColor: "white",
+                top: "0",
                 boxShadow: " rgba(17, 17, 26, 0.1) 0px 1px 0px",
               }
             : {}
@@ -84,35 +88,36 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               } font-semibold`}>
               Home
             </Link>
-
             <Link
               to={"/"}
               className={`${
-                location.pathname === "/aboutus" ? styles.link_active_desk : ""
+                location.pathname.includes("/aboutus")
+                  ? styles.link_active_desk
+                  : ""
               } font-semibold`}>
               About Us
             </Link>
-
             <Link
-              to={"/hostel"}
+              to={"/hotel"}
               className={`${
-                location.pathname === "/hostel" ? styles.link_active_desk : ""
+                location.pathname === "/hotel" ? styles.link_active_desk : ""
               } font-semibold`}>
-              Hostels
+              Hotels
             </Link>
-
             <Link
               to={"/holidays"}
               className={`${
                 location.pathname === "/holidays" ? styles.link_active_desk : ""
               } font-semibold`}>
-              Holidays 
+              Holidays
             </Link>
 
             <Link
               to={"/flights"}
               className={`${
-                location.pathname === "/flights" ? styles.link_active_desk : ""
+                location.pathname.includes("/flight")
+                  ? styles.link_active_desk
+                  : ""
               } font-semibold`}>
               Flights
             </Link>
@@ -126,6 +131,24 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               } font-semibold`}>
               Contact Us
             </Link>
+            {!isAuth && (
+              <Link
+                to={"/login"}
+                className={`${
+                  location.pathname === "/login" ? styles.link_active_desk : ""
+                } font-semibold`}>
+                Login
+              </Link>
+            )}
+            {isAuth && (
+              <Link
+                onClick={handleLogOut}
+                className={`${
+                  location.pathname === "/login" ? styles.link_active_desk : ""
+                } font-semibold`}>
+                Logout
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -140,49 +163,72 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             ? ""
             : `${styles.sidebar_backward}`
         } z-50`}>
-        <p className={`${styles.logo}`}>Voyawander</p>
-
+        <div className={styles.logoouter}>
+          <img src={logo} />
+          <h2 className={`${styles.logo}`}>Voyawander</h2>
+        </div>
+        <div className={styles.hor_line}></div>
         <Link
+          onClick={handleLinkClick}
           to={"/"}
           className={`${
             location.pathname === "/" ? styles.mobile_active_link : ""
           } font-semibold`}>
           Home
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
+          onClick={handleLinkClick}
           to={"/"}
           className={`${
             location.pathname === "/aboutus" ? styles.mobile_active_link : ""
           } font-semibold`}>
           About Us
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
-          to={"/hostel"}
+          onClick={handleLinkClick}
+          to={"/hotel"}
           className={`${
-            location.pathname === "/hostel" ? styles.mobile_active_link : ""
+            location.pathname.includes("/hotel")
+              ? styles.mobile_active_link
+              : ""
           } font-semibold`}>
-          Hostels
+          Hotels
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
+          onClick={handleLinkClick}
           to={"/flights"}
           className={`${
-            location.pathname === "/flights" ? styles.mobile_active_link : ""
+            location.pathname.includes("/flight")
+              ? styles.mobile_active_link
+              : ""
           } font-semibold`}>
           Flights
         </Link>
-
+        <div className={styles.hor_line}></div>
         <Link
+          to={"/holiday"}
+          className={`${
+            location.pathname.includes("/holiday")
+              ? styles.mobile_active_link
+              : ""
+          } font-semibold`}>
+          Holidays
+        </Link>
+        <div className={styles.hor_line}></div>
+        <Link
+          onClick={handleLinkClick}
           to={"/contactus"}
           className={`${
             location.pathname === "/contactus" ? styles.mobile_active_link : ""
           } font-semibold`}>
           Contact Us
         </Link>
+        <div className={styles.hor_line}></div>
       </div>
-    </>
+    </BorderBox>
   );
 }
 

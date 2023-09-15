@@ -1,0 +1,6 @@
+.App {
+  position: relative;
+  min-height: calc(100vh - 350px);
+  padding: 0;
+  margin: 0;
+}
