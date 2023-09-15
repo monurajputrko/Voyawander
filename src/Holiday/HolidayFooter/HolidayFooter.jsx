@@ -3,7 +3,7 @@ import styles from "./HolidayFooter.module.css";
 const HolidayFooter = () => {
   return (
     <div className="HolidayFooter">
-      <div className={styles.flex}>
+      <div className={styles.flexCard}>
         <div className={styles.footerSection} >
           <h3>Why Book Holidays with Voyawander?</h3>
           <p>
@@ -38,7 +38,7 @@ const HolidayFooter = () => {
         </div>
       </div>
 
-      <div className={styles.flex}>
+      <div className={styles.flexCard}>
         <div className={styles.footerSection}>
           <h3>How to book Holidays with VoyaWander?</h3>
           <p>
@@ -86,7 +86,7 @@ const HolidayFooter = () => {
       <h1>Best Destinations to Visit in India</h1>
       <br />
       <br />
-      <div className={styles.flex}>
+      <div className={styles.flexCard}>
         <div className={styles.footerSection}>
           <h3>Goa</h3>
           <p>
@@ -141,7 +141,7 @@ const HolidayFooter = () => {
         </div>
       </div>
 
-      <div className={styles.flex}>
+      <div className={styles.flexCard}>
         <div className={styles.footerSection}>
           <h3>Kashmir</h3>
           <p>
@@ -189,7 +189,7 @@ const HolidayFooter = () => {
         </div>
       </div>
 
-      <div className={styles.flex}>
+      <div className={styles.flexCard}>
         <div className={styles.footerSection}>
           <h3>Shimla</h3>
           <p>
