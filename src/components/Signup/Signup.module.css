@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
    }
    
    
@@ -14,6 +14,8 @@
    .inner {
        background: rgba(255, 255, 255, 0.8); 
        padding: 60px;
+       padding-top: 20px;
+       padding-bottom: 50px;
        border-radius: 10px;
        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
        text-align: center;
@@ -26,14 +28,18 @@
      .input{
        width: 340px;
        height: 30px; 
-       border-top: none;
-       border-bottom: none;
-       border-left: none;
-       border-right: none;
+    border: none;
        font-family: "Gill Sans", sans-serif;
-       font-size: 15px;
-       border-radius: 10px;
+       font-size: 10px;
+       border-radius: 6px;
+       padding-left: 8px;
+       padding-right: 8px;
+       margin-top: 10px;
    
+     }
+     .input:focus{
+      border: 1px solid rgb(0, 168, 255);
+      outline: none;
      }
    
      .btn:hover {
@@ -54,11 +60,12 @@
     }
    
    
-     .welcome{
-       color: #1d3f58;
-       font-family: "Gill Sans", sans-serif;
-       font-size: 11px;
-      
+   
+    .line{
+      color: #1d3f58;
+      font-family: "Gill Sans", sans-serif;
+      font-size: 11px;
+      margin-top: -40px;
      }
      .dont{
        color: #1d3f58;
@@ -76,5 +83,9 @@
      .link{
         text-decoration: none;
      }
-   
+     .logo{
+      width: 150px;
+      margin-top: -40px;
+     }
+  
    

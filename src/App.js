@@ -1,11 +1,11 @@
 
 import './App.css';
-import { Allrouter } from './Routes/Allrouter';
-import { Login } from './components/Login/Login';
+import { AllRoutes } from './Routes/AllRoutes';
+import { Login } from './Components/Login/Login';
 function App() {
   return (
     <div className="App">
-       <Allrouter/>
+       <AllRoutes/>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
-import { Login } from '../components/Login/Login'
-import { Signup } from '../components/Signup/Signup'
+import { Login } from '../Components/Login/Login'
+import { Signup } from '../Components/Signup/Signup'
 
-export const Allrouter = () => {
+export const AllRoutes = () => {
   return (
     <div>
         <Routes>

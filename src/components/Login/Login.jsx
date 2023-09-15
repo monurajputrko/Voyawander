@@ -6,6 +6,7 @@ import {auth,provider} from "../../firebase"
 import Style from "../Login/Login.module.css"
 import { useDispatch, useSelector } from "react-redux";
 import { setUserLogin } from "../../Redux/auth/action";
+import logo from '../../Images/logo_website.png'
 
 export const Login = () => {
   const [values,setvalues]=useState({
@@ -64,8 +65,10 @@ useEffect(()=>{
   return (
     <div className={Style.container}>
       <div className={Style.inner}>
-      <div>
-    <img src="" />
+      <div className={Style.sibl}>
+      <div> 
+    <img src={logo} className={Style.logo} />
+    <p className={Style.line} >Embark on a Journey Beyond Boundaries – Explore, Dream, and Discover with Us!</p>
       <h1 className={Style.welcome} >Welcome Back</h1>
       </div>
         <div>
@@ -88,6 +91,7 @@ useEffect(()=>{
         <p className={Style.dont} >Don't have an account?</p>
         <button className={Style.btn} onClick={handleSignup} >Sign up</button>
         <p className={Style.dont} >Create an account to join us!</p>
+        </div>
       </div>
     </div>
   );

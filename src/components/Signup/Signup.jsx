@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import {createUserWithEmailAndPassword} from "firebase/auth"
 import {auth} from "../../firebase"
 import Style from "../Signup/Signup.module.css"
+import logo from '../../Images/logo_website.png'
 
 export const Signup = () => {
   const [values,setvalues]=useState({
@@ -41,8 +42,9 @@ console.log(values)
   return (
     <div className={Style.container}>
         <div className={Style.inner}>
+        <img src={logo} className={Style.logo}/>
       <div>
-      <p className={Style.welcome} >Embark on a Journey Beyond Boundaries – Explore, Dream, and Discover with Us!</p>
+      <p className={Style.line} >Embark on a Journey Beyond Boundaries – Explore, Dream, and Discover with Us!</p>
       </div>
         <div>
           <input className={Style.input} type="text" placeholder="Enter Your Name" onChange={(e)=>setvalues((prev)=>({...prev,name: e.target.value}))}/>
