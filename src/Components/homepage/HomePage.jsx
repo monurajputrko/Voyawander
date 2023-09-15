@@ -4,10 +4,11 @@ import roundImage from "./images/roundtwoimage.png";
 import mountains from "./images/mountains.png";
 import Filter from "./filter/Filter";
 import ContactUs from "../contact-us/ContactUs";
+import BorderBox from "../common-styles/BorderBox";
 
 function HomePage() {
   return (
-    <>
+    <BorderBox>
       {/* first section  */}
       <div className={styles.first_section}>
         <div className={styles.left_side_first}>
@@ -173,7 +174,7 @@ function HomePage() {
       </div>
       {/* fifth section */}
       <ContactUs />
-    </>
+    </BorderBox>
   );
 }
 
