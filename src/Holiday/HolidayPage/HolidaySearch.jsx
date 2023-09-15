@@ -8,7 +8,7 @@ const HolidaySearch = () => {
 
   return (
     <div className={styles.HolidaySearch_Compo}>
-      <div>
+      <div className={styles.departure}>
         <label>Departure From</label>
         <select>
           <option value="New Delhi">New Delhi</option>
@@ -23,7 +23,7 @@ const HolidaySearch = () => {
           <option value="Patna">Patna</option>
         </select>
       </div>
-      <div>
+      <div className={styles.destination}>
         <label>Destination</label>
         <select onChange={handleDestination}>
           <option value="all">All Destinations</option>

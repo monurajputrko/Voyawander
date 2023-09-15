@@ -6,7 +6,7 @@ const HolidayContext = createContext();
 export const HolidayContextProvider = ({ children }) => {
   console.log(children);
   const [data, setData] = useState([]);
-  const [singleProductData,setSingleProductData] = useState([])
+  const [singleProductData,setSingleProductData] = useState({})
   const [destination, setDestination] = useState("Ladakh");
   const [place, setPlace] = useState("");
   const [price, setPrice] = useState("");
@@ -39,7 +39,7 @@ export const HolidayContextProvider = ({ children }) => {
 
 
 
-
+console.log(singleProductData)
 
 
 
@@ -93,7 +93,7 @@ export const HolidayContextProvider = ({ children }) => {
 const fetchDataId = async(id) =>{
   console.log( "Id for Single Product Page "+  id)
   try{
-const result = await fetch(`http://localhost:3000/holiday/${id}`);
+const result = await fetch(`http://localhost:8080/holiday/${id}`);
 const res = await result.json();
 setSingleProductData(res)
   }catch(err){
@@ -111,94 +111,94 @@ useEffect(()=>{
 
 
 
-// http://localhost:3000/holiday
+//   http://localhost:8080/holiday
   useEffect(() => {
     const fetchData = async (destination, place, searchVal) => {
-      let url = `http://localhost:3000/holiday`;
+      let url = `  http://localhost:8080/holiday`;
     
       if (showDestination) {
-        url = `http://localhost:3000/holiday?state=${destination}`;
+        url = `  http://localhost:8080/holiday?state=${destination}`;
       } else {
         url = url;
       }
       if (showPlace) {
-        url = `http://localhost:3000/holiday?place=${place}`;
+        url = `  http://localhost:8080/holiday?place=${place}`;
       } else {
         url = url;
       }
 
       if (showPrice == true && price === "asc") {
-        url = `http://localhost:3000/holiday?_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?_sort=price&_order=asc`;
       }
       if (price === "desc") {
-        url = `http://localhost:3000/holiday?_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?_sort=price&_order=desc`;
       }
       if (showSearch) {
-        url = `http://localhost:3000/holiday?q=${searchVal}`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}`;
       } else {
         url = url;
       }
       if (showPlaceFor) {
-        url = `http://localhost:3000/holiday?type=${placeFor}`;
+        url = `  http://localhost:8080/holiday?type=${placeFor}`;
       }
 
       if (showPlaceFor && showPrice && price === "desc") {
-        url = `http://localhost:3000/holiday?type=${placeFor}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?type=${placeFor}&_sort=price&_order=desc`;
       }
 
       if (showPlaceFor && showPrice && price === "asc") {
-        url = `http://localhost:3000/holiday?type=${placeFor}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?type=${placeFor}&_sort=price&_order=asc`;
       }
       if (showPlace && showPrice && price === "asc") {
-        url = `http://localhost:3000/holiday?place=${place}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?place=${place}&_sort=price&_order=asc`;
       }
       if (showPlace && showPrice && price === "desc") {
-        url = `http://localhost:3000/holiday?place=${place}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?place=${place}&_sort=price&_order=desc`;
       }
       if (showPlace && showPlaceFor && showPrice && price === "asc") {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?place=${place}&type=${placeFor}&_sort=price&_order=asc`;
       }
       if (showPlace && showPrice && showPlaceFor && price === "desc") {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?place=${place}&type=${placeFor}&_sort=price&_order=desc`;
       }
       if (showPlace && showPlaceFor) {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}`;
+        url = `  http://localhost:8080/holiday?place=${place}&type=${placeFor}`;
       }
 
       if (showSearch && showPrice && price === "asc") {
-        url = `http://localhost:3000/holiday?q=${searchVal}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}&_sort=price&_order=asc`;
       }
       if (showSearch && showPrice && price === "desc") {
-        url = `http://localhost:3000/holiday?q=${searchVal}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}&_sort=price&_order=desc`;
       }
 
 
       if (showRating && rating === "asc" ) {
-        url = `http://localhost:3000/holiday?_sort=rating&_order=asc`;
+        url = `  http://localhost:8080/holiday?_sort=rating&_order=asc`;
       }
       if (showRating && rating === "desc" ) {
-        url = `http://localhost:3000/holiday?_sort=rating&_order=desc`;
+        url = `  http://localhost:8080/holiday?_sort=rating&_order=desc`;
       }
 
       if ( showPlace && showRating && rating === "asc" ) {
-        url = `http://localhost:3000/holiday?place=${place}&_sort=rating&_order=asc`;
+        url = `  http://localhost:8080/holiday?place=${place}&_sort=rating&_order=asc`;
       }
       if ( showPlace && showRating && rating === "desc" ) {
-        url = `http://localhost:3000/holiday?place=${place}&_sort=rating&_order=desc`;
+        url = `  http://localhost:8080/holiday?place=${place}&_sort=rating&_order=desc`;
       }
 
       if ( showPlaceFor && showRating && rating === "asc" ) {
-        url = `http://localhost:3000/holiday?type=${placeFor}&_sort=rating&_order=asc`;
+        url = `  http://localhost:8080/holiday?type=${placeFor}&_sort=rating&_order=asc`;
       }
       if ( showPlaceFor && showRating && rating === "desc" ) {
-        url = `http://localhost:3000/holiday?&type=${placeFor}&_sort=rating&_order=desc`;
+        url = `  http://localhost:8080/holiday?&type=${placeFor}&_sort=rating&_order=desc`;
       }
 
       if (showPlace && showPlaceFor && showRating && rating === "asc" ) {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}&_sort=rating&_order=asc`;
+        url = `  http://localhost:8080/holiday?place=${place}&type=${placeFor}&_sort=rating&_order=asc`;
       }
       if (showPlace &&  showPlaceFor && showRating && rating === "desc" ) {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}&_sort=rating&_order=desc`;
+        url = `  http://localhost:8080/holiday?place=${place}&type=${placeFor}&_sort=rating&_order=desc`;
       }
 
 
@@ -209,7 +209,7 @@ useEffect(()=>{
         price === "asc" &&
         showPlace
       ) {
-        url = `http://localhost:3000/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=asc`;
       }
       if (
         showSearch &&
@@ -218,7 +218,7 @@ useEffect(()=>{
         price === "desc" &&
         showPlace
       ) {
-        url = `http://localhost:3000/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=desc`;
       }
 
 
@@ -267,6 +267,7 @@ useEffect(()=>{
         fetchDataId,
         handleNextPage,
         handlePrevPage,
+        singleProductData,
         page
       }}
     >

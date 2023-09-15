@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <Navbar isOfferVisible={true} />
       <AllRoutes />
+      
     </div>
   );
 }

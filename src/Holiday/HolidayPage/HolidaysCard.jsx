@@ -23,9 +23,7 @@ const HolidaysCard = ({
   rating,
   stay,
 }) => {
-
-const {fetchDataId} = useContext(HolidayContext)
-
+  const { fetchDataId } = useContext(HolidayContext);
 
   return (
     <div className={styles.HolidaysCard}>
@@ -33,16 +31,27 @@ const {fetchDataId} = useContext(HolidayContext)
         <div className={styles.holidayImage}>
           <img src={image} />
         </div>
+        <div className={styles.flexDetailAndTitle}>
         <div className={styles.title}>
           <h1>{title}</h1>
-          <p style={{fontSize:"15px"}}>
-            {stay} Days / {stay + 1}Nights <span style={{fontSize:"15px", color:"darkcyan"}}>Seller : VoyaWander.com</span>{" "}
+          <p style={{ fontSize: "15px" }}>
+            {stay} Days / {stay + 1}Nights{" "}
+            <span style={{ fontSize: "15px", color: "darkcyan" }}>
+              Seller : VoyaWander.com
+            </span>{" "}
           </p>
           <h3> Place : {place}</h3>
           <h3>Rating : {rating} </h3>
-          <div className={styles.details}>
-            <h2> &#8377; {price}/person </h2>
-            <button onClick={()=>fetchDataId(id)}> <Link to="/singleproductpage" element={<HolidaySingleProduct/> } > View Details</Link> </button>
+        </div>
+        <div className={styles.details}>
+          <h2> &#8377; {price}/person </h2>
+          <button className={styles.button} onClick={() => fetchDataId(id)}>
+            {" "}
+            <Link to="/singleproductpage" element={<HolidaySingleProduct />}>
+              {" "}
+              View Details
+            </Link>{" "}
+          </button>
           </div>
         </div>
       </div>
@@ -51,3 +60,12 @@ const {fetchDataId} = useContext(HolidayContext)
 };
 
 export default HolidaysCard;
+
+/* 
+HolidayPlaces Module css
+
+
+
+
+
+*/

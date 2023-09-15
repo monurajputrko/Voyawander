@@ -1,198 +1,94 @@
-/* Holidays.module.css */
-
-.HolidaysCard {
-    background-color: #fbf6f6;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    padding: 20px;
-    margin-left: 30%;
-    max-width: 800px; /* Increase the maximum width as needed */
-   
-   
-   
-  }
+.HolidayComponent{
+  padding-top: 10%;
   
+}
+
+.holidayDiv{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-bottom: 25px;
+border-radius: 10px;
+margin-top: 60px;
+}
+.holidayDiv img{
+  width: 300px;
+  height: 250px;
+  border-start-start-radius: 10px;
+  border-bottom-left-radius: 10px;
+  float: left;
+  margin-right: 20px;
+}
+.title {
+  flex-wrap: wrap;
+  /* Adjust other styles as needed for text elements */
+}
+.flexDetailAndTitle{
+  display: flex;
+  margin-left: 20px;
+ 
+}
+.details{
+  margin-left: 50px;
+}
+/* Clear the float to prevent text from wrapping around the image */
+
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Primary color */
+  color: #f4ecec; /* Text color */
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+  transform: translateY(-2px); /* Move the button slightly up */
+}
+
+/* Optional: Add more styles for different button states (e.g., active, disabled) */
+.button:active {
+  transform: translateY(1px); /* Move the button slightly down when clicked */
+}
+
+/* Optional: Disabled button styles */
+.button:disabled {
+  background-color: #ccc; /* Grayed-out background for disabled state */
+  color: #999; /* Grayed-out text color */
+  cursor: not-allowed; /* Show a "not allowed" cursor */
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
   .holidayDiv {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    width: 90%; 
+    margin-top: 40px;/* Adjust the width for smaller screens */
   }
-  
-  .holidayImage img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-  }
-  
-  .title {
-    margin-left: 50px;
 
+  .holidayDiv img {
+    width: 100%; /* Make images full width on smaller screens */
+    height: auto; /* Preserve aspect ratio */
+    float: none; /* Remove float to make images stack on top of each other */
+    margin-right: 0; /* Remove margin for images */
   }
-  
-  .title h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    padding-right: 30px;
+  .button{
+    font-size: 0.5rem;
   }
-  
-  .title p {
-    font-size: 0.9rem;
-    color: #777;
-    margin: 5px 0;
-  }
-  
-  .title h3 {
-    font-size: 1.2rem;
-    margin: 5px 0;
-    color: darkcyan;
-  }
-  
-  .details {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .details h2 {
-    font-size: 1.2rem;
-    margin-right: 10px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 15px;
-    cursor: pointer;
-    text-decoration: none; /* Remove underlines from links */
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Add media queries for responsiveness as needed */
-  @media (max-width: 768px) {
-    .holidayDiv {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .holidayImage {
-      margin-bottom: 10px;
-    }
-  }
-  /* Holidays.module.css */
-
-/* Container for Holidays component */
-.Holidays {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  /* Add spacing between elements */
-  .Holidays > * {
-    margin-bottom: 20px;
-  }
-  
-  /* Styles for the HolidaySearch component */
-  .HolidaySearch {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .HolidaySearch h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  /* Styles for the HolidaysCard component */
-  .HolidaysCard {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .HolidaysCard h1 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-  
-  .HolidaysCard p {
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 5px;
-  }
-  
-  .HolidaysCard h3 {
-    font-size: 1.2rem;
-    margin: 5px 0;
-    color: darkcyan;
-  }
-  
-  .HolidaysCard .details {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .HolidaysCard h2 {
-    font-size: 1.2rem;
-    margin-right: 10px;
-  }
-  
-  .HolidaysCard button {
-    background-color: #067af7;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 15px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .HolidaysCard button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Styles for the HolidayPlaces component */
-  .HolidayPlaces {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  /* Add media queries for responsiveness as needed */
-  @media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-    .Holidays {
-      padding: 10px;
-    }
-  
-    .Holidays > * {
-      margin-bottom: 10px;
-    }
-  
-    .HolidaySearch,
-    .HolidaysCard {
-      max-width: 100%;
-    }
-  }
-  
+}
