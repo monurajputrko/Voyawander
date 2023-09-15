@@ -4,6 +4,8 @@ import { useState } from "react";
 import {signInWithEmailAndPassword,signInWithPopup} from "firebase/auth"
 import {auth,provider} from "../../firebase"
 import Style from "../Login/Login.module.css"
+import { useDispatch, useSelector } from "react-redux";
+import { setUserLogin } from "../../Redux/auth/action";
 
 export const Login = () => {
   const [values,setvalues]=useState({
@@ -16,8 +18,10 @@ export const Login = () => {
   const [submitbutton,setSubmitButton] =useState(false); 
 
   const navigate=useNavigate();
+  const dispatch = useDispatch();
 
-
+  const isAuth = useSelector(state=>state);
+  console.log(isAuth)
 
 const handlesubmit=()=>{
 if(!values.email||!values.pass){
@@ -46,6 +50,7 @@ const handleGoogle=()=>{
   signInWithPopup(auth,provider).then((data)=>{
 setGoogle(data.user.email);
 localStorage.setItem("email",data.user.email);
+dispatch(setUserLogin(data.user))
   }).catch((error)=>{
     console.log(error);
   })

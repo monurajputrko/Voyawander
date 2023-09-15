@@ -59,7 +59,7 @@ console.log(values)
         <div>
         <p className={Style.dont}>{isError}</p>
         </div>
-        <button className={Style.btn} onClick={handlesubmit} disabled={submitbutton} >Signup</button>
+        <button className={Style.btn} onClick={handlesubmit} disabled={submitbutton} >Sign up</button>
         <p>Already have an account?
         <span>
           <Link className={Style.link} to='/login'> Login</Link>

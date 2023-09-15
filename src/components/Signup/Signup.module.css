@@ -36,20 +36,22 @@
    
      }
    
-     .btn {
-       background: linear-gradient(to right, #0A50A1, #3D86D2); 
-       color: white; 
-       border: none;
-       padding: 10px 20px; 
-       border-radius: 5px; 
-       cursor: pointer;
-       transition: background 0.3s ease; 
-       font-family: "Gill Sans", sans-serif;
-       width: 300px;
-       &:hover {
-         background: linear-gradient(to right, #3D86D2, #0A50A1); 
-       }
-     }
+     .btn:hover {
+      transition-duration: 300ms;
+      background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+    }
+   .btn {
+      background: linear-gradient(to left, rgb(0, 168, 255), rgb(2, 232, 255));
+      border-radius: 20px;
+      color: white;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      width: 320px;
+      padding: 10px 20px;
+      font-size: 15px;
+      transition-duration: 300ms;
+    }
    
    
      .welcome{
