@@ -16,21 +16,43 @@ function Filter() {
   const makeRequest = async (value) => {
     try {
       const res = await axios.get(
-        `https://voyawander-json-szvk.onrender.com/${value}`
+        `https://voyawander-json-szvk.onrender.com/${value}Place`
       );
       console.log(res);
       setLocations(res.data);
     } catch (er) {
       console.error(er);
+      setLocations([
+        "Leh",
+        "Srinagar",
+        "Pangong",
+        "Maldives",
+        "Male",
+        "Mauriitus",
+        "Mauritius",
+        "Dubai",
+        "Manali",
+        "Kargil",
+        "Munnar",
+        "Kochi",
+        "Bangalore",
+        "Mahabalipuram",
+        "Calicut",
+      ]);
     }
   };
 
   const handleFilterChange = (e) => {
     if (e.target.value !== "") {
-      makeRequest(e.target.value);
       setFilter((prev) => {
         return { ...prev, [e.target.name]: e.target.value };
       });
+    }
+  };
+
+  const handleCategoryChange = (e) => {
+    if (e.target.value !== "") {
+      makeRequest(e.target.value);
     }
   };
 
@@ -51,7 +73,12 @@ function Filter() {
   return (
     <div className={styles.filter_outer}>
       <div>
-        <select name="category" onChange={handleFilterChange}>
+        <select
+          name="category"
+          onChange={(e) => {
+            handleFilterChange(e);
+            handleCategoryChange(e);
+          }}>
           <option value={""}>Category</option>
           <option value="flight">Flight</option>
           <option value="hotel">Hotel</option>
@@ -61,8 +88,8 @@ function Filter() {
           <option value={""}>Location</option>
           {locations.map((single, i) => {
             return (
-              <option key={i} value={single.place}>
-                {single.place}
+              <option key={i} value={single.toLowerCase()}>
+                {single}
               </option>
             );
           })}
