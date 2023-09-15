@@ -9,11 +9,11 @@ const Holidays = () => {
   const {} = useContext(HolidayContext);
   return (
     <div className={styles.HolidayComponent}>
-    <HolidayPlaces/>
-      {data.map((holi) => {
-        return <HolidaysCard key={holi.id} {...holi} />;
-      })}
-      <HolidayFooter/>
+    <HolidayPlaces/>  
+      {data.length <= 0 ? <div> <img src="https://media1.giphy.com/media/MF1z8yeGEauJfZNwOL/giphy.gif" /></div> : <div> {data.map((holi)=>{
+        return <HolidaysCard key={holi.id} {...holi} />
+      })}</div> }
+     
     </div>
   );
 };

@@ -31,10 +31,11 @@ h5{
         border-top: 2px solid red;
       }
       
-      .flex {
+      .flexCard {
         display: flex;
+        
         justify-content: space-between;
-        flex-wrap: wrap;
+        
       }
       
       .footerSection {
