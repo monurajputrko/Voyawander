@@ -367,7 +367,7 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "90px",
                       paddingLeft: "6px",
                     }}>
@@ -392,7 +392,7 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "85px",
                       paddingLeft: "6px",
                     }}>
@@ -417,7 +417,7 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "55px",
                       paddingLeft: "6px",
                     }}>
@@ -442,7 +442,7 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "115px",
                       paddingLeft: "6px",
                     }}>
@@ -473,7 +473,7 @@ function Payment() {
                         fontSize: "14px",
                         fontWeight: "700",
                         backgroundColor: theme ? "#191b1d" : "white",
-                        zIndex: "4",
+                        zIndex: "1",
                         width: "35px",
                         paddingLeft: "6px",
                       }}>
@@ -721,7 +721,7 @@ function Payment() {
                         fontSize: "14px",
                         fontWeight: "700",
                         backgroundColor: theme ? "#191b1d" : "white",
-                        zIndex: "4",
+                        zIndex: "1",
                         width: "58px",
                         paddingLeft: "6px",
                       }}>
@@ -837,7 +837,7 @@ function Payment() {
                         fontSize: "14px",
                         fontWeight: "700",
                         backgroundColor: theme ? "#191b1d" : "white",
-                        zIndex: "4",
+                        zIndex: "1",
                         width: "40px",
                         paddingLeft: "6px",
                       }}>
@@ -1049,7 +1049,7 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "90px",
                       paddingLeft: "6px",
                     }}>
@@ -1232,7 +1232,7 @@ function Payment() {
                           fontSize: "14px",
                           fontWeight: "700",
                           backgroundColor: theme ? "#191b1d" : "white",
-                          zIndex: "4",
+                          zIndex: "1",
                           width: "125px",
                           paddingLeft: "5px",
                         }}>
@@ -1259,7 +1259,7 @@ function Payment() {
                           fontSize: "14px",
                           fontWeight: "700",
                           backgroundColor: theme ? "#191b1d" : "white",
-                          zIndex: "4",
+                          zIndex: "1",
                           width: "110px",
                           paddingLeft: "5px",
                         }}>
@@ -1291,7 +1291,7 @@ function Payment() {
                             fontSize: "14px",
                             fontWeight: "700",
                             backgroundColor: theme ? "#191b1d" : "white",
-                            zIndex: "4",
+                            zIndex: "1",
                             width: "95px",
                             paddingLeft: "3px",
                           }}>
@@ -1322,7 +1322,7 @@ function Payment() {
                             fontSize: "14px",
                             fontWeight: "700",
                             backgroundColor: theme ? "#191b1d" : "white",
-                            zIndex: "4",
+                            zIndex: "1",
                             width: "45px",
                             paddingLeft: "3px",
                           }}>
@@ -1519,7 +1519,7 @@ function Payment() {
                     <span style={{ fontWeight: "500" }}>
                       You will be charged
                     </span>{" "}
-                    ₹{storedata?.act_price?.toLocaleString("en-US")}{" "}
+                    ₹{storedata?.price_per_day?.toLocaleString("en-US")}{" "}
                     <span style={{ fontWeight: "500" }}>
                       now. The remaining balance is due on
                     </span>{" "}
@@ -1652,11 +1652,11 @@ function Pricediv({ theme, storedata, traveller }) {
           <Text>Base price</Text>
           <Text fontSize={"14px"}>
             {traveller} Traveller x ₹
-            {storedata?.str_price?.toLocaleString("en-US")}
+            {storedata?.price_per_day?.toLocaleString("en-US")}
           </Text>
         </Box>
         <Text>
-          ₹ {(traveller * storedata?.str_price)?.toLocaleString("en-US")}
+          ₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}
         </Text>
       </Flex>
       <Flex
@@ -1664,14 +1664,16 @@ function Pricediv({ theme, storedata, traveller }) {
         pb={"15px"}
         borderBottom={"1px solid silver"}>
         <Text>Discount</Text>
-        <Text>
-          - ₹ {(traveller * storedata?.save_price)?.toLocaleString("en-US")}
-        </Text>
+        <Text>- ₹ {storedata?.save_price?.toLocaleString("en-US")}</Text>
       </Flex>
       <Flex justifyContent={"space-between"} pt={"20px"}>
         <Text fontWeight={"700"}>Total due</Text>
         <Text fontSize={"20px"} fontWeight={"700"}>
-          ₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}
+          ₹{" "}
+          {(
+            traveller * storedata?.price_per_day * storedata.tour_length -
+            storedata?.save_price
+          )?.toLocaleString("en-US")}
         </Text>
       </Flex>
       <Flex
@@ -1692,7 +1694,12 @@ function Pricediv({ theme, storedata, traveller }) {
           <Text>Due on 1 Oct, 2023</Text>
           <Spacer />
           <Text>
-            ₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}
+            ₹{" "}
+            {(
+              traveller * storedata?.price_per_day * storedata.tour_length -
+              storedata?.save_price -
+              traveller * storedata.price_per_day
+            )?.toLocaleString("en-US")}
           </Text>
         </Flex>
       </Flex>

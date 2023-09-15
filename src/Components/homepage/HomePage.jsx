@@ -149,7 +149,6 @@ function HomePage() {
                       act_price: 6900,
                       tour_length: 10,
                       save_price: 6900 - 3900,
-                      str_price: 3900,
                     })
                   );
                   nagivate("/payment");
@@ -179,7 +178,6 @@ function HomePage() {
                       act_price: 6900,
                       tour_length: 10,
                       save_price: 6900 - 3900,
-                      str_price: 3900,
                     })
                   );
                   nagivate("/payment");
@@ -209,7 +207,6 @@ function HomePage() {
                       act_price: 6900,
                       tour_length: 10,
                       save_price: 6900 - 3900,
-                      str_price: 3900,
                     })
                   );
                   nagivate("/payment");
