@@ -100,12 +100,18 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             <Link
               to={"/hotel"}
               className={`${
-                location.pathname.includes("/hotel")
-                  ? styles.link_active_desk
-                  : ""
+                location.pathname === "/hotel" ? styles.link_active_desk : ""
               } font-semibold`}>
               Hotels
             </Link>
+            <Link
+              to={"/holidays"}
+              className={`${
+                location.pathname === "/holidays" ? styles.link_active_desk : ""
+              } font-semibold`}>
+              Holidays
+            </Link>
+
             <Link
               to={"/flights"}
               className={`${
@@ -115,15 +121,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               } font-semibold`}>
               Flights
             </Link>
-            <Link
-              to={"/holiday"}
-              className={`${
-                location.pathname.includes("/holiday")
-                  ? styles.link_active_desk
-                  : ""
-              } font-semibold`}>
-              Holidays
-            </Link>
+
             <Link
               to={"/contactus"}
               className={`${

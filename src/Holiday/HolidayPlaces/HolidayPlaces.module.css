@@ -1,0 +1,85 @@
+.HolidayPlaces_Div {
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    border-bottom: 0.1px solid rgb(111, 102, 102);
+    padding-bottom: 20px;
+    margin-left: 20%;
+  }
+  
+  .place {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .functionality {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .select-container {
+    position: relative;
+  }
+  
+  .select-container select {
+    appearance: none;
+    padding: 5px 30px 5px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .selectContainer::after {
+    content: "\f078"; /* FontAwesome caret-down icon */
+    font-family: FontAwesome;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  input[type="text"] {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Add media queries for responsiveness as needed */
+  @media (max-width: 768px) {
+    .HolidayPlaces_Div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .functionality {
+      margin-top: 10px;
+    }
+  }
+  
