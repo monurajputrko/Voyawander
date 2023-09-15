@@ -27,10 +27,15 @@ function Filter() {
 
   const handleFilterChange = (e) => {
     if (e.target.value !== "") {
-      makeRequest(e.target.value);
       setFilter((prev) => {
         return { ...prev, [e.target.name]: e.target.value };
       });
+    }
+  };
+
+  const handleCategoryChange = (e) => {
+    if (e.target.value !== "") {
+      makeRequest(e.target.value);
     }
   };
 
@@ -51,7 +56,12 @@ function Filter() {
   return (
     <div className={styles.filter_outer}>
       <div>
-        <select name="category" onChange={handleFilterChange}>
+        <select
+          name="category"
+          onChange={(e) => {
+            handleFilterChange(e);
+            handleCategoryChange(e);
+          }}>
           <option value={""}>Category</option>
           <option value="flight">Flight</option>
           <option value="hotel">Hotel</option>

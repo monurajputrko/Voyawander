@@ -117,7 +117,6 @@
   color: rgb(89, 89, 89);
   cursor: pointer;
   padding: 10px;
-  -webkit-appearance: none;
 }
 
 .filter_outer {
@@ -376,7 +375,6 @@
   outline: none;
   border-bottom: 2px solid rgb(0, 0, 0, 0.1);
   font-size: 16px;
-  -webkit-appearance: none;
 }
 
 .contact_form > form > div {
@@ -387,7 +385,6 @@
 
 .contact_form > form > div input {
   width: 50%;
-  -webkit-appearance: none;
 }
 
 .contact_form > form > button {
