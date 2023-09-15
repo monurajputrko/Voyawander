@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../Images/logo_navbar.png";
+import BorderBox from "../common-styles/BorderBox";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
   const [colorChange, setColorchange] = useState(false);
@@ -43,7 +44,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
   };
 
   return (
-    <>
+    <BorderBox>
       <div
         className={`${styles.blank_screen} ${
           sideBarHidden || sideBarHidden === null ? "hidden" : ""
@@ -229,7 +230,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         </Link>
         <div className={styles.hor_line}></div>
       </div>
-    </>
+    </BorderBox>
   );
 }
 
