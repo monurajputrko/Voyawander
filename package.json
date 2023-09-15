@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.0",
     "firebase": "^10.3.1",
+    "json-server": "^0.17.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build  && echo '/* /index.html  200' | cat >build/_redirects ",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "json-server --watch db.json --port 8080"
   },
   "eslintConfig": {
     "extends": [

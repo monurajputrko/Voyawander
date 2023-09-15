@@ -99,7 +99,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             <Link
               to={"/hotel"}
               className={`${
-                location.pathname.includes("/hotel")
+                location.pathname === "/hotel"
                   ? styles.link_active_desk
                   : ""
               } font-semibold`}>

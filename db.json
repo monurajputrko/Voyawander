@@ -908,5 +908,278 @@
 
 
 
-]
+],
+  "hotels":[
+    {
+      "id":1,
+      "title":"Citizen Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4269/42695/images/ed7fd9a3_z.jpg",
+      "price":6591,
+      "rating":3.5,
+      "location":"Juhu, Mumbai",
+      "city":"Mumbai",
+      "category":"hotel",
+      "reviewCount":"1256"
+    },
+    {
+      "id":2,
+      "title":"Hotel Mumbai House",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2050/2050772/images/image_2954116_original.jpg",
+      "price":3400,
+      "rating":4.5,
+      "location":"J B Nagar, Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":3,
+      "title":"Hotel Sahara Star",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4192/41924/images/image_3195007_original.jpg",
+      "price":12995,
+      "rating":4.6,
+      "location":"Mumbai Domestic Airport, Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":4,
+      "title":"Ginger Mumbai Goregaon",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4002/4002401/images/80fa4241_z.jpg",
+      "price":5279,
+      "rating":4.2,
+      "location":"Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":5,
+      "title":"T24 Retro",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7937/79372/images/image_3195557_original.jpg",
+      "price":5219,
+      "rating":4.5,
+      "location":"Near Domestic Airport, Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":6,
+      "title":"Hotel Milan International",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7918/791826/images/image_4001417_original.jpg",
+      "price":2823,
+      "rating":3.9,
+      "location":"Santacruz, Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":7,
+      "title":"Sea Green South Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7161/716138/images/image_2954428_original.jpg",
+      "price":5561,
+      "rating":3.6,
+      "location":"Marine Drive, Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":8,
+      "title":"The Roa Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3290/329098/images/image_2620651_original.jpg",
+      "price":3449,
+      "rating":3.5,
+      "location":"Ghatkopar West, Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":9,
+      "title":"Novotel Mumbai International Airport",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4065/4065146/images/e19510a2_z.jpg",
+      "price":4500,
+      "rating":4.2,
+      "location":"Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":10,
+      "title":"The Fern Goregaon",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1361/1361468/images/image_2353391_original.jpg",
+      "price":9774,
+      "rating":4.8,
+      "location":"Goregaon, Mumbai",
+      "city":"Mumbai",
+      "category":"hotel"
+    },
+    {
+      "id":11,
+      "title":"Citrus Hotel Cunningham By OTHPL",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3296/329680/images/image_2332440_original.jpg",
+      "price":3941,
+      "rating":4.1,
+      "location":"Cunningham Road, Bangalore",
+      "city":"Bangalore",
+      "category":"hotel"
+    },
+    {
+      "id":12,
+      "title":"Octave Hotel & Spa JP Nagar",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1360/1360346/images/858ded90_z.jpg",
+      "price":1563,
+      "rating":4.6,
+      "location":"47 9th Cross Road, Sarakki, Bangalore",
+      "city":"Bangalore",
+      "category":"hotel"
+    },
+    {
+      "id":13,
+      "title":"Octave Studio Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2626/2626740/images/a3ee9f57_z.jpg",
+      "price":1797,
+      "rating":3.8,
+      "location":"Octave Studio Hotel",
+      "city":"Bangalore",
+      "category":"hotel"
+    },
+    {
+      "id":14,
+      "title":"Gokulam Grand Hotel & Spa Bangalore",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2626/2626738/images/image_3427127_original.jpg",
+      "price":6707,
+      "rating":2.6,
+      "location":"Bangalore",
+      "city":"Bangalore",
+      "category":"hotel"
+    },
+    {
+      "id":15,
+      "title":"The Park Bangalore",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4015/40155/images/image_2509346_original.jpg",
+      "price":7898,
+      "rating":5.0,
+      "location":"MG Road , Bangalore",
+      "city":"Bangalore",
+      "category":"hotel"
+    },
+    {
+      "id":16,
+      "title":"JP Cordial Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1228/122897/images/image_2977050_original.jpg",
+      "price":2850,
+      "rating":4.1,
+      "location":"Majestic, Bangalore",
+      "city":"Bangalore",
+      "category":"hotel"
+    },
+    {
+      "id":17,
+      "title":"Hotel B plus",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2867/2867756/images/image_2867756_b87838a1-7348-4549-8960-17bb8a8b5dd3.jpeg",
+      "price":3500,
+      "rating":4.1,
+      "location":"Hitech City, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":18,
+      "title":"Hotel Deccan Serai Grande",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3989/3989283/images/image_3193902_original.jpg",
+      "price":5001,
+      "rating":3.1,
+      "location":"Gachibowli, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":19,
+      "title":"Avasa Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3791/379189/images/image_4905144_original.jpg",
+      "price":4512,
+      "rating":5.0,
+      "location":"Madhapur, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":20,
+      "title":"Radisson Blu Plaza Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3792/379219/images/Exterior_Night_View.jpg",
+      "price":12545,
+      "rating":4.9,
+      "location":"Banjara Hills, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":21,
+      "title":"Oakwood Residence",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7464/746488/images/b0a41998_z.jpg",
+      "price":5481,
+      "rating":2.9,
+      "location":"Gachibowli, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":22,
+      "title":"Taj Krishna",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2597/259757/images/5d6bfc25_z.jpg",
+      "price":1254,
+      "rating":2.9,
+      "location":"Taj Krishna",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":23,
+      "title":"Rester Select",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3989/3989285/images/image_4319386_original.jpg",
+      "price":2355,
+      "rating":3.8,
+      "location":"Kukatpally, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":24,
+      "title":"Lemon Tree Premier",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3156/315697/images/image_2953341_original.jpg",
+      "price":12896,
+      "rating":3.4,
+      "location":"Hitech City, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":25,
+      "title":"Red Fox Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7881/788160/images/image_3602922_original.jpg",
+      "price":4589,
+      "rating":4.1,
+      "location":"Hitech City, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":26,
+      "title":"Lemon Tree Hotel",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7265/726541/images/image_3602984_original.jpg",
+      "price":4897,
+      "rating":5.0,
+      "location":"Gachibowli",
+      "city":"Hyderabad",
+      "category":"hotel"
+    },
+    {
+      "id":27,
+      "title":"Oh Biz Premier at Leonia",
+      "image":"https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3980/3980605/images/image_3486172_original.png",
+      "price":9254,
+      "rating":4.1,
+      "location":"Medchal, Hyderabad",
+      "city":"Hyderabad",
+      "category":"hotel"
+    }    
+  ]
 }

@@ -1,0 +1,125 @@
+.hotel_component {
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-bottom: 23px;
+    cursor: pointer;
+  }
+  
+  .hotel_component > p:nth-child(3) {
+    font-size: 17px;
+    color: rgb(111, 111, 111);
+  }
+  
+  .hotel_component > div:first-child {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .hotel_component > div > img {
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+    transition-duration: 250ms;
+    border-radius: 15px;
+  }
+  
+  .hotel_component > div > img:hover {
+    scale: 1.1;
+    transition-duration: 250ms;
+  }
+  
+  .hotel_component > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0px 25px;
+    width: 100%;
+    padding-top: 12px;
+  }
+  
+  .hotel_component > div:last-child > div > p:first-child {
+    font-size: 15px;
+    color: rgb(95, 95, 95);
+  }
+  
+  .hotel_component > div > button {
+    background: linear-gradient(to left, rgb(0, 168, 255), rgb(2, 232, 255));
+    border-radius: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 15px;
+    transition-duration: 300ms;
+  }
+  
+  .hotel_component > div > button:hover {
+    transition-duration: 300ms;
+    background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+  }
+
+  
+.allhotels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  /* justify-content: center;
+  align-items: center;
+  align-self: center; */
+  /* margin-top: 150px; */
+  margin-left: 100px;
+  gap: 64px;
+}
+
+.filters_div {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 40px;
+  display: flex;
+  float: right;
+  gap: 25px;
+  /* float: right; */
+}
+
+.pagination button {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background: linear-gradient(to left, rgb(0, 168, 255), rgb(2, 232, 255));
+    border-radius: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 15px;
+    transition-duration: 300ms;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination > button:hover {
+  transition-duration: 300ms;
+  background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+}
+
+.no_items {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.loading {
+  margin-top: 400px;
+  text-align: center;
+}
