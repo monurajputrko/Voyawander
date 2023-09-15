@@ -5,8 +5,13 @@ import mountains from "./images/mountains.png";
 import Filter from "./filter/Filter";
 import ContactUs from "../contact-us/ContactUs";
 import BorderBox from "../common-styles/BorderBox";
+import { useDispatch } from "react-redux";
+import { updateSingleProduct } from "../../Redux/payment/action-creator";
+import { useNavigate } from "react-router";
 
 function HomePage() {
+  const dispatch = useDispatch();
+  const nagivate = useNavigate();
   return (
     <BorderBox>
       {/* first section  */}
@@ -132,9 +137,25 @@ function HomePage() {
             <div>
               <div>
                 <p>Starts from</p>
-                <h4>₹ 8000 / person</h4>
+                <h4>₹ 3900 / person</h4>
               </div>
-              <button>Book Now</button>
+              <button
+                onClick={() => {
+                  dispatch(
+                    updateSingleProduct({
+                      title: "Magical Maldives",
+                      price_per_day: 3900,
+                      group_size: 1,
+                      act_price: 6900,
+                      tour_length: 10,
+                      save_price: 6900 - 3900,
+                      str_price: 3900,
+                    })
+                  );
+                  nagivate("/payment");
+                }}>
+                Book Now
+              </button>
             </div>
           </div>
           <div className={styles.product_card}>
@@ -146,9 +167,25 @@ function HomePage() {
             <div>
               <div>
                 <p>Starts from</p>
-                <h4>₹ 8000 / person</h4>
+                <h4>₹ 3900 / person</h4>
               </div>
-              <button>Book Now</button>
+              <button
+                onClick={() => {
+                  dispatch(
+                    updateSingleProduct({
+                      title: "Dazzling dubai",
+                      price_per_day: 3900,
+                      group_size: 1,
+                      act_price: 6900,
+                      tour_length: 10,
+                      save_price: 6900 - 3900,
+                      str_price: 3900,
+                    })
+                  );
+                  nagivate("/payment");
+                }}>
+                Book Now
+              </button>
             </div>
           </div>
           <div className={styles.product_card}>
@@ -160,9 +197,25 @@ function HomePage() {
             <div>
               <div>
                 <p>Starts from</p>
-                <h4>₹ 8000 / person</h4>
+                <h4>₹ 3900 / person</h4>
               </div>
-              <button>Book Now</button>
+              <button
+                onClick={() => {
+                  dispatch(
+                    updateSingleProduct({
+                      title: "Royal Rajasthan",
+                      price_per_day: 3900,
+                      group_size: 1,
+                      act_price: 6900,
+                      tour_length: 10,
+                      save_price: 6900 - 3900,
+                      str_price: 3900,
+                    })
+                  );
+                  nagivate("/payment");
+                }}>
+                Book Now
+              </button>
             </div>
           </div>
         </div>
