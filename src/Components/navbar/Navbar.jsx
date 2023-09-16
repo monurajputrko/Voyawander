@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useDebugValue, useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../Images/logo_navbar.png";
 import BorderBox from "../common-styles/BorderBox";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { userLogOut } from "../../Redux/auth/action.js";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
@@ -14,6 +14,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
   const { isAuth } = useSelector((state) => state.auth);
 
   const location = useLocation();
+  const dispatch = useDispatch();
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 30) {
@@ -43,8 +44,13 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
   };
 
   const handleLogOut = (e) => {
-    e.preventDefault();
-    userLogOut();
+    try {
+      e.preventDefault();
+      dispatch(userLogOut());
+      alert("Logged out ...");
+    } catch (er) {
+      console.error(er);
+    }
   };
 
   return (
