@@ -279,7 +279,7 @@ function Payment() {
                   <IconButton
                     // isDisabled={traveller === storedata?.group_size}
                     onClick={() => {
-                      settraveller((pre) => pre + 1);
+                      settraveller((pre) => +pre + 1);
                     }}
                     icon={<GrFormAdd size={"25px"} />}
                     rounded={"full"}
