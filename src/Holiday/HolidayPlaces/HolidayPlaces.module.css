@@ -5,7 +5,7 @@
 .HolidayPlaces_Div{
     width: 100%;
     background-color: aliceblue;
-    position: fixed;
+    /* position: fixed; */
     margin-top: -82px;
     padding-top: 30px;
     padding-bottom: 20px;
