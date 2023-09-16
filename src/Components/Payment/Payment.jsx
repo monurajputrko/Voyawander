@@ -90,8 +90,8 @@ function Payment() {
   }, []);
 
   const handlePayment = () => {
-    const Pr = traveller * 100;
-    const checkout = Number(Pr * 10);
+    const Pr = traveller * storedata?.price_per_day * 100;
+    const checkout = Number(Pr * 1);
     console.log(checkout);
     const options = {
       key: "rzp_test_dnv3nQiWbqzTGt",
