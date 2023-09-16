@@ -9,15 +9,15 @@
     <p></p>
     <script>
         let map = {}
-        fetch(`https://voyawander-json-szvk.onrender.com/holiday`).then(res => {
+        fetch(`https://voyawander-json-szvk.onrender.com/hotels`).then(res => {
             return res.json();
         }).then(data => {
             console.log(data)
             let str = "";
             data.forEach((object) => {
-                if (map[object.place] === undefined) {
-                    str += "\"" + object.place + "\","
-                    map[object.place] = true;
+                if (map[object.city] === undefined) {
+                    str += "\"" + object.city + "\","
+                    map[object.city] = true;
                 }
             })
             document.querySelector("p").innerText = str;
