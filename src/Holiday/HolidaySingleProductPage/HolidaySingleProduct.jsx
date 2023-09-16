@@ -7,6 +7,9 @@ import "react-multi-carousel/lib/styles.css";
 const HolidaySingleProduct = () => {
   const [current, setCurrent] = useState(0);
   const { singleProductData, destination } = useContext(HolidayContext);
+
+  console.log(singleProductData);
+
   const {
     image,
     image1,
@@ -23,8 +26,8 @@ const HolidaySingleProduct = () => {
     place,
     id,
     rating,
-    stay,
     state,
+    stay,
   } = singleProductData;
 
   const top_crousel_img = [
@@ -61,14 +64,16 @@ const HolidaySingleProduct = () => {
       </div>
       <div className={styles.flexDetails}>
         <div>
-          <h1 style={{ fontSize: "30px" }}>{title}</h1>
-          <p style={{ fontSize: "16px" }}>Seller : Voyawander.com </p>
-          <button className={styles.stay}>{stay}Nights </button>
+          <h1 style={{ fontSize: "30px" }}> {title} </h1>
+          <p style={{ fontSize: "15px", color: "darkcyan", fontWeight: "600" }}>
+            Seller : Voyawander.com{" "}
+          </p>
+          <button className={styles.stay}>{stay} Nights </button>
         </div>
         <div style={{ marginRight: "100px" }}>
-          <h2 className={styles.price}>Starting From &#8377;{price}</h2>
+          <h2 className={styles.price}>Starting From &#8377; {price}</h2>
           <button className={styles.button}>Book Now</button>
-          <button className={styles.button}>Submit Query</button>
+          <button className={styles.querryBtn}>Submit Query</button>
         </div>
       </div>
 
@@ -99,7 +104,7 @@ const HolidaySingleProduct = () => {
           </div>
         </div>
 
-        <div>
+        <div className={styles.detailsDesc}>
           <div>
             <h1>Customizable Tour</h1>
             <h4>
@@ -146,15 +151,21 @@ const HolidaySingleProduct = () => {
 
       <div className={styles.about}>
         <div>
-          <img src={image6} width={200} />
+          <img src="" width={200} />
         </div>
         <div>
           <h1>About {state}</h1>
-          <h3>{about} </h3>
+          <hr />
+          <div className={styles.flexAbout}>
+            <div>
+              <img style={{marginTop:"-5px"}} src={image3} width={300} />{" "}
+            </div>
+            <div>
+              <h3>{about} </h3>
+            </div>
+          </div>
         </div>
       </div>
-
-      <HolidayFooter></HolidayFooter>
     </div>
   );
 };
