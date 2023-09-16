@@ -23,6 +23,9 @@ function Filter() {
     } catch (er) {
       console.error(er);
       setLocations([
+        "Mumbai",
+        "Hydrabad",
+        "Bangalore",
         "Leh",
         "Srinagar",
         "Pangong",
@@ -82,7 +85,7 @@ function Filter() {
           <option value={""}>Category</option>
           <option value="flight">Flight</option>
           <option value="hotel">Hotel</option>
-          <option value="holiday">Holiday</option>
+          <option value="holidays">Holiday</option>
         </select>
         <select name="location" onChange={handleFilterChange}>
           <option value={""}>Location</option>
