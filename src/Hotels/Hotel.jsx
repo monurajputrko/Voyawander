@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import HotelComponent from "./HotelComponent";
 import styles from "../Hotels/HotelComponent.module.css";
 import { useSearchParams } from "react-router-dom";
+import BorderBox from "../Components/common-styles/BorderBox";
 
 const Hotel = () => {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -86,75 +87,78 @@ const Hotel = () => {
   }, [sortOrder, page, search, url]);
 
   return (
-    /*isLoading ? <h1 className={styles.loading}>Page Loading, Please Wait a Moment !</h1> : */ <div>
-      <div className={styles.filters_div}>
-        <div className={styles.search}>
-          <input
-            onChange={(e) => setSearch(e.target.value)}
-            type="text"
-            name=""
-            id=""
-            placeholder="Search"
-          />
+    /*isLoading ? <h1 className={styles.loading}>Page Loading, Please Wait a Moment !</h1> : */
+    <BorderBox>
+      <div>
+        <div className={styles.filters_div}>
+          <div className={styles.search}>
+            <input
+              onChange={(e) => setSearch(e.target.value)}
+              type="text"
+              name=""
+              id=""
+              placeholder="Search"
+            />
+          </div>
+          <div className={styles.sort_price}>
+            <select
+              name="sortingFunctionality"
+              id="sortingFunctionality"
+              onChange={(event) => {
+                setOrderBy(event.target.value);
+              }}>
+              Sort By:
+              <option value="default">Default</option>
+              <option value="aToZasc">Sort A to Z</option>
+              <option value="aToZdesc">Sort Z to A</option>
+              <option value="priceAsc">Price - Low to High</option>
+              <option value="priceDesc">Price - High to Low</option>
+              <option value="ratingsAsc">Ratings - Low to High</option>
+              <option value="ratingsDesc">Ratings - High to Low</option>
+            </select>
+          </div>
         </div>
-        <div className={styles.sort_price}>
-          <select
-            name="sortingFunctionality"
-            id="sortingFunctionality"
-            onChange={(event) => {
-              setOrderBy(event.target.value);
-            }}>
-            Sort By:
-            <option value="default">Default</option>
-            <option value="aToZasc">Sort A to Z</option>
-            <option value="aToZdesc">Sort Z to A</option>
-            <option value="priceAsc">Price - Low to High</option>
-            <option value="priceDesc">Price - High to Low</option>
-            <option value="ratingsAsc">Ratings - Low to High</option>
-            <option value="ratingsDesc">Ratings - High to Low</option>
-          </select>
+        <div className={styles.allhotels}>
+          {apiData?.map((hotel) => {
+            return (
+              <div>
+                <HotelComponent key={hotel.title} hotel={hotel} />
+              </div>
+            );
+          })}
+        </div>
+        {isLoading ? (
+          <h1 className={styles.no_items}>
+            Page Loading, Please Wait a Moment !
+          </h1>
+        ) : (
+          ""
+        )}
+        ;
+        {currItems === 0 && isLoading === false ? (
+          <h1 className={styles.no_items}>No Results Found !</h1>
+        ) : (
+          ""
+        )}
+        ;
+        {isError ? (
+          <h1 className={styles.no_items}>
+            Oops !!! Error Occured While Loading the Page.
+          </h1>
+        ) : (
+          ""
+        )}
+        <div className={styles.pagination}>
+          {pageNumbers.map((num, index) => {
+            return (
+              <button onClick={() => setPage(num)} key={index}>
+                {num}
+              </button>
+            );
+          })}
         </div>
       </div>
-      <div className={styles.allhotels}>
-        {apiData?.map((hotel) => {
-          return (
-            <div>
-              <HotelComponent key={hotel.title} hotel={hotel} />
-            </div>
-          );
-        })}
-      </div>
-      {isLoading ? (
-        <h1 className={styles.no_items}>
-          Page Loading, Please Wait a Moment !
-        </h1>
-      ) : (
-        ""
-      )}
-      ;
-      {currItems === 0 && isLoading === false ? (
-        <h1 className={styles.no_items}>No Results Found !</h1>
-      ) : (
-        ""
-      )}
-      ;
-      {isError ? (
-        <h1 className={styles.no_items}>
-          Oops !!! Error Occured While Loading the Page.
-        </h1>
-      ) : (
-        ""
-      )}
-      <div className={styles.pagination}>
-        {pageNumbers.map((num, index) => {
-          return (
-            <button onClick={() => setPage(num)} key={index}>
-              {num}
-            </button>
-          );
-        })}
-      </div>
-    </div>
+    </BorderBox>
   );
 };
 
