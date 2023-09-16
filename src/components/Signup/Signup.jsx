@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import Style from "../Signup/Signup.module.css";
 import { useSelector } from "react-redux";
+import logo from "../../Images/logo_website.png";
 
 export const Signup = () => {
   const [values, setvalues] = useState({
@@ -43,6 +44,7 @@ export const Signup = () => {
     <div className={Style.container}>
       <div className={Style.inner}>
         <div>
+          <img src={logo} className={Style.logo} />
           <p className={Style.welcome}>
             Embark on a Journey Beyond Boundaries – Explore, Dream, and Discover
             with Us!

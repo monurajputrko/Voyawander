@@ -6,6 +6,7 @@ import { auth, provider } from "../../firebase";
 import Style from "../Login/Login.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserLogin } from "../../Redux/auth/action";
+import logo from "../../Images/logo_website.png";
 
 export const Login = () => {
   const [values, setvalues] = useState({
@@ -67,7 +68,7 @@ export const Login = () => {
     <div className={Style.container}>
       <div className={Style.inner}>
         <div>
-          <img src="" />
+          <img src={logo} className={Style.logo} />
           <h1 className={Style.welcome}>Welcome Back</h1>
         </div>
         <div>
