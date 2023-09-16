@@ -264,6 +264,7 @@ export const HolidayContextProvider = ({ children }) => {
         handleNextPage,
         handlePrevPage,
         page,
+        singleProductData
       }}>
       {children}
     </HolidayContext.Provider>

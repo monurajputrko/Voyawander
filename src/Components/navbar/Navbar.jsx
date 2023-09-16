@@ -115,7 +115,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             <Link
               to={"/flights"}
               className={`${
-                location.pathname.includes("/flight")
+                location.pathname.includes("/flights")
                   ? styles.link_active_desk
                   : ""
               } font-semibold`}>
@@ -201,7 +201,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           onClick={handleLinkClick}
           to={"/flights"}
           className={`${
-            location.pathname.includes("/flight")
+            location.pathname.includes("/flights")
               ? styles.mobile_active_link
               : ""
           } font-semibold`}>
@@ -209,9 +209,9 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         </Link>
         <div className={styles.hor_line}></div>
         <Link
-          to={"/holiday"}
+          to={"/holidays"}
           className={`${
-            location.pathname.includes("/holiday")
+            location.pathname.includes("/holidays")
               ? styles.mobile_active_link
               : ""
           } font-semibold`}>

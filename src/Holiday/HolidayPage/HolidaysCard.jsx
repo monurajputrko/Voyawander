@@ -35,9 +35,9 @@ const HolidaysCard = ({
         <div className={styles.title}>
           <h1>{title}</h1>
           <p style={{ fontSize: "15px" }}>
-            {stay} Days / {stay + 1}Nights{" "}
+            {stay} Days / {stay + 1}Nights{" "}  <br/>
             <span style={{ fontSize: "15px", color: "darkcyan" }}>
-              Seller : VoyaWander.com
+              Seller : Voyawander.com
             </span>{" "}
           </p>
           <h3> Place : {place}</h3>

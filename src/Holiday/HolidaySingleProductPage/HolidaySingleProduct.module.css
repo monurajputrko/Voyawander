@@ -2,6 +2,7 @@
  padding-top: 5%;
  width: 90%;
  margin-left: 10%;
+ overflow-x: hidden;
 }
 .form{
     display: flex;
@@ -79,4 +80,22 @@
 }
 .about img{
     margin-top: 35px;
+}
+.querryBtn{
+  background-color: #000000;
+  color: white;
+  border: none;
+margin-right:5px ;
+margin-left: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  height: 40px;
+  margin-top: 10px;
+}
+.detailsDesc{
+  margin-top: -20px;
+}
+.flexAbout{
+  display: flex;
+  gap:20px;
 }

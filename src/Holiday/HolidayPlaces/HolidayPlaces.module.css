@@ -16,7 +16,7 @@
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 5px 10px;
     cursor: pointer;
   }
@@ -35,9 +35,15 @@
     height: 30px;
 }
 .search button{
-    height: 30px;
-margin-left: -3px;
-border-radius: 0px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+margin-right:5px ;
+margin-left: -5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  height: 35px;
+  margin-top: 10px;
 }
 
 .select option{
