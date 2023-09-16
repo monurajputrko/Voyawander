@@ -28,10 +28,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build  && echo '/* /index.html  200' | cat >build/_redirects ",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server db.json --port 8080 --watch"
+    "server": "json-server db.json --port 8080 --watch",
+    "deploy": "npm run build && echo '/* /index.html  200' | cat > build/_redirects && netlify deploy --prod"
   },
   "eslintConfig": {
     "extends": [
