@@ -19,9 +19,9 @@ function AllRoutes() {
       <Route path="/holidays" element={<Holidays />}></Route>
       <Route path="/singleproductpage" element={<HolidaySingleProduct />} />
       <Route path="/login" element={<Login />}></Route>
-      <Route path="/Signup" element={<Signup />}></Route>
+      <Route path="/signup" element={<Signup />}></Route>
       <Route
-        path="/Payment"
+        path="/payment"
         element={
           <ChakraProvider>
             <Payment />
