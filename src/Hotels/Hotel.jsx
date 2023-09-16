@@ -22,13 +22,17 @@ const Hotel = () => {
 
   const people = searchParams.get("people") || 1; // will give us the people, if people param is there it will provide us number or else it will give us 1
 
-  let primaryURL = `https://voyawander-json-szvk.onrender.com/hotels?_page=1&_limit=12`;
+  let primaryURL = searchParams.get("location")
+    ? `https://voyawander-json-szvk.onrender.com/hotels?q=${searchParams.get(
+        "location"
+      )}&_page=${page}&_limit=12`
+    : `https://voyawander-json-szvk.onrender.com/hotels?_page=1&_limit=12`;
 
   // checking for search params if available then adding one q param or else go with normal page
   let url = searchParams.get("location")
     ? `https://voyawander-json-szvk.onrender.com/hotels?q=${searchParams.get(
         "location"
-      )}_page=${page}&_limit=12`
+      )}&_page=${page}&_limit=12`
     : `https://voyawander-json-szvk.onrender.com/hotels?_page=${page}&_limit=12`;
 
   const fetchApiData = async (sortOrder, page, url, search) => {
