@@ -38,6 +38,7 @@ import { GrFormAdd, GrFormSubtract, GrRadialSelected } from "react-icons/gr";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "./common-style/index.css";
 
 function Payment() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -374,6 +375,7 @@ function Payment() {
                     First Name*
                   </label>
                   <Input
+                    className="inpt"
                     autoComplete="on"
                     onChange={(e) => {
                       setformdata({ ...formdata, first_N: e.target.value });
@@ -399,6 +401,7 @@ function Payment() {
                     Last Name*
                   </label>
                   <Input
+                    className="inpt"
                     autoComplete="on"
                     onChange={(e) => {
                       setformdata({ ...formdata, last_N: e.target.value });
@@ -424,6 +427,7 @@ function Payment() {
                     Email*
                   </label>
                   <Input
+                    className="inpt"
                     autoComplete="on"
                     onChange={(e) => {
                       setformdata({ ...formdata, email: e.target.value });
@@ -449,6 +453,7 @@ function Payment() {
                     Phone Number*
                   </label>
                   <Input
+                    className="inpt"
                     autoComplete="on"
                     onChange={(e) => {
                       setformdata({ ...formdata, phone: e.target.value });
@@ -1239,6 +1244,7 @@ function Payment() {
                         Cardholder Name
                       </label>
                       <Input
+                        className="inpt"
                         autoComplete="on"
                         onChange={(e) => {
                           setformdata({
@@ -1266,6 +1272,7 @@ function Payment() {
                         Card Number *
                       </label>
                       <Input
+                        className="inpt"
                         autoComplete="on"
                         onChange={(e) => {
                           setformdata({
@@ -1298,6 +1305,7 @@ function Payment() {
                           Expiry Date *
                         </label>
                         <Input
+                          className="inpt"
                           onChange={(e) => {
                             setformdata({
                               ...formdata,
@@ -1329,6 +1337,7 @@ function Payment() {
                           CVV *
                         </label>
                         <Input
+                          className="inpt"
                           onChange={(e) => {
                             setformdata({ ...formdata, cvv: e.target.value });
                           }}
