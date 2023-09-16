@@ -561,4 +561,10 @@
   .first_section {
     padding: 30% 4%;
   }
+
+  .product_card,
+  .offer_card {
+    width: 95%;
+    max-width: 95%;
+  }
 }
