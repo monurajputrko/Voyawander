@@ -17,7 +17,7 @@ const Hotel = () => {
   const [currItems, setCurrItems] = useState(0);
   const [sortOrder, setOrderBy] = useState("");
   const [pageNumbers, setPageNumbers] = useState([]);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(searchParams.get("location") || "");
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -37,6 +37,12 @@ const Hotel = () => {
     : `https://voyawander-json-szvk.onrender.com/hotels?_page=${page}&_limit=12`;
 
   const fetchApiData = async (sortOrder, page, url, search) => {
+    if (search !== "") {
+      setIsLoading(false);
+      setSearchParams({ location: search, people: people });
+      primaryURL = `https://voyawander-json-szvk.onrender.com/hotels?q=${search}`;
+    }
+
     if (sortOrder === "default") {
       // setIsLoading(true);
       url = primaryURL;
@@ -58,9 +64,6 @@ const Hotel = () => {
     } else if (sortOrder === "ratingsDesc") {
       setIsLoading(true);
       url = `${primaryURL}&_sort=rating&_order=desc`;
-    } else if (search !== "") {
-      setIsLoading(false);
-      url = `https://voyawander-json-szvk.onrender.com/hotels?q=${search}`;
     }
     console.log(url);
 
@@ -89,7 +92,7 @@ const Hotel = () => {
   return (
     /*isLoading ? <h1 className={styles.loading}>Page Loading, Please Wait a Moment !</h1> : */
     <BorderBox>
-      <div>
+      <>
         <div className={styles.filters_div}>
           <div className={styles.search}>
             <input
@@ -122,7 +125,11 @@ const Hotel = () => {
           {apiData?.map((hotel) => {
             return (
               <div>
-                <HotelComponent key={hotel.title} hotel={hotel} />
+                <HotelComponent
+                  group_size={people}
+                  key={hotel.title}
+                  hotel={hotel}
+                />
               </div>
             );
           })}
@@ -151,13 +158,24 @@ const Hotel = () => {
         <div className={styles.pagination}>
           {pageNumbers.map((num, index) => {
             return (
-              <button onClick={() => setPage(num)} key={index}>
+              <button
+                disabled={index + 1 === page}
+                style={
+                  index + 1 === page
+                    ? {
+                        background:
+                          "linear-gradient(to left, rgb(133, 199, 232), rgb(159, 226, 232))",
+                      }
+                    : {}
+                }
+                onClick={() => setPage(num)}
+                key={index}>
                 {num}
               </button>
             );
           })}
         </div>
-      </div>
+      </>
     </BorderBox>
   );
 };

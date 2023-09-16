@@ -37,8 +37,9 @@ import { FaUserFriends } from "react-icons/fa";
 import { GrFormAdd, GrFormSubtract, GrRadialSelected } from "react-icons/gr";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./common-style/index.css";
+import { removeSingleProduct } from "../../Redux/payment/action-creator";
 
 function Payment() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -50,6 +51,7 @@ function Payment() {
   const [traveller, settraveller] = useState(storedata.group_size || 1);
   const toast = useToast();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [chk, setchk] = useState(false);
   const [pin, setpin] = useState({
     first: "",
@@ -102,6 +104,8 @@ function Payment() {
       description: "Payment",
       image: "https://rb.gy/6cdbi",
       handler: function (response) {
+        console.log(response);
+        dispatch(removeSingleProduct());
         navigate("/");
         // Update the state to indicate payment completion
       },
