@@ -1,18 +1,17 @@
-.HolidayComponent{
+.HolidayComponent {
   padding-top: 10%;
-  
 }
 
-.holidayDiv{
+.holidayDiv {
   width: 60%;
   margin: auto;
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   margin-bottom: 25px;
-border-radius: 10px;
-margin-top: 60px;
+  border-radius: 10px;
+  margin-top: 60px;
 }
-.holidayDiv img{
+.holidayDiv img {
   width: 300px;
   height: 250px;
   border-start-start-radius: 10px;
@@ -24,12 +23,11 @@ margin-top: 60px;
   flex-wrap: wrap;
   /* Adjust other styles as needed for text elements */
 }
-.flexDetailAndTitle{
+.flexDetailAndTitle {
   display: flex;
   margin-left: 20px;
- 
 }
-.details{
+.details {
   margin-left: 50px;
 }
 /* Clear the float to prevent text from wrapping around the image */
@@ -69,17 +67,10 @@ margin-top: 60px;
   cursor: not-allowed; /* Show a "not allowed" cursor */
 }
 
-
-
-
-
-
-
-
 @media (max-width: 768px) {
   .holidayDiv {
-    width: 90%; 
-    margin-top: 40px;/* Adjust the width for smaller screens */
+    width: 90%;
+    margin-top: 40px; /* Adjust the width for smaller screens */
   }
 
   .holidayDiv img {
@@ -88,7 +79,7 @@ margin-top: 60px;
     float: none; /* Remove float to make images stack on top of each other */
     margin-right: 0; /* Remove margin for images */
   }
-  .button{
+  .button {
     font-size: 0.5rem;
   }
 }
