@@ -5,7 +5,7 @@
   justify-content: space-around;
   align-items: center;
   height: 300px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .footer > div:first-child {

@@ -3,11 +3,15 @@ import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../Images/logo_navbar.png";
 import BorderBox from "../common-styles/BorderBox";
+import { useSelector } from "react-redux";
+import { userLogOut } from "../../Redux/auth/action.js";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
   const [colorChange, setColorchange] = useState(false);
   const [sideBarHidden, setSideBarHidden] = useState(null);
-  const [isAuth, setIsAuth] = useState(false);
+  // const [isAuth, setIsAuth] = useState(false);
+
+  const { isAuth } = useSelector((state) => state.auth);
 
   const location = useLocation();
 
@@ -40,7 +44,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
 
   const handleLogOut = (e) => {
     e.preventDefault();
-    setIsAuth(false);
+    userLogOut();
   };
 
   return (
@@ -228,6 +232,18 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           } font-semibold`}>
           Contact Us
         </Link>
+        <div className={styles.hor_line}></div>
+        {!isAuth && (
+          <Link
+            to={"/login"}
+            className={`${
+              location.pathname === "/login" ? styles.link_active_desk : ""
+            } font-semibold`}>
+            Login
+          </Link>
+        )}
+        <div className={styles.hor_line}></div>
+        {isAuth && <Link onClick={handleLogOut}>Logout</Link>}
         <div className={styles.hor_line}></div>
       </div>
     </BorderBox>
