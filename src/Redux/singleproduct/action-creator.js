@@ -1,5 +1,3 @@
-import {} from "./actionTypes";
-
 export const setSingleProduct = (payload) => {
   return (dispatch) => {
     dispatch({ type: "SET_SINGLE", payload: payload });
