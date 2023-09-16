@@ -1,6 +1,6 @@
 import React, { useDebugValue, useState } from "react";
 import styles from "./Navbar.module.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../Images/logo_navbar.png";
 import BorderBox from "../common-styles/BorderBox";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,6 +13,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
 
   const { isAuth } = useSelector((state) => state.auth);
 
+  const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
 
@@ -78,7 +79,10 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         }>
         <div
           className={`${styles.navbar} max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4`}>
-          <div>
+          <div
+            onClick={() => {
+              navigate("/");
+            }}>
             <span className="text-3xl font-semibold whitespace-nowrap">
               Voyawander
             </span>
