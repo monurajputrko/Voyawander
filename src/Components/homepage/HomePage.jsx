@@ -8,6 +8,7 @@ import BorderBox from "../common-styles/BorderBox";
 import { useDispatch } from "react-redux";
 import { updateSingleProduct } from "../../Redux/payment/action-creator";
 import { useNavigate } from "react-router";
+import { setSingleProduct } from "../../Redux/singleproduct/action-creator";
 
 function HomePage() {
   const dispatch = useDispatch();
