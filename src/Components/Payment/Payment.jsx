@@ -229,7 +229,7 @@ function Payment() {
                   <Flex py={"5px"}>
                     <FaUserFriends size={"25px"} />
                     <Text px={"10px"}>
-                      6 spaces left and yours is reserved for the next 10
+                      A few spaces left and yours is reserved for the next 10
                       minutes
                     </Text>
                   </Flex>
