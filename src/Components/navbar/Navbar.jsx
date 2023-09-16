@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useDebugValue, useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../Images/logo_navbar.png";
 import BorderBox from "../common-styles/BorderBox";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { userLogOut } from "../../Redux/auth/action.js";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
@@ -14,6 +14,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
   const { isAuth } = useSelector((state) => state.auth);
 
   const location = useLocation();
+  const dispatch = useDispatch();
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 30) {
@@ -43,8 +44,13 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
   };
 
   const handleLogOut = (e) => {
-    e.preventDefault();
-    userLogOut();
+    try {
+      e.preventDefault();
+      dispatch(userLogOut());
+      alert("Logged out ...");
+    } catch (er) {
+      console.error(er);
+    }
   };
 
   return (
@@ -104,30 +110,28 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             <Link
               to={"/hotel"}
               className={`${
-                location.pathname.includes("/hotel")
-                  ? styles.link_active_desk
-                  : ""
+                location.pathname === "/hotel" ? styles.link_active_desk : ""
               } font-semibold`}>
               Hotels
             </Link>
             <Link
+              to={"/holidays"}
+              className={`${
+                location.pathname === "/holidays" ? styles.link_active_desk : ""
+              } font-semibold`}>
+              Holidays
+            </Link>
+
+            <Link
               to={"/flights"}
               className={`${
-                location.pathname.includes("/flight")
+                location.pathname.includes("/flights")
                   ? styles.link_active_desk
                   : ""
               } font-semibold`}>
               Flights
             </Link>
-            <Link
-              to={"/holiday"}
-              className={`${
-                location.pathname.includes("/holiday")
-                  ? styles.link_active_desk
-                  : ""
-              } font-semibold`}>
-              Holidays
-            </Link>
+
             <Link
               to={"/contactus"}
               className={`${
@@ -207,7 +211,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           onClick={handleLinkClick}
           to={"/flights"}
           className={`${
-            location.pathname.includes("/flight")
+            location.pathname.includes("/flights")
               ? styles.mobile_active_link
               : ""
           } font-semibold`}>
@@ -215,9 +219,9 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         </Link>
         <div className={styles.hor_line}></div>
         <Link
-          to={"/holiday"}
+          to={"/holidays"}
           className={`${
-            location.pathname.includes("/holiday")
+            location.pathname.includes("/holidays")
               ? styles.mobile_active_link
               : ""
           } font-semibold`}>
