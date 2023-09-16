@@ -375,7 +375,6 @@ function Payment() {
                     First Name*
                   </label>
                   <Input
-                    className="inpt"
                     autoComplete="on"
                     onChange={(e) => {
                       setformdata({ ...formdata, first_N: e.target.value });
@@ -384,6 +383,7 @@ function Payment() {
                     size={"lg"}
                     border={"1px solid silver"}
                     type="text"
+                    className="inpt"
                   />
                 </VStack>
                 <VStack align={"left"} my={"20px"}>
