@@ -12,7 +12,7 @@ function App() {
     <>
       <div className="App">
         {location.pathname !== "/login" && location.pathname !== "/signup" && (
-          <Navbar isWhiteBackground={isWhite} isOfferVisible={!isWhite} />
+          <Navbar isWhiteBackground={isWhite} isOfferVisible={!true} /> //isWhite
         )}
         <AllRoutes />
       </div>
