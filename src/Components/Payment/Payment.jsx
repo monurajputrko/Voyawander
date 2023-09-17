@@ -1511,7 +1511,7 @@ function Payment() {
                           pin.third == 3 &&
                           pin.fourth == 7
                         ) {
-                          navigate("/payment-successful");
+                          navigate("/payment-success");
                         } else {
                           toast({
                             description: "Payment failed",
