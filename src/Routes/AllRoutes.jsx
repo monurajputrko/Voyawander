@@ -7,21 +7,31 @@ import HolidaySingleProduct from "../Holiday/HolidaySingleProductPage/HolidaySin
 import { Login } from "../Components/Login/Login";
 import { Signup } from "../Components/Signup/Signup";
 import Payment from "../Components/Payment/Payment"
-import Thankyou from "../Components/Payment/Thankyou";
+import Thankyou from './../Components/Payment/Thankyou';
+import Hotel from "../Hotels/Hotel";
+import { ChakraProvider } from "@chakra-ui/provider";
 
 function AllRoutes() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />}></Route>
       <Route path="/contactus" element={<ContactUs />}></Route>
+      <Route path="/hotel" element={<Hotel />}></Route>
       <Route path="/holidays" element={<Holidays />}></Route>
       <Route path="/singleproductpage" element={<HolidaySingleProduct />} />
       <Route path="/login" element={<Login />}></Route>
       <Route path="/Signup" element={<Signup />}></Route>
-      <Route path="/Payment" element={<Payment />}></Route>
-      <Route path="/payment-successful" element={<Thankyou />} />
+      <Route
+        path="/Payment"
+        element={
+          <ChakraProvider>
+            <Payment />
+          </ChakraProvider>
+        }
+      ></Route>
+      <Route path="/Payment-Success" element={<ChakraProvider><Thankyou /></ChakraProvider>}></Route>
     </Routes>
-      );
+  );
 }
 
 export default AllRoutes;

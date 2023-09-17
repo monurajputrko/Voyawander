@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        let map = {}
+        fetch(`https://voyawander-json-szvk.onrender.com/hotels`).then(res => {
+            return res.json();
+        }).then(data => {
+            console.log(data)
+            let str = "";
+            data.forEach((object) => {
+                if (map[object.city] === undefined) {
+                    str += "\"" + object.city + "\","
+                    map[object.city] = true;
+                }
+            })
+            document.querySelector("p").innerText = str;
+
+        })
+    </script>
+</body>
+</html>
