@@ -27,6 +27,13 @@ function AllRoutes() {
             <Payment />
           </ChakraProvider>
         }></Route>
+      <Route
+        path="/Payment-Success"
+        element={
+          <ChakraProvider>
+            <Thankyou />
+          </ChakraProvider>
+        }></Route>
     </Routes>
   );
 }
