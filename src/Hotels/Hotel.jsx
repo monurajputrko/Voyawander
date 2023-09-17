@@ -23,25 +23,20 @@ const Hotel = () => {
 
   const people = searchParams.get("people") || 1; // will give us the people, if people param is there it will provide us number or else it will give us 1
 
-  let primaryURL = searchParams.get("location")
-    ? `https://voyawander-json-szvk.onrender.com/hotels?q=${searchParams.get(
-        "location"
-      )}&_page=${page}&_limit=12`
-    : `https://voyawander-json-szvk.onrender.com/hotels?_page=1&_limit=12`;
+  const fetchApiData = async () => {
+    console.log("I am being called");
+    let url = null;
+    let primaryURL = `https://voyawander-json-szvk.onrender.com/hotels?_page=${page}&_limit=12`;
 
-  // checking for search params if available then adding one q param or else go with normal page
-  let url = searchParams.get("location")
-    ? `https://voyawander-json-szvk.onrender.com/hotels?q=${searchParams.get(
-        "location"
-      )}&_page=${page}&_limit=12`
-    : `https://voyawander-json-szvk.onrender.com/hotels?_page=${page}&_limit=12`;
-
-  const fetchApiData = async (sortOrder, page, url, search) => {
-    if (search !== "") {
-      setIsLoading(false);
+    if (search === "") {
+      setSearchParams({ people: people });
+      primaryURL = `https://voyawander-json-szvk.onrender.com/hotels?_page=${page}&_limit=12`;
+    } else {
       setSearchParams({ location: search, people: people });
-      primaryURL = `https://voyawander-json-szvk.onrender.com/hotels?q=${search}`;
+      primaryURL = `https://voyawander-json-szvk.onrender.com/hotels?q=${search}&_page=${page}&_limit=12`;
     }
+
+    url = primaryURL;
 
     if (sortOrder === "default") {
       // setIsLoading(true);
@@ -65,6 +60,7 @@ const Hotel = () => {
       setIsLoading(true);
       url = `${primaryURL}&_sort=rating&_order=desc`;
     }
+
     console.log(url);
 
     try {
@@ -78,6 +74,7 @@ const Hotel = () => {
       );
       setPageNumbers(pageNumbersTemp);
       const finalData = res.data;
+      console.log(finalData);
       setApiData(finalData);
       setIsLoading(false);
     } catch (error) {
@@ -86,8 +83,21 @@ const Hotel = () => {
   };
 
   useEffect(() => {
-    fetchApiData(sortOrder, page, url, search);
-  }, [sortOrder, page, search, url]);
+    fetchApiData();
+  }, [sortOrder, page, search]);
+
+  const debounce = (duration) => {
+    let timer;
+    return (query) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        setPage(1);
+        setSearch(query);
+      }, duration);
+    };
+  };
+
+  const debounceSearch = debounce(800);
 
   return (
     /*isLoading ? <h1 className={styles.loading}>Page Loading, Please Wait a Moment !</h1> : */
@@ -96,7 +106,9 @@ const Hotel = () => {
         <div className={styles.filters_div}>
           <div className={styles.search}>
             <input
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+                debounceSearch(e.target.value);
+              }}
               type="text"
               name=""
               id=""
@@ -148,7 +160,7 @@ const Hotel = () => {
           ""
         )}
         ;
-        {isError ? (
+        {isError && apiData.length === 0 ? (
           <h1 className={styles.no_items}>
             Oops !!! Error Occured While Loading the Page.
           </h1>

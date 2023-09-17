@@ -1,5 +1,6 @@
 .container {
   background-image: url(https://media2.thrillophilia.com/images/photos/000/082/497/original/1675261154_shutterstock_2148766633.jpg?width=975&height=600);
+  background-image: url(https://wallpapercave.com/wp/wp8525914.jpg);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -36,7 +37,7 @@
   border-radius: 6px;
   padding-left: 8px;
   padding-right: 8px;
-  border: 1px solid rgb(0, 0, 0, 0.1);
+  border: 1px solid rgb(0, 0, 0, 0.2);
   margin-bottom: -10px;
   background-color: rgb(255, 255, 255, 0.4);
 }
