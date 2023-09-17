@@ -18,6 +18,7 @@ const Hotel = () => {
   const [sortOrder, setOrderBy] = useState("");
   const [pageNumbers, setPageNumbers] = useState([]);
   const [search, setSearch] = useState(searchParams.get("location") || "");
+  const [input, setInput] = useState(searchParams.get("location") || "");
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -106,7 +107,9 @@ const Hotel = () => {
         <div className={styles.filters_div}>
           <div className={styles.search}>
             <input
+              value={input}
               onChange={(e) => {
+                setInput(e.target.value);
                 debounceSearch(e.target.value);
               }}
               type="text"
