@@ -133,25 +133,24 @@ const Hotel = () => {
             </select>
           </div>
         </div>
-        <div className={styles.allhotels}>
-          {apiData?.map((hotel) => {
-            return (
-              <div>
-                <HotelComponent
-                  group_size={people}
-                  key={hotel.title}
-                  hotel={hotel}
-                />
-              </div>
-            );
-          })}
-        </div>
         {isLoading ? (
           <h1 className={styles.no_items}>
             Page Loading, Please Wait a Moment !
           </h1>
         ) : (
-          ""
+          <div className={styles.allhotels}>
+            {apiData?.map((hotel) => {
+              return (
+                <div>
+                  <HotelComponent
+                    group_size={people}
+                    key={hotel.title}
+                    hotel={hotel}
+                  />
+                </div>
+              );
+            })}
+          </div>
         )}
         ;
         {currItems === 0 && isLoading === false ? (
