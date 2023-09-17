@@ -106,7 +106,8 @@ function Payment() {
       handler: function (response) {
         console.log(response);
         dispatch(removeSingleProduct());
-        navigate("/");
+        // navigate("/");
+        navigate("/payment-success");
         // Update the state to indicate payment completion
       },
     };

@@ -9,6 +9,7 @@ import { Signup } from "../Components/Signup/Signup";
 import Payment from "../Components/Payment/Payment";
 import Hotel from "../Hotels/Hotel";
 import { ChakraProvider } from "@chakra-ui/react";
+import Thankyou from "../Components/Payment/Thankyou";
 
 function AllRoutes() {
   return (
@@ -28,7 +29,7 @@ function AllRoutes() {
           </ChakraProvider>
         }></Route>
       <Route
-        path="/Payment-Success"
+        path="/payment-success"
         element={
           <ChakraProvider>
             <Thankyou />
