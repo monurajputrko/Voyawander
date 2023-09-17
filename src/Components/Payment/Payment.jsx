@@ -151,36 +151,6 @@ function Payment() {
 
       {/* Midbox-start */}
       <Box w={{ base: "92%", md: "95%", lg: "76%" }} m={"auto"}>
-        {/* Heading flex */}
-        <Flex py={"30px"}>
-          <Text
-            fontSize={{ base: "20px", md: "33px", lg: "33px" }}
-            fontWeight={"600"}
-          >
-            {storedata?.title}
-          </Text>
-          <Spacer />
-          <Button
-            colorScheme="none"
-            bg={theme ? "#191b1d" : "white"}
-            color={theme ? "white" : "blackAlpha.800"}
-            mr={"10px"}
-            borderRadius={"20px"}
-            display={{ base: "none", md: "block", lg: "block" }}
-          >
-            Help
-          </Button>
-          <Button
-            colorScheme="none"
-            bg={theme ? "#191b1d" : "white"}
-            color={theme ? "white" : "blackAlpha.800"}
-            borderRadius={"20px"}
-            display={{ base: "none", md: "block", lg: "block" }}
-          >
-            Share Tour
-          </Button>
-        </Flex>
-
         {/* Main content-start */}
         <Flex justifyContent={"space-between"}>
           {/* left box */}
