@@ -103,7 +103,7 @@ function Payment() {
       description: "Payment",
       image: "https://rb.gy/6cdbi",
       handler: function (response) {
-        navigate("/");
+        navigate("/Payment-Success");
         // Update the state to indicate payment completion
       },
     };
