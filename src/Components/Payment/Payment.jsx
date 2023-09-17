@@ -42,17 +42,16 @@ import "./common-style/index.css";
 import { removeSingleProduct } from "../../Redux/payment/action-creator";
 
 function Payment() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const theme = useSelector((state) => state.theme);
-  const storedata = useSelector((state) => state.detail);
-  const [start, setstart] = useState("");
-  const [end, setend] = useState("");
-  const len = storedata?.destinations?.length;
-  const [traveller, settraveller] = useState(storedata.group_size || 1);
-  const toast = useToast();
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [chk, setchk] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const theme = useSelector(state => state.theme);
+  const storedata = useSelector(state => state.detail)
+  const [start, setstart] = useState('');
+  const [end, setend] = useState('');
+  const len = storedata?.destinations?.length
+  const [traveller, settraveller] = useState(1);
+  const toast = useToast()
+  const navigate = useNavigate()
+  const [chk, setchk]=useState(false)
   const [pin, setpin] = useState({
     first: "",
     sec: "",
@@ -89,8 +88,8 @@ function Payment() {
         setend(el);
       }
       return el;
-    });
-  }, []);
+    })
+  }, [])
 
   const handlePayment = () => {
     const Pr = traveller * storedata?.price_per_day * 100;
@@ -104,9 +103,7 @@ function Payment() {
       description: "Payment",
       image: "https://rb.gy/6cdbi",
       handler: function (response) {
-        console.log(response);
-        dispatch(removeSingleProduct());
-        navigate("/");
+        navigate("/Payment-Success");
         // Update the state to indicate payment completion
       },
     };
@@ -158,7 +155,8 @@ function Payment() {
         <Flex py={"30px"}>
           <Text
             fontSize={{ base: "20px", md: "33px", lg: "33px" }}
-            fontWeight={"600"}>
+            fontWeight={"600"}
+          >
             {storedata?.title}
           </Text>
           <Spacer />
@@ -168,7 +166,8 @@ function Payment() {
             color={theme ? "white" : "blackAlpha.800"}
             mr={"10px"}
             borderRadius={"20px"}
-            display={{ base: "none", md: "block", lg: "block" }}>
+            display={{ base: "none", md: "block", lg: "block" }}
+          >
             Help
           </Button>
           <Button
@@ -176,7 +175,8 @@ function Payment() {
             bg={theme ? "#191b1d" : "white"}
             color={theme ? "white" : "blackAlpha.800"}
             borderRadius={"20px"}
-            display={{ base: "none", md: "block", lg: "block" }}>
+            display={{ base: "none", md: "block", lg: "block" }}
+          >
             Share Tour
           </Button>
         </Flex>
@@ -1126,14 +1126,16 @@ function Payment() {
               p={"20px"}
               borderRadius={"15px"}
               bg={theme ? "#191b1d" : "white"}
-              boxShadow={"md"}>
+              boxShadow={"md"}
+            >
               <HStack>
                 <BsFill3SquareFill size={"30px"} />
                 <Text
                   pb={"5px"}
                   fontWeight={"700"}
                   fontSize={"20px"}
-                  px={"10px"}>
+                  px={"10px"}
+                >
                   Voyawondar Savings
                 </Text>
               </HStack>
@@ -1150,7 +1152,8 @@ function Payment() {
                     duration: 3000,
                     isClosable: true,
                   });
-                }}>
+                }}
+              >
                 Redeem Promo Code
               </Text>
             </Box>
@@ -1162,7 +1165,7 @@ function Payment() {
               bg={theme ? "#191b1d" : "white"}
               borderRadius={"15px"}>
               <HStack>
-                <BsFill4SquareFill size={"30px"} />
+                <BsFill3SquareFill size={"30px"} />
                 <Text
                   pb={"5px"}
                   fontWeight={"700"}
@@ -1195,17 +1198,20 @@ function Payment() {
                   boxShadow={"md"}
                   border={"1px solid silver"}
                   bg={theme ? "#191b1d" : "white"}
-                  borderRadius={"15px"}>
+                  borderRadius={"15px"}
+                >
                   <HStack
                     borderBottom={"1px solid silver"}
                     p={"15px"}
-                    borderRadius={"15px 15px 0 0 "}>
+                    borderRadius={"15px 15px 0 0 "}
+                  >
                     <GrRadialSelected size={"20px"} color={"blue"} />
                     <Text
                       px={"10px"}
                       fontSize={"16px"}
                       fontWeight={"400"}
-                      color={theme ? "white" : "blackAlpha.800"}>
+                      color={theme ? "white" : "blackAlpha.800"}
+                    >
                       Pay by card
                     </Text>
                     <Spacer />
@@ -1241,14 +1247,14 @@ function Payment() {
                           fontSize: "14px",
                           fontWeight: "700",
                           backgroundColor: theme ? "#191b1d" : "white",
-                          zIndex: "1",
+                          zIndex: "4",
                           width: "125px",
                           paddingLeft: "5px",
-                        }}>
+                        }}
+                      >
                         Cardholder Name
                       </label>
                       <Input
-                        className="inpt"
                         autoComplete="on"
                         onChange={(e) => {
                           setformdata({
@@ -1269,14 +1275,14 @@ function Payment() {
                           fontSize: "14px",
                           fontWeight: "700",
                           backgroundColor: theme ? "#191b1d" : "white",
-                          zIndex: "1",
+                          zIndex: "4",
                           width: "110px",
                           paddingLeft: "5px",
-                        }}>
+                        }}
+                      >
                         Card Number *
                       </label>
                       <Input
-                        className="inpt"
                         autoComplete="on"
                         onChange={(e) => {
                           setformdata({
@@ -1294,7 +1300,8 @@ function Payment() {
                     <Flex direction={{ base: "column", md: "row", lg: "row" }}>
                       <Flex
                         direction={"column"}
-                        w={{ base: "60%", md: "20%", lg: "20%" }}>
+                        w={{ base: "60%", md: "20%", lg: "20%" }}
+                      >
                         <label
                           style={{
                             marginBottom: "-10px",
@@ -1302,14 +1309,14 @@ function Payment() {
                             fontSize: "14px",
                             fontWeight: "700",
                             backgroundColor: theme ? "#191b1d" : "white",
-                            zIndex: "1",
+                            zIndex: "4",
                             width: "95px",
                             paddingLeft: "3px",
-                          }}>
+                          }}
+                        >
                           Expiry Date *
                         </label>
                         <Input
-                          className="inpt"
                           onChange={(e) => {
                             setformdata({
                               ...formdata,
@@ -1326,7 +1333,8 @@ function Payment() {
                         direction={"column"}
                         w={{ base: "60%", md: "20%", lg: "20%" }}
                         ml={{ base: "0%", md: "5%", lg: "5%" }}
-                        mt={{ base: "15px", md: "0px", lg: "0px" }}>
+                        mt={{ base: "15px", md: "0px", lg: "0px" }}
+                      >
                         <label
                           style={{
                             marginBottom: "-10px",
@@ -1334,14 +1342,14 @@ function Payment() {
                             fontSize: "14px",
                             fontWeight: "700",
                             backgroundColor: theme ? "#191b1d" : "white",
-                            zIndex: "1",
+                            zIndex: "4",
                             width: "45px",
                             paddingLeft: "3px",
-                          }}>
+                          }}
+                        >
                           CVV *
                         </label>
                         <Input
-                          className="inpt"
                           onChange={(e) => {
                             setformdata({ ...formdata, cvv: e.target.value });
                           }}
@@ -1364,7 +1372,8 @@ function Payment() {
                     <Text
                       pl={"15px"}
                       mt={"45px"}
-                      fontSize={{ base: "14px", md: "16px", lg: "16px" }}>
+                      fontSize={{ base: "14px", md: "16px", lg: "16px" }}
+                    >
                       I accept Voyawondar's{" "}
                       <span style={{ color: "#008cc9" }}>
                         Terms & Conditions
@@ -1424,7 +1433,8 @@ function Payment() {
                   colorScheme="none"
                   bg={"#008cc9"}
                   py={"30px"}
-                  mt={"30px"}>
+                  mt={"30px"}
+                >
                   Book Spaces
                 </Button>
                 <Button
@@ -1434,7 +1444,8 @@ function Payment() {
                   colorScheme="none"
                   bg={"#008cc9"}
                   py={"30px"}
-                  mt={"30px"}>
+                  mt={"30px"}
+                >
                   Pay Now
                 </Button>
                 <Modal isOpen={isOpen}>
@@ -1567,7 +1578,8 @@ function Payment() {
               <Flex
                 justifyContent={"space-between"}
                 w={"70%"}
-                direction={{ base: "column", md: "row", lg: "row" }}>
+                direction={{ base: "column", md: "row", lg: "row" }}
+              >
                 <Box lineHeight={"23px"}>
                   <Text mt={"13px"} fontWeight={"700"} fontSize={"15px"}>
                     Operated by Expat Explore Travel
@@ -1648,76 +1660,37 @@ function Payment() {
 }
 
 function Pricediv({ theme, storedata, traveller }) {
-  return (
-    <Box
-      p={"20px"}
-      my={"25px"}
-      borderRadius={"15px"}
-      bg={theme ? "#191b1d" : "white"}
-      boxShadow={"md"}
-      position={"sticky"}
-      top={"20px"}>
-      <Text pb={"20px"} fontSize={"20px"} fontWeight={"700"}>
-        Price Breakdown
-      </Text>
-      <Flex justifyContent={"space-between"}>
-        <Box pb={"14px"}>
-          <Text>Base price</Text>
-          <Text fontSize={"14px"}>
-            {traveller} Traveller x ₹
-            {storedata?.price_per_day?.toLocaleString("en-US")}
-          </Text>
-        </Box>
-        <Text>
-          ₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}
-        </Text>
+  return <Box p={'20px'} my={'25px'} borderRadius={'15px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'} position={'sticky'} top={'20px'}>
+    <Text pb={'20px'} fontSize={'20px'} fontWeight={'700'}>Price Breakdown</Text>
+    <Flex justifyContent={'space-between'}>
+      <Box pb={'14px'}>
+        <Text>Base price</Text>
+        <Text fontSize={'14px'}>{traveller} Traveller x ₹{(storedata?.str_price)?.toLocaleString("en-US")}</Text>
+      </Box>
+      <Text>₹ {(traveller * storedata?.str_price)?.toLocaleString("en-US")}</Text>
+    </Flex>
+    <Flex justifyContent={'space-between'} pb={'15px'} borderBottom={'1px solid silver'}>
+      <Text>Discount</Text>
+      <Text>- ₹ {(traveller * storedata?.save_price)?.toLocaleString("en-US")}</Text>
+    </Flex>
+    <Flex justifyContent={'space-between'} pt={'20px'}>
+      <Text fontWeight={'700'}>Total due</Text>
+      <Text fontSize={'20px'} fontWeight={'700'}>₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}</Text>
+    </Flex>
+    <Flex lineHeight={'45px'} direction={'column'} mt={'10px'} p={'5px'} bg={theme ? 'gray.800' : 'gray.100'} borderRadius={'10px'}>
+      <Flex>
+        <Text fontWeight={'700'}>Due today</Text>
+        <Spacer />
+        <Text fontWeight={'700'}>₹ {(traveller * storedata?.price_per_day)?.toLocaleString("en-US")}</Text>
       </Flex>
-      <Flex
-        justifyContent={"space-between"}
-        pb={"15px"}
-        borderBottom={"1px solid silver"}>
-        <Text>Discount</Text>
-        <Text>- ₹ {storedata?.save_price?.toLocaleString("en-US")}</Text>
+      <Flex>
+        <Text>Due on 1 Oct, 2023</Text>
+        <Spacer />
+        <Text>₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}</Text>
       </Flex>
-      <Flex justifyContent={"space-between"} pt={"20px"}>
-        <Text fontWeight={"700"}>Total due</Text>
-        <Text fontSize={"20px"} fontWeight={"700"}>
-          ₹{" "}
-          {(
-            traveller * storedata?.price_per_day * storedata.tour_length -
-            storedata?.save_price
-          )?.toLocaleString("en-US")}
-        </Text>
-      </Flex>
-      <Flex
-        lineHeight={"45px"}
-        direction={"column"}
-        mt={"10px"}
-        p={"5px"}
-        bg={theme ? "gray.800" : "gray.100"}
-        borderRadius={"10px"}>
-        <Flex>
-          <Text fontWeight={"700"}>Due today</Text>
-          <Spacer />
-          <Text fontWeight={"700"}>
-            ₹ {(traveller * storedata?.price_per_day)?.toLocaleString("en-US")}
-          </Text>
-        </Flex>
-        <Flex>
-          <Text>Due on 1 Oct, 2023</Text>
-          <Spacer />
-          <Text>
-            ₹{" "}
-            {(
-              traveller * storedata?.price_per_day * storedata.tour_length -
-              storedata?.save_price -
-              traveller * storedata.price_per_day
-            )?.toLocaleString("en-US")}
-          </Text>
-        </Flex>
-      </Flex>
-    </Box>
-  );
+    </Flex>
+  </Box>
+
 }
 
 export default Payment;
