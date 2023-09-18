@@ -43,20 +43,20 @@ import { removeSingleProduct } from "../../Redux/payment/action-creator";
 import HolidayContext from "../../Holiday/HolidayContext";
 
 function Payment() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const theme = useSelector(state => state.theme);
-  const storedata = useSelector(state => state.detail)
-  const [start, setstart] = useState('');
-  const [end, setend] = useState('');
-  const len = storedata?.destinations?.length
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const theme = useSelector((state) => state.theme);
+  const storedata = useSelector((state) => state.detail);
+  const [start, setstart] = useState("");
+  const [end, setend] = useState("");
+  const len = storedata?.destinations?.length;
   const [traveller, settraveller] = useState(1);
-  const toast = useToast()
-  const navigate = useNavigate()
-  const [chk, setchk]=useState(false)
-   const [CardPay, setCardPay] = useState(true);
-   const [RazorPay, setRazorPay] = useState(false);
-  const {singleProductData} = useContext(HolidayContext);
-  console.log(singleProductData);    // udate the data from single Product page
+  const toast = useToast();
+  const navigate = useNavigate();
+  const [chk, setchk] = useState(false);
+  const [CardPay, setCardPay] = useState(true);
+  const [RazorPay, setRazorPay] = useState(false);
+  const { singleProductData } = useContext(HolidayContext);
+  console.log(singleProductData); // udate the data from single Product page
 
   const [pin, setpin] = useState({
     first: "",
@@ -94,21 +94,23 @@ function Payment() {
         setend(el);
       }
       return el;
-    })
-  }, [])
-   const handleRadioChange = (value) => {
-     setRazorPay(true);
-     setCardPay(false);
-   };
-   const handleRadioChange2 = (value) => {
-     setCardPay(true);
-     setRazorPay(false);
-   };
+    });
+  }, []);
+  const handleRadioChange = (value) => {
+    setRazorPay(true);
+    setCardPay(false);
+  };
+  const handleRadioChange2 = (value) => {
+    setCardPay(true);
+    setRazorPay(false);
+  };
 
   const handlePayment = () => {
-    const Pr = ((traveller * (storedata?.act_price - storedata?.act_price * 0.3)) / 2) * 100;
+    const Pr =
+      ((traveller * (storedata?.act_price - storedata?.act_price * 0.3)) / 2) *
+      100;
     const checkout = Number(Pr * 1);
-    console.log("amount ",checkout);
+    console.log("amount ", checkout);
     const options = {
       key: "rzp_test_dnv3nQiWbqzTGt",
       amount: checkout,
@@ -1748,7 +1750,10 @@ function Pricediv({ theme, storedata, traveller }) {
         <Text fontWeight={"700"}>Total due</Text>
         <Text fontSize={"20px"} fontWeight={"700"}>
           ₹{" "}
-          {(traveller * storedata?.act_price - storedata?.act_price*0.30 )?.toLocaleString("en-US")}
+          {(
+            traveller * storedata?.act_price -
+            storedata?.act_price * 0.3
+          )?.toLocaleString("en-US")}
         </Text>
       </Flex>
       <Flex
@@ -1763,7 +1768,12 @@ function Pricediv({ theme, storedata, traveller }) {
           <Text fontWeight={"700"}>Due today</Text>
           <Spacer />
           <Text fontWeight={"700"}>
-            ₹ {(traveller * (storedata?.act_price - storedata?.act_price*0.30)/2)?.toLocaleString("en-US")}
+            ₹{" "}
+            {(
+              (traveller *
+                (storedata?.act_price - storedata?.act_price * 0.3)) /
+              2
+            )?.toLocaleString("en-US")}
           </Text>
         </Flex>
         {/* <Flex>
@@ -1776,7 +1786,6 @@ function Pricediv({ theme, storedata, traveller }) {
       </Flex>
     </Box>
   );
-
 }
 
 export default Payment;
