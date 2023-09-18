@@ -23,7 +23,7 @@ import {
   useDisclosure,
   useToast,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AiFillCheckCircle, AiFillTag } from "react-icons/ai";
 import {
   BsFill1SquareFill,
@@ -40,6 +40,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./common-style/index.css";
 import { removeSingleProduct } from "../../Redux/payment/action-creator";
+import HolidayContext from "../../Holiday/HolidayContext";
 
 function Payment() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -53,6 +54,10 @@ function Payment() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [chk, setchk] = useState(false);
+
+  const {singleProductData} = useContext(HolidayContext);
+  console.log(singleProductData);    // udate the data from single Product page
+
   const [pin, setpin] = useState({
     first: "",
     sec: "",

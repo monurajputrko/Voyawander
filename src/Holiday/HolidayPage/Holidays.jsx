@@ -23,6 +23,7 @@ const Holidays = () => {
           })}
         </div>
       )}
+      <HolidayFooter/>
     </div>
   );
 };
