@@ -6,11 +6,12 @@ const HolidayContext = createContext();
 export const HolidayContextProvider = ({ children }) => {
   console.log(children);
   const [data, setData] = useState([]);
-  const [singleProductData,setSingleProductData] = useState([])
+  const [singleProductData, setSingleProductData] = useState({});
   const [destination, setDestination] = useState("Ladakh");
   const [place, setPlace] = useState("");
   const [price, setPrice] = useState("");
   const [searchVal, setSearchVal] = useState("");
+  const [page, setPage] = useState(1);
   const [showDestination, setShowDestination] = useState(false);
   const [showPlace, setShowPlace] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
@@ -24,6 +25,14 @@ export const HolidayContextProvider = ({ children }) => {
     setDestination(e.target.value);
     setShowDestination(true);
   };
+
+  function handleNextPage() {
+    setPage((pre) => pre + 1);
+  }
+
+  function handlePrevPage() {
+    setPage((pre) => pre - 1);
+  }
 
   function handlePlace(p) {
     setPlace(p);
@@ -62,121 +71,128 @@ export const HolidayContextProvider = ({ children }) => {
   console.log("price " + price);
   console.log(showPrice);
 
+  const fetchDataId = async (id) => {
+    console.log("Id for Single Product Page " + id);
+    try {
+      const result = await fetch(
+        `https://voyawander-json-szvk.onrender.com/holiday/${id}`
+      );
+      const res = await result.json();
+      setSingleProductData(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-
-
-
-
-const fetchDataId = async(id) =>{
-  console.log( "Id for Single Product Page "+  id)
-  try{
-const result = await fetch(`http://localhost:3000/holiday/${id}`);
-const res = await result.json();
-setSingleProductData(res)
-  }catch(err){
-console.log(err)
-  }
-}
-
-console.log(singleProductData)
-
-useEffect(()=>{
-  fetchDataId()
-},[])
-
-
-
-
-
+  console.log(singleProductData);
 
   useEffect(() => {
+    fetchDataId();
+  }, []);
+
+  // https://voyawander-json-szvk.onrender.com/holiday
+  useEffect(() => {
     const fetchData = async (destination, place, searchVal) => {
-      let url = `http://localhost:3000/holiday`;
+      let url = `https://voyawander-json-szvk.onrender.com/holiday`;
+
       if (showDestination) {
-        url = `http://localhost:3000/holiday?state=${destination}`;
+        url = `  http://localhost:8080/holiday?state=${destination}`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?state=${destination}`;
       } else {
         url = url;
       }
       if (showPlace) {
-        url = `http://localhost:3000/holiday?place=${place}`;
+        url = `  http://localhost:8080/holiday?place=${place}`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}`;
       } else {
         url = url;
       }
 
       if (showPrice == true && price === "asc") {
-        url = `http://localhost:3000/holiday?_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?_sort=price&_order=asc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?_sort=price&_order=asc`;
       }
       if (price === "desc") {
-        url = `http://localhost:3000/holiday?_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?_sort=price&_order=desc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?_sort=price&_order=desc`;
       }
       if (showSearch) {
-        url = `http://localhost:3000/holiday?q=${searchVal}`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?q=${searchVal}`;
       } else {
         url = url;
       }
       if (showPlaceFor) {
-        url = `http://localhost:3000/holiday?type=${placeFor}`;
+        url = `  http://localhost:8080/holiday?type=${placeFor}`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?type=${placeFor}`;
       }
 
       if (showPlaceFor && showPrice && price === "desc") {
-        url = `http://localhost:3000/holiday?type=${placeFor}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?type=${placeFor}&_sort=price&_order=desc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?type=${placeFor}&_sort=price&_order=desc`;
       }
 
       if (showPlaceFor && showPrice && price === "asc") {
-        url = `http://localhost:3000/holiday?type=${placeFor}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?type=${placeFor}&_sort=price&_order=asc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?type=${placeFor}&_sort=price&_order=asc`;
       }
       if (showPlace && showPrice && price === "asc") {
-        url = `http://localhost:3000/holiday?place=${place}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?place=${place}&_sort=price&_order=asc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&_sort=price&_order=asc`;
       }
       if (showPlace && showPrice && price === "desc") {
-        url = `http://localhost:3000/holiday?place=${place}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?place=${place}&_sort=price&_order=desc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&_sort=price&_order=desc`;
       }
       if (showPlace && showPlaceFor && showPrice && price === "asc") {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?place=${place}&type=${placeFor}&_sort=price&_order=asc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&type=${placeFor}&_sort=price&_order=asc`;
       }
       if (showPlace && showPrice && showPlaceFor && price === "desc") {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?place=${place}&type=${placeFor}&_sort=price&_order=desc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&type=${placeFor}&_sort=price&_order=desc`;
       }
       if (showPlace && showPlaceFor) {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}`;
+        url = `  http://localhost:8080/holiday?place=${place}&type=${placeFor}`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&type=${placeFor}`;
       }
 
       if (showSearch && showPrice && price === "asc") {
-        url = `http://localhost:3000/holiday?q=${searchVal}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}&_sort=price&_order=asc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?q=${searchVal}&_sort=price&_order=asc`;
       }
       if (showSearch && showPrice && price === "desc") {
-        url = `http://localhost:3000/holiday?q=${searchVal}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}&_sort=price&_order=desc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?q=${searchVal}&_sort=price&_order=desc`;
       }
 
-
-      if (showRating && rating === "asc" ) {
-        url = `http://localhost:3000/holiday?_sort=rating&_order=asc`;
+      if (showRating && rating === "asc") {
+        url = `https://voyawander-json-szvk.onrender.com/holiday?_sort=rating&_order=asc`;
       }
-      if (showRating && rating === "desc" ) {
-        url = `http://localhost:3000/holiday?_sort=rating&_order=desc`;
-      }
-
-      if ( showPlace && showRating && rating === "asc" ) {
-        url = `http://localhost:3000/holiday?place=${place}&_sort=rating&_order=asc`;
-      }
-      if ( showPlace && showRating && rating === "desc" ) {
-        url = `http://localhost:3000/holiday?place=${place}&_sort=rating&_order=desc`;
+      if (showRating && rating === "desc") {
+        url = `https://voyawander-json-szvk.onrender.com/holiday?_sort=rating&_order=desc`;
       }
 
-      if ( showPlaceFor && showRating && rating === "asc" ) {
-        url = `http://localhost:3000/holiday?type=${placeFor}&_sort=rating&_order=asc`;
+      if (showPlace && showRating && rating === "asc") {
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&_sort=rating&_order=asc`;
       }
-      if ( showPlaceFor && showRating && rating === "desc" ) {
-        url = `http://localhost:3000/holiday?&type=${placeFor}&_sort=rating&_order=desc`;
-      }
-
-      if (showPlace && showPlaceFor && showRating && rating === "asc" ) {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}&_sort=rating&_order=asc`;
-      }
-      if (showPlace &&  showPlaceFor && showRating && rating === "desc" ) {
-        url = `http://localhost:3000/holiday?place=${place}&type=${placeFor}&_sort=rating&_order=desc`;
+      if (showPlace && showRating && rating === "desc") {
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&_sort=rating&_order=desc`;
       }
 
+      if (showPlaceFor && showRating && rating === "asc") {
+        url = `https://voyawander-json-szvk.onrender.com/holiday?type=${placeFor}&_sort=rating&_order=asc`;
+      }
+      if (showPlaceFor && showRating && rating === "desc") {
+        url = `https://voyawander-json-szvk.onrender.com/holiday?&type=${placeFor}&_sort=rating&_order=desc`;
+      }
+
+      if (showPlace && showPlaceFor && showRating && rating === "asc") {
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&type=${placeFor}&_sort=rating&_order=asc`;
+      }
+      if (showPlace && showPlaceFor && showRating && rating === "desc") {
+        url = `https://voyawander-json-szvk.onrender.com/holiday?place=${place}&type=${placeFor}&_sort=rating&_order=desc`;
+      }
 
       if (
         showSearch &&
@@ -185,7 +201,8 @@ useEffect(()=>{
         price === "asc" &&
         showPlace
       ) {
-        url = `http://localhost:3000/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=asc`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=asc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=asc`;
       }
       if (
         showSearch &&
@@ -194,13 +211,9 @@ useEffect(()=>{
         price === "desc" &&
         showPlace
       ) {
-        url = `http://localhost:3000/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=desc`;
+        url = `  http://localhost:8080/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=desc`;
+        url = `https://voyawander-json-szvk.onrender.com/holiday?q=${searchVal}&type=${placeFor}&place=${place}&_sort=price&_order=desc`;
       }
-
-
-
-
-
 
       console.log(url);
 
@@ -212,7 +225,14 @@ useEffect(()=>{
         console.log(err);
       }
     };
-    fetchData(destination, place, searchVal, placeFor, showPlaceFor,showRating);
+    fetchData(
+      destination,
+      place,
+      searchVal,
+      placeFor,
+      showPlaceFor,
+      showRating
+    );
   }, [
     destination,
     place,
@@ -223,7 +243,7 @@ useEffect(()=>{
     placeFor,
     showPlaceFor,
     showRating,
-    rating
+    rating,
   ]);
 
   return (
@@ -240,9 +260,12 @@ useEffect(()=>{
         handleSearchSubmit,
         handlePlaceFor,
         handleRating,
-        fetchDataId
-      }}
-    >
+        fetchDataId,
+        handleNextPage,
+        handlePrevPage,
+        page,
+        singleProductData
+      }}>
       {children}
     </HolidayContext.Provider>
   );

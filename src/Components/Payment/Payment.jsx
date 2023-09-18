@@ -1,68 +1,100 @@
-
-import { Box, Button, Checkbox, Flex, FormControl, HStack, IconButton, Image, Input, Modal, ModalBody, ModalContent, ModalOverlay, PinInput, PinInputField, Radio, RadioGroup, Select, Spacer, Text, VStack, useDisclosure, useToast } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
-import { AiFillCheckCircle, AiFillTag } from 'react-icons/ai';
-import { BsFill1SquareFill, BsFill2SquareFill, BsFill3SquareFill, BsFill4SquareFill, BsFillInfoCircleFill, BsLightningChargeFill } from 'react-icons/bs';
-import { FaUserFriends } from 'react-icons/fa';
-import { GrFormAdd, GrFormSubtract, GrRadialSelected } from 'react-icons/gr';
-import { TfiHeadphoneAlt } from 'react-icons/tfi';
-import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux';
+import {
+  Box,
+  Button,
+  Checkbox,
+  Flex,
+  FormControl,
+  HStack,
+  IconButton,
+  Image,
+  Input,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalOverlay,
+  PinInput,
+  PinInputField,
+  Radio,
+  RadioGroup,
+  Select,
+  Spacer,
+  Text,
+  VStack,
+  useDisclosure,
+  useToast,
+} from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { AiFillCheckCircle, AiFillTag } from "react-icons/ai";
+import {
+  BsFill1SquareFill,
+  BsFill2SquareFill,
+  BsFill3SquareFill,
+  BsFill4SquareFill,
+  BsFillInfoCircleFill,
+  BsLightningChargeFill,
+} from "react-icons/bs";
+import { FaUserFriends } from "react-icons/fa";
+import { GrFormAdd, GrFormSubtract, GrRadialSelected } from "react-icons/gr";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import "./common-style/index.css";
+import { removeSingleProduct } from "../../Redux/payment/action-creator";
 
 function Payment() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const theme = useSelector(state => state.theme);
-  const storedata = useSelector(state => state.detail)
-  const [start, setstart] = useState('');
-  const [end, setend] = useState('');
-  const len = storedata?.destinations?.length
-  const [traveller, settraveller] = useState(1);
-  const toast = useToast()
-  const navigate = useNavigate()
-  const [chk, setchk]=useState(false)
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const theme = useSelector((state) => state.theme);
+  const storedata = useSelector((state) => state.detail);
+  const [start, setstart] = useState("");
+  const [end, setend] = useState("");
+  const len = storedata?.destinations?.length;
+  const [traveller, settraveller] = useState(storedata.group_size || 1);
+  const toast = useToast();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [chk, setchk] = useState(false);
   const [pin, setpin] = useState({
-    first: '',
-    sec: '',
-    third: '',
-    fourth: ''
-  })
+    first: "",
+    sec: "",
+    third: "",
+    fourth: "",
+  });
   const [formdata, setformdata] = useState({
-    title: '',
-    first_N: '',
-    last_N: '',
-    email: '',
-    phone:'',
-    day:'',
-    month:'',
-    year:'',
-    gender:'',
-    nationality:'',
-    c_holder:'',
-    c_number:'',
-    exp_day:'',
-    cvv:''
-  })
+    title: "",
+    first_N: "",
+    last_N: "",
+    email: "",
+    phone: "",
+    day: "",
+    month: "",
+    year: "",
+    gender: "",
+    nationality: "",
+    c_holder: "",
+    c_number: "",
+    exp_day: "",
+    cvv: "",
+  });
 
   useEffect(() => {
-
     window.scrollTo({
-      top: 0, 
+      top: 0,
     });
 
     storedata?.destinations?.filter((el, i) => {
       if (i === 0) {
-        setstart(el)
+        setstart(el);
       }
       if (i === len - 1) {
-        setend(el)
+        setend(el);
       }
       return el;
-    })
-  }, [])
+    });
+  }, []);
 
   const handlePayment = () => {
-    const Pr = traveller * 100;
-    const checkout = Number(Pr * 10);
+    const Pr = traveller * storedata?.price_per_day * 100;
+    const checkout = Number(Pr * 1);
     console.log(checkout);
     const options = {
       key: "rzp_test_dnv3nQiWbqzTGt",
@@ -70,9 +102,12 @@ function Payment() {
       currency: "INR",
       name: "Voyawondar",
       description: "Payment",
-      image: "https://shrtco.de/hGmWAe",
+      image: "https://rb.gy/6cdbi",
       handler: function (response) {
-        navigate("/");
+        console.log(response);
+        dispatch(removeSingleProduct());
+        // navigate("/");
+        navigate("/payment-success");
         // Update the state to indicate payment completion
       },
     };
@@ -81,13 +116,11 @@ function Payment() {
     rzp1.open();
   };
 
-
   return (
     <Box
       minH={"100vh"}
       bg={theme ? "#101214" : "gray.100"}
-      color={theme ? "white" : "blackAlpha.800"}
-    >
+      color={theme ? "white" : "blackAlpha.800"}>
       {/* <Toggle /> */}
       {/* navbar-box */}
       <Box bg={theme ? "#191b1d" : "white"} py={"15px"}>
@@ -102,8 +135,7 @@ function Payment() {
 
           <Text
             display={{ base: "none", md: "block", lg: "block" }}
-            pr={"10px"}
-          >
+            pr={"10px"}>
             +1 844 311 8331
           </Text>
           <HStack
@@ -112,8 +144,7 @@ function Payment() {
             display={{ base: "none", md: "flex", lg: "flex" }}
             borderRadius={"20px"}
             py={"10px"}
-            px={"18px"}
-          >
+            px={"18px"}>
             <TfiHeadphoneAlt />
             <Box color={theme ? "white" : "blackAlpha.800"} colorScheme="none">
               Book as Travel Agent
@@ -128,8 +159,7 @@ function Payment() {
         <Flex py={"30px"}>
           <Text
             fontSize={{ base: "20px", md: "33px", lg: "33px" }}
-            fontWeight={"600"}
-          >
+            fontWeight={"600"}>
             {storedata?.title}
           </Text>
           <Spacer />
@@ -139,8 +169,7 @@ function Payment() {
             color={theme ? "white" : "blackAlpha.800"}
             mr={"10px"}
             borderRadius={"20px"}
-            display={{ base: "none", md: "block", lg: "block" }}
-          >
+            display={{ base: "none", md: "block", lg: "block" }}>
             Help
           </Button>
           <Button
@@ -148,8 +177,7 @@ function Payment() {
             bg={theme ? "#191b1d" : "white"}
             color={theme ? "white" : "blackAlpha.800"}
             borderRadius={"20px"}
-            display={{ base: "none", md: "block", lg: "block" }}
-          >
+            display={{ base: "none", md: "block", lg: "block" }}>
             Share Tour
           </Button>
         </Flex>
@@ -162,8 +190,7 @@ function Payment() {
               boxShadow={"md"}
               p={"20px"}
               bg={theme ? "#191b1d" : "white"}
-              borderRadius={"15px"}
-            >
+              borderRadius={"15px"}>
               <Text pb={"20px"} fontSize={"20px"} fontWeight={"600"}>
                 Your adventure overview
               </Text>
@@ -176,8 +203,7 @@ function Payment() {
                     base: "15px 15px 0 0",
                     md: "15px 0 0 15px",
                     lg: "15px 0 0 15px",
-                  }}
-                >
+                  }}>
                   <Text fontSize={"18px"} fontWeight={"700"}>
                     Sunday, August 20th, 2023
                   </Text>
@@ -192,8 +218,7 @@ function Payment() {
                     base: "0 0 15px 15px",
                     md: "0 15px 15px 0",
                     lg: "0 15px 15px 0",
-                  }}
-                >
+                  }}>
                   <Flex py={"5px"}>
                     <AiFillCheckCircle size={"35px"} />
                     <Text pt={"5px"} px={"10px"}>
@@ -205,7 +230,7 @@ function Payment() {
                   <Flex py={"5px"}>
                     <FaUserFriends size={"25px"} />
                     <Text px={"10px"}>
-                      6 spaces left and yours is reserved for the next 10
+                      A few spaces left and yours is reserved for the next 10
                       minutes
                     </Text>
                   </Flex>
@@ -227,16 +252,14 @@ function Payment() {
               p={"20px"}
               borderRadius={"15px"}
               bg={theme ? "#191b1d" : "white"}
-              boxShadow={"md"}
-            >
+              boxShadow={"md"}>
               <HStack>
                 <BsFill1SquareFill size={"30px"} />
                 <Text
                   pb={"5px"}
                   fontWeight={"700"}
                   fontSize={"20px"}
-                  px={"10px"}
-                >
+                  px={"10px"}>
                   How many are travelling?
                 </Text>
               </HStack>
@@ -255,9 +278,9 @@ function Payment() {
                   />
                   <Text px={"10px"}>{traveller}</Text>
                   <IconButton
-                    isDisabled={traveller === storedata?.group_size}
+                    // isDisabled={traveller === storedata?.group_size}
                     onClick={() => {
-                      settraveller((pre) => pre + 1);
+                      settraveller((pre) => +pre + 1);
                     }}
                     icon={<GrFormAdd size={"25px"} />}
                     rounded={"full"}
@@ -271,8 +294,7 @@ function Payment() {
               p={"20px"}
               bg={theme ? "#191b1d" : "white"}
               boxShadow={"md"}
-              borderRadius={"15px"}
-            >
+              borderRadius={"15px"}>
               <HStack>
                 <BsFill2SquareFill size={"30px"} />
                 <Text px={"10px"} fontWeight={"700"} fontSize={"20px"}>
@@ -284,14 +306,12 @@ function Payment() {
                 borderRadius={"15px"}
                 p={"20px"}
                 bg={theme ? "gray.800" : "gray.200"}
-                my={"25px"}
-              >
+                my={"25px"}>
                 <BsFillInfoCircleFill size={"25px"} />
                 <HStack
                   px={"10px"}
                   fontWeight={{ base: "500", md: "700", lg: "700" }}
-                  fontSize={{ base: "14px", md: "16", lg: "16" }}
-                >
+                  fontSize={{ base: "14px", md: "16", lg: "16" }}>
                   <Text>Please note:</Text>
                   <Text>
                     {" "}
@@ -318,32 +338,28 @@ function Payment() {
                     value="Mr."
                     onChange={(e) => {
                       setformdata({ ...formdata, title: e.target.value });
-                    }}
-                  >
+                    }}>
                     Mr.
                   </Radio>
                   <Radio
                     value="Ms."
                     onChange={(e) => {
                       setformdata({ ...formdata, title: e.target.value });
-                    }}
-                  >
+                    }}>
                     Ms.
                   </Radio>
                   <Radio
                     value="Mrs."
                     onChange={(e) => {
                       setformdata({ ...formdata, title: e.target.value });
-                    }}
-                  >
+                    }}>
                     Mrs.
                   </Radio>
                   <Radio
                     value="Miss"
                     onChange={(e) => {
                       setformdata({ ...formdata, title: e.target.value });
-                    }}
-                  >
+                    }}>
                     Miss
                   </Radio>
                 </HStack>
@@ -357,11 +373,10 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "90px",
                       paddingLeft: "6px",
-                    }}
-                  >
+                    }}>
                     First Name*
                   </label>
                   <Input
@@ -373,6 +388,7 @@ function Payment() {
                     size={"lg"}
                     border={"1px solid silver"}
                     type="text"
+                    className="inpt"
                   />
                 </VStack>
                 <VStack align={"left"} my={"20px"}>
@@ -383,14 +399,14 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "85px",
                       paddingLeft: "6px",
-                    }}
-                  >
+                    }}>
                     Last Name*
                   </label>
                   <Input
+                    className="inpt"
                     autoComplete="on"
                     onChange={(e) => {
                       setformdata({ ...formdata, last_N: e.target.value });
@@ -409,14 +425,14 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "55px",
                       paddingLeft: "6px",
-                    }}
-                  >
+                    }}>
                     Email*
                   </label>
                   <Input
+                    className="inpt"
                     autoComplete="on"
                     onChange={(e) => {
                       setformdata({ ...formdata, email: e.target.value });
@@ -435,14 +451,14 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "115px",
                       paddingLeft: "6px",
-                    }}
-                  >
+                    }}>
                     Phone Number*
                   </label>
                   <Input
+                    className="inpt"
                     autoComplete="on"
                     onChange={(e) => {
                       setformdata({ ...formdata, phone: e.target.value });
@@ -467,11 +483,10 @@ function Payment() {
                         fontSize: "14px",
                         fontWeight: "700",
                         backgroundColor: theme ? "#191b1d" : "white",
-                        zIndex: "4",
+                        zIndex: "1",
                         width: "35px",
                         paddingLeft: "6px",
-                      }}
-                    >
+                      }}>
                       Day
                     </label>
                     <Select
@@ -480,198 +495,229 @@ function Payment() {
                       }}
                       size={"lg"}
                       w={"80px"}
-                      border={"1px solid silver"}
-                    >
+                      border={"1px solid silver"}>
                       <option
                         value=""
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         {" "}
                       </option>
                       <option
                         value="01"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         01
                       </option>
                       <option
                         value="02"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         02
                       </option>
                       <option
                         value="03"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         03
                       </option>
                       <option
                         value="04"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         04
                       </option>
                       <option
                         value="05"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         05
                       </option>
                       <option
                         value="06"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         06
                       </option>
                       <option
                         value="07"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         07
                       </option>
                       <option
                         value="08"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         08
                       </option>
                       <option
                         value="09"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         09
                       </option>
                       <option
                         value="10"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         10
                       </option>
                       <option
                         value="11"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         11
                       </option>
                       <option
                         value="12"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         12
                       </option>
                       <option
                         value="13"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         13
                       </option>
                       <option
                         value="14"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         14
                       </option>
                       <option
                         value="15"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         15
                       </option>
                       <option
                         value="16"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         16
                       </option>
                       <option
                         value="17"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         17
                       </option>
                       <option
                         value="18"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         18
                       </option>
                       <option
                         value="19"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         19
                       </option>
                       <option
                         value="20"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         20
                       </option>
                       <option
                         value="21"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         21
                       </option>
                       <option
                         value="22"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         22
                       </option>
                       <option
                         value="23"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         23
                       </option>
                       <option
                         value="24"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         24
                       </option>
                       <option
                         value="25"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         25
                       </option>
                       <option
                         value="26"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         26
                       </option>
                       <option
                         value="27"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         27
                       </option>
                       <option
                         value="28"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         28
                       </option>
                       <option
                         value="29"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         29
                       </option>
                       <option
                         value="30"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         30
                       </option>
                       <option
                         value="31"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         31
                       </option>
                     </Select>
@@ -685,11 +731,10 @@ function Payment() {
                         fontSize: "14px",
                         fontWeight: "700",
                         backgroundColor: theme ? "#191b1d" : "white",
-                        zIndex: "4",
+                        zIndex: "1",
                         width: "58px",
                         paddingLeft: "6px",
-                      }}
-                    >
+                      }}>
                       Month
                     </label>
                     <Select
@@ -699,84 +744,96 @@ function Payment() {
                       bg={theme ? "#191b1d" : "white"}
                       size={"lg"}
                       w={{ base: "100px", md: "145px", lg: "145px" }}
-                      border={"1px solid silver"}
-                    >
+                      border={"1px solid silver"}>
                       <option
                         value="00"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         {" "}
                       </option>
                       <option
                         value="01"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         January
                       </option>
                       <option
                         value="02"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         February
                       </option>
                       <option
                         value="03"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         March
                       </option>
                       <option
                         value="04"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         April
                       </option>
                       <option
                         value="05"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         May
                       </option>
                       <option
                         value="06"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         June
                       </option>
                       <option
                         value="07"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         July
                       </option>
                       <option
                         value="08"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         August
                       </option>
                       <option
                         value="09"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         September
                       </option>
                       <option
                         value="10"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         October
                       </option>
                       <option
                         value="11"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         November
                       </option>
                       <option
                         value="12"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         December
                       </option>
                     </Select>
@@ -790,11 +847,10 @@ function Payment() {
                         fontSize: "14px",
                         fontWeight: "700",
                         backgroundColor: theme ? "#191b1d" : "white",
-                        zIndex: "4",
+                        zIndex: "1",
                         width: "40px",
                         paddingLeft: "6px",
-                      }}
-                    >
+                      }}>
                       Year
                     </label>
                     <Select
@@ -803,148 +859,171 @@ function Payment() {
                       }}
                       size={"lg"}
                       w={"80px"}
-                      border={"1px solid silver"}
-                    >
+                      border={"1px solid silver"}>
                       <option
                         value=""
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      ></option>
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}></option>
                       <option
                         value="1988"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1988
                       </option>
                       <option
                         value="1989"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1989
                       </option>
                       <option
                         value="1990"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1990
                       </option>
                       <option
                         value="1991"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1991
                       </option>
                       <option
                         value="1992"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1992
                       </option>
                       <option
                         value="1993"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1993
                       </option>
                       <option
                         value="1994"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1994
                       </option>
                       <option
                         value="1995"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1995
                       </option>
                       <option
                         value="1996"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1996
                       </option>
                       <option
                         value="1997"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1997
                       </option>
                       <option
                         value="1998"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1998
                       </option>
                       <option
                         value="1999"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         1999
                       </option>
                       <option
                         value="2000"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2000
                       </option>
                       <option
                         value="2001"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2001
                       </option>
                       <option
                         value="2002"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2002
                       </option>
                       <option
                         value="2003"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2003
                       </option>
                       <option
                         value="2004"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2004
                       </option>
                       <option
                         value="2005"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2005
                       </option>
                       <option
                         value="2006"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2006
                       </option>
                       <option
                         value="2007"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2007
                       </option>
                       <option
                         value="2008"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2008
                       </option>
                       <option
                         value="2009"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2009
                       </option>
                       <option
                         value="2010"
-                        style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                      >
+                        style={{
+                          backgroundColor: theme ? "#191b1d" : "white",
+                        }}>
                         2010
                       </option>
                     </Select>
@@ -959,16 +1038,14 @@ function Payment() {
                       value="male"
                       onChange={(e) => {
                         setformdata({ ...formdata, gender: e.target.value });
-                      }}
-                    >
+                      }}>
                       Male
                     </Radio>
                     <Radio
                       value="female"
                       onChange={(e) => {
                         setformdata({ ...formdata, gender: e.target.value });
-                      }}
-                    >
+                      }}>
                       Female
                     </Radio>
                   </HStack>
@@ -982,11 +1059,10 @@ function Payment() {
                       fontSize: "14px",
                       fontWeight: "700",
                       backgroundColor: theme ? "#191b1d" : "white",
-                      zIndex: "4",
+                      zIndex: "1",
                       width: "90px",
                       paddingLeft: "6px",
-                    }}
-                  >
+                    }}>
                     Nationality*
                   </label>
                   <Select
@@ -995,58 +1071,50 @@ function Payment() {
                     }}
                     w={"45%"}
                     size={"lg"}
-                    border={"1px solid silver"}
-                  >
+                    border={"1px solid silver"}>
                     <option
                       value=""
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    ></option>
+                      style={{
+                        backgroundColor: theme ? "#191b1d" : "white",
+                      }}></option>
                     <option
                       value="India"
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    >
+                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}>
                       India
                     </option>
                     <option
                       value="Russia"
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    >
+                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}>
                       Russia
                     </option>
                     <option
                       value="Nepal"
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    >
+                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}>
                       Nepal
                     </option>
                     <option
                       value="Sri_lanka"
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    >
+                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}>
                       Sri lanka
                     </option>
                     <option
                       value="Bhutan"
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    >
+                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}>
                       Bhutan
                     </option>
                     <option
                       value="France"
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    >
+                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}>
                       France
                     </option>
                     <option
                       value="USA"
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    >
+                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}>
                       USA
                     </option>
                     <option
                       value="Germany"
-                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}
-                    >
+                      style={{ backgroundColor: theme ? "#191b1d" : "white" }}>
                       Germany
                     </option>
                   </Select>
@@ -1059,16 +1127,14 @@ function Payment() {
               p={"20px"}
               borderRadius={"15px"}
               bg={theme ? "#191b1d" : "white"}
-              boxShadow={"md"}
-            >
+              boxShadow={"md"}>
               <HStack>
                 <BsFill3SquareFill size={"30px"} />
                 <Text
                   pb={"5px"}
                   fontWeight={"700"}
                   fontSize={"20px"}
-                  px={"10px"}
-                >
+                  px={"10px"}>
                   Voyawondar Savings
                 </Text>
               </HStack>
@@ -1085,8 +1151,7 @@ function Payment() {
                     duration: 3000,
                     isClosable: true,
                   });
-                }}
-              >
+                }}>
                 Redeem Promo Code
               </Text>
             </Box>
@@ -1096,16 +1161,14 @@ function Payment() {
               p={"20px"}
               boxShadow={"md"}
               bg={theme ? "#191b1d" : "white"}
-              borderRadius={"15px"}
-            >
+              borderRadius={"15px"}>
               <HStack>
                 <BsFill4SquareFill size={"30px"} />
                 <Text
                   pb={"5px"}
                   fontWeight={"700"}
                   fontSize={"20px"}
-                  px={"10px"}
-                >
+                  px={"10px"}>
                   Add payment details
                 </Text>
               </HStack>
@@ -1114,15 +1177,13 @@ function Payment() {
                 p={"15px"}
                 my={"20px"}
                 bg={theme ? "gray.800" : "gray.200"}
-                borderRadius={"15px"}
-              >
+                borderRadius={"15px"}>
                 <BsFillInfoCircleFill size={"20px"} />
                 <Text
                   px={"10px"}
                   fontSize={{ base: "14px", md: "16px", lg: "16px" }}
                   fontWeight={"400"}
-                  color={theme ? "white" : "blackAlpha.800"}
-                >
+                  color={theme ? "white" : "blackAlpha.800"}>
                   This is a secure and SSL encrypted payment. Your credit card
                   details are safe.
                 </Text>
@@ -1135,20 +1196,17 @@ function Payment() {
                   boxShadow={"md"}
                   border={"1px solid silver"}
                   bg={theme ? "#191b1d" : "white"}
-                  borderRadius={"15px"}
-                >
+                  borderRadius={"15px"}>
                   <HStack
                     borderBottom={"1px solid silver"}
                     p={"15px"}
-                    borderRadius={"15px 15px 0 0 "}
-                  >
+                    borderRadius={"15px 15px 0 0 "}>
                     <GrRadialSelected size={"20px"} color={"blue"} />
                     <Text
                       px={"10px"}
                       fontSize={"16px"}
                       fontWeight={"400"}
-                      color={theme ? "white" : "blackAlpha.800"}
-                    >
+                      color={theme ? "white" : "blackAlpha.800"}>
                       Pay by card
                     </Text>
                     <Spacer />
@@ -1184,14 +1242,14 @@ function Payment() {
                           fontSize: "14px",
                           fontWeight: "700",
                           backgroundColor: theme ? "#191b1d" : "white",
-                          zIndex: "4",
+                          zIndex: "1",
                           width: "125px",
                           paddingLeft: "5px",
-                        }}
-                      >
+                        }}>
                         Cardholder Name
                       </label>
                       <Input
+                        className="inpt"
                         autoComplete="on"
                         onChange={(e) => {
                           setformdata({
@@ -1212,14 +1270,14 @@ function Payment() {
                           fontSize: "14px",
                           fontWeight: "700",
                           backgroundColor: theme ? "#191b1d" : "white",
-                          zIndex: "4",
+                          zIndex: "1",
                           width: "110px",
                           paddingLeft: "5px",
-                        }}
-                      >
+                        }}>
                         Card Number *
                       </label>
                       <Input
+                        className="inpt"
                         autoComplete="on"
                         onChange={(e) => {
                           setformdata({
@@ -1237,8 +1295,7 @@ function Payment() {
                     <Flex direction={{ base: "column", md: "row", lg: "row" }}>
                       <Flex
                         direction={"column"}
-                        w={{ base: "60%", md: "20%", lg: "20%" }}
-                      >
+                        w={{ base: "60%", md: "20%", lg: "20%" }}>
                         <label
                           style={{
                             marginBottom: "-10px",
@@ -1246,14 +1303,14 @@ function Payment() {
                             fontSize: "14px",
                             fontWeight: "700",
                             backgroundColor: theme ? "#191b1d" : "white",
-                            zIndex: "4",
+                            zIndex: "1",
                             width: "95px",
                             paddingLeft: "3px",
-                          }}
-                        >
+                          }}>
                           Expiry Date *
                         </label>
                         <Input
+                          className="inpt"
                           onChange={(e) => {
                             setformdata({
                               ...formdata,
@@ -1270,8 +1327,7 @@ function Payment() {
                         direction={"column"}
                         w={{ base: "60%", md: "20%", lg: "20%" }}
                         ml={{ base: "0%", md: "5%", lg: "5%" }}
-                        mt={{ base: "15px", md: "0px", lg: "0px" }}
-                      >
+                        mt={{ base: "15px", md: "0px", lg: "0px" }}>
                         <label
                           style={{
                             marginBottom: "-10px",
@@ -1279,14 +1335,14 @@ function Payment() {
                             fontSize: "14px",
                             fontWeight: "700",
                             backgroundColor: theme ? "#191b1d" : "white",
-                            zIndex: "4",
+                            zIndex: "1",
                             width: "45px",
                             paddingLeft: "3px",
-                          }}
-                        >
+                          }}>
                           CVV *
                         </label>
                         <Input
+                          className="inpt"
                           onChange={(e) => {
                             setformdata({ ...formdata, cvv: e.target.value });
                           }}
@@ -1305,13 +1361,11 @@ function Payment() {
                       size="md"
                       onChange={() => {
                         setchk(!chk);
-                      }}
-                    ></Checkbox>
+                      }}></Checkbox>
                     <Text
                       pl={"15px"}
                       mt={"45px"}
-                      fontSize={{ base: "14px", md: "16px", lg: "16px" }}
-                    >
+                      fontSize={{ base: "14px", md: "16px", lg: "16px" }}>
                       I accept Voyawondar's{" "}
                       <span style={{ color: "#008cc9" }}>
                         Terms & Conditions
@@ -1371,8 +1425,7 @@ function Payment() {
                   colorScheme="none"
                   bg={"#008cc9"}
                   py={"30px"}
-                  mt={"30px"}
-                >
+                  mt={"30px"}>
                   Book Spaces
                 </Button>
                 <Button
@@ -1382,8 +1435,7 @@ function Payment() {
                   colorScheme="none"
                   bg={"#008cc9"}
                   py={"30px"}
-                  mt={"30px"}
-                >
+                  mt={"30px"}>
                   Pay Now
                 </Button>
                 <Modal isOpen={isOpen}>
@@ -1442,8 +1494,7 @@ function Payment() {
                             fontWeight={"500"}
                             fontSize={"12px"}
                             pt={"15px"}
-                            cursor={"pointer"}
-                          >
+                            cursor={"pointer"}>
                             RESEND
                           </Text>
                         </HStack>
@@ -1460,7 +1511,7 @@ function Payment() {
                           pin.third == 3 &&
                           pin.fourth == 7
                         ) {
-                          navigate("/payment-successful");
+                          navigate("/payment-success");
                         } else {
                           toast({
                             description: "Payment failed",
@@ -1470,8 +1521,7 @@ function Payment() {
                             isClosable: true,
                           });
                         }
-                      }}
-                    >
+                      }}>
                       Enter OTP
                     </Button>
                   </ModalContent>
@@ -1483,7 +1533,7 @@ function Payment() {
                     <span style={{ fontWeight: "500" }}>
                       You will be charged
                     </span>{" "}
-                    ₹{storedata?.act_price?.toLocaleString("en-US")}{" "}
+                    ₹{storedata?.price_per_day?.toLocaleString("en-US")}{" "}
                     <span style={{ fontWeight: "500" }}>
                       now. The remaining balance is due on
                     </span>{" "}
@@ -1504,8 +1554,7 @@ function Payment() {
               p={"20px"}
               borderRadius={"15px"}
               bg={theme ? "#191b1d" : "white"}
-              boxShadow={"md"}
-            >
+              boxShadow={"md"}>
               <Text mt={"15px"} fontWeight={"700"} fontSize={"17px"}>
                 Terms & Conditions
               </Text>
@@ -1519,8 +1568,7 @@ function Payment() {
               <Flex
                 justifyContent={"space-between"}
                 w={"70%"}
-                direction={{ base: "column", md: "row", lg: "row" }}
-              >
+                direction={{ base: "column", md: "row", lg: "row" }}>
                 <Box lineHeight={"23px"}>
                   <Text mt={"13px"} fontWeight={"700"} fontSize={"15px"}>
                     Operated by Expat Explore Travel
@@ -1546,8 +1594,7 @@ function Payment() {
               borderRadius={"15px"}
               bg={theme ? "#191b1d" : "white"}
               boxShadow={"md"}
-              lineHeight={"25px"}
-            >
+              lineHeight={"25px"}>
               <Text pb={"15px"} fontSize={"20px"} fontWeight={"700"}>
                 My Trip
               </Text>
@@ -1602,37 +1649,76 @@ function Payment() {
 }
 
 function Pricediv({ theme, storedata, traveller }) {
-  return <Box p={'20px'} my={'25px'} borderRadius={'15px'} bg={theme ? '#191b1d' : 'white'} boxShadow={'md'} position={'sticky'} top={'20px'}>
-    <Text pb={'20px'} fontSize={'20px'} fontWeight={'700'}>Price Breakdown</Text>
-    <Flex justifyContent={'space-between'}>
-      <Box pb={'14px'}>
-        <Text>Base price</Text>
-        <Text fontSize={'14px'}>{traveller} Traveller x ₹{(storedata?.str_price)?.toLocaleString("en-US")}</Text>
-      </Box>
-      <Text>₹ {(traveller * storedata?.str_price)?.toLocaleString("en-US")}</Text>
-    </Flex>
-    <Flex justifyContent={'space-between'} pb={'15px'} borderBottom={'1px solid silver'}>
-      <Text>Discount</Text>
-      <Text>- ₹ {(traveller * storedata?.save_price)?.toLocaleString("en-US")}</Text>
-    </Flex>
-    <Flex justifyContent={'space-between'} pt={'20px'}>
-      <Text fontWeight={'700'}>Total due</Text>
-      <Text fontSize={'20px'} fontWeight={'700'}>₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}</Text>
-    </Flex>
-    <Flex lineHeight={'45px'} direction={'column'} mt={'10px'} p={'5px'} bg={theme ? 'gray.800' : 'gray.100'} borderRadius={'10px'}>
-      <Flex>
-        <Text fontWeight={'700'}>Due today</Text>
-        <Spacer />
-        <Text fontWeight={'700'}>₹ {(traveller * storedata?.price_per_day)?.toLocaleString("en-US")}</Text>
+  return (
+    <Box
+      p={"20px"}
+      my={"25px"}
+      borderRadius={"15px"}
+      bg={theme ? "#191b1d" : "white"}
+      boxShadow={"md"}
+      position={"sticky"}
+      top={"20px"}>
+      <Text pb={"20px"} fontSize={"20px"} fontWeight={"700"}>
+        Price Breakdown
+      </Text>
+      <Flex justifyContent={"space-between"}>
+        <Box pb={"14px"}>
+          <Text>Base price</Text>
+          <Text fontSize={"14px"}>
+            {traveller} Traveller x ₹
+            {storedata?.price_per_day?.toLocaleString("en-US")}
+          </Text>
+        </Box>
+        <Text>
+          ₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}
+        </Text>
       </Flex>
-      <Flex>
-        <Text>Due on 1 Oct, 2023</Text>
-        <Spacer />
-        <Text>₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}</Text>
+      <Flex
+        justifyContent={"space-between"}
+        pb={"15px"}
+        borderBottom={"1px solid silver"}>
+        <Text>Discount</Text>
+        <Text>- ₹ {storedata?.save_price?.toLocaleString("en-US")}</Text>
       </Flex>
-    </Flex>
-  </Box>
-
+      <Flex justifyContent={"space-between"} pt={"20px"}>
+        <Text fontWeight={"700"}>Total due</Text>
+        <Text fontSize={"20px"} fontWeight={"700"}>
+          ₹{" "}
+          {(
+            traveller * storedata?.price_per_day * storedata.tour_length -
+            storedata?.save_price
+          )?.toLocaleString("en-US")}
+        </Text>
+      </Flex>
+      <Flex
+        lineHeight={"45px"}
+        direction={"column"}
+        mt={"10px"}
+        p={"5px"}
+        bg={theme ? "gray.800" : "gray.100"}
+        borderRadius={"10px"}>
+        <Flex>
+          <Text fontWeight={"700"}>Due today</Text>
+          <Spacer />
+          <Text fontWeight={"700"}>
+            ₹ {(traveller * storedata?.price_per_day)?.toLocaleString("en-US")}
+          </Text>
+        </Flex>
+        <Flex>
+          <Text>Due on 1 Oct, 2023</Text>
+          <Spacer />
+          <Text>
+            ₹{" "}
+            {(
+              traveller * storedata?.price_per_day * storedata.tour_length -
+              storedata?.save_price -
+              traveller * storedata.price_per_day
+            )?.toLocaleString("en-US")}
+          </Text>
+        </Flex>
+      </Flex>
+    </Box>
+  );
 }
 
-export default Payment
+export default Payment;

@@ -1,37 +1,85 @@
-.holidayImage img{
-    width: 400px;
-    height: 300px;
-   
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+.HolidayComponent {
+  margin-top: 154px;
 }
-.holidayDiv{
-    border: 2px solid rgb(191, 225, 225);
-    width: 70%;
-    display: flex;
-    margin-left: 15%;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-radius: 10px;
+
+.holidayDiv {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  margin-top: 60px;
 }
-.holidayDiv button{
-    background-color: rgb(59, 174, 236);
-    border: 2px solid rgb(32, 196, 218);
-    color:"white";
-    font-size: small;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.holidayDiv img {
+  width: 300px;
+  height: 250px;
+  border-start-start-radius: 10px;
+  border-bottom-left-radius: 10px;
+  float: left;
+  margin-right: 20px;
 }
-.HolidaysCard{
-    padding-top: 100px;
+.title {
+  flex-wrap: wrap;
+  /* Adjust other styles as needed for text elements */
 }
-.details{
-    margin-top: 50px;
-    padding-left: 10%;
-   
+.flexDetailAndTitle {
+  display: flex;
+  margin-left: 20px;
 }
-.title{
-    margin-top: 50px;
-    padding-left: 10%;
+.details {
+  margin-left: 50px;
+}
+/* Clear the float to prevent text from wrapping around the image */
+
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Primary color */
+  color: #f4ecec; /* Text color */
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+  transform: translateY(-2px); /* Move the button slightly up */
+}
+
+/* Optional: Add more styles for different button states (e.g., active, disabled) */
+.button:active {
+  transform: translateY(1px); /* Move the button slightly down when clicked */
+}
+
+/* Optional: Disabled button styles */
+.button:disabled {
+  background-color: #ccc; /* Grayed-out background for disabled state */
+  color: #999; /* Grayed-out text color */
+  cursor: not-allowed; /* Show a "not allowed" cursor */
+}
+
+@media (max-width: 768px) {
+  .holidayDiv {
+    width: 90%;
+    margin-top: 40px; /* Adjust the width for smaller screens */
+  }
+
+  .holidayDiv img {
+    width: 100%; /* Make images full width on smaller screens */
+    height: auto; /* Preserve aspect ratio */
+    float: none; /* Remove float to make images stack on top of each other */
+    margin-right: 0; /* Remove margin for images */
+  }
+  .button {
+    font-size: 0.5rem;
+  }
 }

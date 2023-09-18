@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useDebugValue, useState } from "react";
 import styles from "./Navbar.module.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../Images/logo_navbar.png";
+import BorderBox from "../common-styles/BorderBox";
+import { useDispatch, useSelector } from "react-redux";
+import { userLogOut } from "../../Redux/auth/action.js";
 
 function Navbar({ isWhiteBackground, isOfferVisible }) {
   const [colorChange, setColorchange] = useState(false);
   const [sideBarHidden, setSideBarHidden] = useState(null);
-  const [isAuth, setIsAuth] = useState(false);
+  // const [isAuth, setIsAuth] = useState(false);
 
+  const { isAuth } = useSelector((state) => state.auth);
+
+  const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 30) {
@@ -38,12 +45,17 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
   };
 
   const handleLogOut = (e) => {
-    e.preventDefault();
-    setIsAuth(false);
+    try {
+      e.preventDefault();
+      dispatch(userLogOut());
+      alert("Logged out ...");
+    } catch (er) {
+      console.error(er);
+    }
   };
 
   return (
-    <>
+    <BorderBox>
       <div
         className={`${styles.blank_screen} ${
           sideBarHidden || sideBarHidden === null ? "hidden" : ""
@@ -67,7 +79,11 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         }>
         <div
           className={`${styles.navbar} max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4`}>
-          <div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              navigate("/");
+            }}>
             <span className="text-3xl font-semibold whitespace-nowrap">
               Voyawander
             </span>
@@ -99,9 +115,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
             <Link
               to={"/hotel"}
               className={`${
-                location.pathname === "/hotel"
-                  ? styles.link_active_desk
-                  : ""
+                location.pathname === "/hotel" ? styles.link_active_desk : ""
               } font-semibold`}>
               Hotels
             </Link>
@@ -110,27 +124,19 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
               className={`${
                 location.pathname === "/holidays" ? styles.link_active_desk : ""
               } font-semibold`}>
-              Holidays 
+              Holidays
             </Link>
 
             <Link
               to={"/flights"}
               className={`${
-                location.pathname.includes("/flight")
+                location.pathname.includes("/flights")
                   ? styles.link_active_desk
                   : ""
               } font-semibold`}>
               Flights
             </Link>
-            <Link
-              to={"/holiday"}
-              className={`${
-                location.pathname.includes("/holiday")
-                  ? styles.link_active_desk
-                  : ""
-              } font-semibold`}>
-              Holidays
-            </Link>
+
             <Link
               to={"/contactus"}
               className={`${
@@ -210,7 +216,7 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           onClick={handleLinkClick}
           to={"/flights"}
           className={`${
-            location.pathname.includes("/flight")
+            location.pathname.includes("/flights")
               ? styles.mobile_active_link
               : ""
           } font-semibold`}>
@@ -218,9 +224,9 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
         </Link>
         <div className={styles.hor_line}></div>
         <Link
-          to={"/holiday"}
+          to={"/holidays"}
           className={`${
-            location.pathname.includes("/holiday")
+            location.pathname.includes("/holidays")
               ? styles.mobile_active_link
               : ""
           } font-semibold`}>
@@ -236,8 +242,20 @@ function Navbar({ isWhiteBackground, isOfferVisible }) {
           Contact Us
         </Link>
         <div className={styles.hor_line}></div>
+        {!isAuth && (
+          <Link
+            to={"/login"}
+            className={`${
+              location.pathname === "/login" ? styles.link_active_desk : ""
+            } font-semibold`}>
+            Login
+          </Link>
+        )}
+        <div className={styles.hor_line}></div>
+        {isAuth && <Link onClick={handleLogOut}>Logout</Link>}
+        <div className={styles.hor_line}></div>
       </div>
-    </>
+    </BorderBox>
   );
 }
 

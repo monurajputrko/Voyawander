@@ -1,0 +1,4 @@
+.inpt:focus-visible,
+.inpt:focus {
+  z-index: 0 !important;
+}

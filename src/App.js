@@ -11,12 +11,14 @@ function App() {
   return (
     <>
       <div className="App">
-        {location.pathname !== "/login" && (
-          <Navbar isWhiteBackground={isWhite} isOfferVisible={!isWhite} />
+        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+          <Navbar isWhiteBackground={isWhite} isOfferVisible={!true} /> //isWhite
         )}
         <AllRoutes />
       </div>
-      {location.pathname !== "/login" && <Footer />}
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        <Footer />
+      )}
     </>
   );
 }

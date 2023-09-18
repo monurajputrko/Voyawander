@@ -1,80 +1,93 @@
-.container{
-    background-image: url(https://media2.thrillophilia.com/images/photos/000/082/497/original/1675261154_shutterstock_2148766633.jpg?width=975&height=600);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   }
-   
-   
-   
-   .inner {
-       background: rgba(255, 255, 255, 0.8); 
-       padding: 60px;
-       border-radius: 10px;
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-       text-align: center;
-       position: absolute;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-     }
-   
-     .input{
-       width: 340px;
-       height: 30px; 
-       border-top: none;
-       border-bottom: none;
-       border-left: none;
-       border-right: none;
-       font-family: "Gill Sans", sans-serif;
-       font-size: 15px;
-       border-radius: 10px;
-   
-     }
-   
-     .btn:hover {
-      transition-duration: 300ms;
-      background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
-    }
-   .btn {
-      background: linear-gradient(to left, rgb(0, 168, 255), rgb(2, 232, 255));
-      border-radius: 20px;
-      color: white;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      width: 320px;
-      padding: 10px 20px;
-      font-size: 15px;
-      transition-duration: 300ms;
-    }
-   
-   
-     .welcome{
-       color: #1d3f58;
-       font-family: "Gill Sans", sans-serif;
-       font-size: 11px;
-      
-     }
-     .dont{
-       color: #1d3f58;
-       font-family: "Gill Sans", sans-serif;
-     }
-     .appLogo{
-       display: grid;
-       grid-template-columns: repeat(3,1fr);
-     }
-     .images{
-       width: 30px;
-       height: 30px;
-       margin-left: 45px;
-     }
-     .link{
-        text-decoration: none;
-     }
-   
-   
+.container {
+  /* background-image: url(https://media2.thrillophilia.com/images/photos/000/082/497/original/1675261154_shutterstock_2148766633.jpg?width=975&height=600); */
+  /* background-image: url(https://wallpapercave.com/wp/wp8525914.jpg); */
+  background-image: url(https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg?w=2000);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.inner {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 60px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome {
+  margin-bottom: 1.2rem;
+}
+
+.input {
+  width: 340px;
+  height: 35px;
+  border: none;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 15px;
+  border-radius: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  margin-bottom: -10px;
+  background-color: rgb(255, 255, 255, 0.4);
+}
+.input:focus {
+  border: 1px solid rgb(0, 168, 255);
+  outline: none;
+}
+
+.btn:hover {
+  transition-duration: 300ms;
+  background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+}
+.btn {
+  background: linear-gradient(to left, rgb(0, 168, 255), rgb(2, 232, 255));
+  border-radius: 20px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 320px;
+  padding: 10px 20px;
+  font-size: 15px;
+  transition-duration: 300ms;
+}
+
+.line {
+  color: #1d3f58;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 11px;
+  margin-top: -40px;
+}
+.dont {
+  color: #1d3f58;
+  font-family: "Gill Sans", sans-serif;
+}
+.appLogo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.images {
+  width: 30px;
+  height: 30px;
+  margin-left: 45px;
+}
+.link {
+  text-decoration: none;
+}
+.logo {
+  width: 150px;
+  margin-top: -25px;
+  margin-bottom: -30px;
+}

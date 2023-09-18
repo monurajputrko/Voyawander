@@ -31,6 +31,7 @@
 .contact_form {
   margin-top: 50px;
   width: 40%;
+  margin-bottom: 50px;
 }
 
 .contact_form > form {
