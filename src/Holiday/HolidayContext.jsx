@@ -7,6 +7,7 @@ export const HolidayContextProvider = ({ children }) => {
   console.log(children);
   const [data, setData] = useState([]);
   const [singleProductData, setSingleProductData] = useState({});
+  const [hotelSingleData , setHotelSingleData] = useState({});
   const [destination, setDestination] = useState("Ladakh");
   const [departure, setDeparture] = useState("New Delhi");
   const [place, setPlace] = useState("");
@@ -83,11 +84,36 @@ export const HolidayContextProvider = ({ children }) => {
         `https://voyawander-json-szvk.onrender.com/holiday/${id}`
       );
       const res = await result.json();
+      console.log(res);
       setSingleProductData(res);
     } catch (err) {
       console.log(err);
     }
   };
+
+
+
+  const fetchHotelSingleData = async (id) => {
+    console.log("Id for Single Product Page " + id);
+    try {
+      const result = await fetch(
+        `https://voyawander-json-szvk.onrender.com/hotels/${id}`
+      );
+      const res = await result.json();
+      console.log(res);
+      setHotelSingleData(res);
+      console.log(hotelSingleData)
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+useEffect(()=>{
+fetchHotelSingleData()
+},[])
+
+  
+  
 
   console.log(singleProductData);
 
@@ -271,6 +297,8 @@ export const HolidayContextProvider = ({ children }) => {
         handleNextPage,
         handlePrevPage,
         page,
+        fetchHotelSingleData,
+        hotelSingleData,
         singleProductData
       }}>
       {children}

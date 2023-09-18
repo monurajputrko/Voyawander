@@ -1,14 +1,15 @@
 .place{
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
 }
 .HolidayPlaces_Div{
     width: 100%;
     background-color: aliceblue;
-    /* position: fixed; */
-    margin-top: -82px;
-    padding-top: 30px;
+     position: fixed;
+    margin-top: -84px;
     padding-bottom: 20px;
+  
 }
 
 .place button{
