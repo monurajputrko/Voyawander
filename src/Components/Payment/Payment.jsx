@@ -136,40 +136,12 @@ function Payment() {
 
   return (
     <Box
+      py="100px"
       minH={"100vh"}
       bg={theme ? "#101214" : "gray.100"}
       color={theme ? "white" : "blackAlpha.800"}>
       {/* <Toggle /> */}
       {/* navbar-box */}
-      <Box bg={theme ? "#191b1d" : "white"} py={"15px"}>
-        <HStack w={{ base: "95%", md: "95%", lg: "76%" }} m={"auto"}>
-          <Flex alignItems={"center"}>
-            {/* <Image src={Logo} alt='logo' w={"70px"} px={"8px"} /> */}
-            <Text fontSize={"1.2rem"} fontWeight={"800"}>
-              Voyawondar.
-            </Text>
-          </Flex>
-          <Spacer />
-
-          <Text
-            display={{ base: "none", md: "block", lg: "block" }}
-            pr={"10px"}>
-            +1 844 311 8331
-          </Text>
-          <HStack
-            _hover={{ bg: !theme ? "gray.300" : "gray.700" }}
-            bg={theme ? "gray.800" : "gray.200"}
-            display={{ base: "none", md: "flex", lg: "flex" }}
-            borderRadius={"20px"}
-            py={"10px"}
-            px={"18px"}>
-            <TfiHeadphoneAlt />
-            <Box color={theme ? "white" : "blackAlpha.800"} colorScheme="none">
-              Book as Travel Agent
-            </Box>
-          </HStack>
-        </HStack>
-      </Box>
 
       {/* Midbox-start */}
       <Box w={{ base: "92%", md: "95%", lg: "76%" }} m={"auto"}>
