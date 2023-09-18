@@ -154,7 +154,7 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1600px) {
   .allhotels {
     grid-template-columns: repeat(3, auto);
   }
