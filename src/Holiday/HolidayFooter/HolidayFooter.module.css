@@ -27,13 +27,19 @@
 .HolidayFooter {
   background-color: #f8f8f8;
   padding: 20px;
-  border-top: 2px solid red;
+  border-top: 1px solid rgb(83, 78, 78);
+  margin-top: 20px;
+  width: 100%;
+  margin-left: -10px;
+ 
 }
 
 .flexCard {
+  margin-left: -10px;
   display: flex;
-
   justify-content: space-between;
+  gap: 10px;
+
 }
 
 .footerSection {
@@ -41,7 +47,8 @@
   margin-bottom: 20px;
   padding: 20px;
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .footerSection h3 {

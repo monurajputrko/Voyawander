@@ -1,5 +1,8 @@
 .HolidayComponent {
   margin-top: 154px;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+  
 }
 
 .holidayDiv {

@@ -23,7 +23,7 @@ import {
   useDisclosure,
   useToast,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AiFillCheckCircle, AiFillTag } from "react-icons/ai";
 import {
   BsFill1SquareFill,
@@ -40,6 +40,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./common-style/index.css";
 import { removeSingleProduct } from "../../Redux/payment/action-creator";
+import HolidayContext from "../../Holiday/HolidayContext";
 
 function Payment() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -52,6 +53,21 @@ function Payment() {
   const toast = useToast()
   const navigate = useNavigate()
   const [chk, setchk]=useState(false)
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  // const theme = useSelector((state) => state.theme);
+  // const storedata = useSelector((state) => state.detail);
+  // const [start, setstart] = useState("");
+  // const [end, setend] = useState("");
+  // const len = storedata?.destinations?.length;
+  // const [traveller, settraveller] = useState(storedata.group_size || 1);
+  // const toast = useToast();
+  // const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const [chk, setchk] = useState(false);
+
+  const {singleProductData} = useContext(HolidayContext);
+  console.log(singleProductData);    // udate the data from single Product page
+
   const [pin, setpin] = useState({
     first: "",
     sec: "",
@@ -104,6 +120,10 @@ function Payment() {
       image: "https://rb.gy/6cdbi",
       handler: function (response) {
         navigate("/Payment-Success");
+        console.log(response);
+        // dispatch(removeSingleProduct());
+        // navigate("/");
+        navigate("/payment-success");
         // Update the state to indicate payment completion
       },
     };
@@ -1491,7 +1511,7 @@ function Payment() {
                           pin.third == 3 &&
                           pin.fourth == 7
                         ) {
-                          navigate("/payment-successful");
+                          navigate("/payment-success");
                         } else {
                           toast({
                             description: "Payment failed",

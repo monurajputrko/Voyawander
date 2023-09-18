@@ -11,6 +11,25 @@
     padding-bottom: 20px;
 }
 
+.place button{
+  background-color: #007bff;
+  font-weight: 400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.place button:hover{
+  background-color: white;
+  font-weight: 400;
+  color: blue;
+  font-size: large;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
 
 .button {
     background-color: #007bff;

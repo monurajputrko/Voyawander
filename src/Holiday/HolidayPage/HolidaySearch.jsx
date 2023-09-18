@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import HolidayContext from "../HolidayContext";
 import styles from "./HolidaySearch.module.css";
 const HolidaySearch = () => {
-  const { handleDestination, destination, setDestination } =
+  const { handleDestination, destination, setDestination,handleDeparture } =
     useContext(HolidayContext);
   console.log(destination);
 
@@ -10,7 +10,7 @@ const HolidaySearch = () => {
     <div className={styles.HolidaySearch_Compo}>
       <div className={styles.departure}>
         <label>Departure From</label>
-        <select>
+        <select onChange={handleDeparture}>
           <option value="New Delhi">New Delhi</option>
           <option value="Mumbai">Mumbai</option>
           <option value="Kolkata">Kolkata</option>

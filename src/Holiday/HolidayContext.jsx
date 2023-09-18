@@ -8,6 +8,7 @@ export const HolidayContextProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [singleProductData, setSingleProductData] = useState({});
   const [destination, setDestination] = useState("Ladakh");
+  const [departure, setDeparture] = useState("New Delhi");
   const [place, setPlace] = useState("");
   const [price, setPrice] = useState("");
   const [searchVal, setSearchVal] = useState("");
@@ -23,6 +24,10 @@ export const HolidayContextProvider = ({ children }) => {
 
   const handleDestination = (e) => {
     setDestination(e.target.value);
+    setShowDestination(true);
+  };
+  const handleDeparture = (e) => {
+    setDeparture(e.target.value);
     setShowDestination(true);
   };
 
@@ -255,6 +260,8 @@ export const HolidayContextProvider = ({ children }) => {
         handleDestination,
         setDestination,
         showDestination,
+        departure
+        ,handleDeparture,
         handlePlace,
         handleSearch,
         handleSearchSubmit,
