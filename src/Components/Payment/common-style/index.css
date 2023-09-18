@@ -1,0 +1,18 @@
+.inpt:focus-visible,
+.inpt:focus {
+  z-index: 0 !important;
+}
+
+.btn > button {
+  background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.btn > button:hover {
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}

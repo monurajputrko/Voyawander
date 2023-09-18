@@ -24,8 +24,9 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { useContext, useEffect, useState } from "react";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import { AiFillCheckCircle, AiFillTag } from "react-icons/ai";
-import {
+import {  
   BsFill1SquareFill,
   BsFill2SquareFill,
   BsFill3SquareFill,
@@ -1442,7 +1443,6 @@ function Payment() {
                         if (
                           !formdata.first_N ||
                           !formdata.last_N ||
-                          !formdata.title ||
                           !formdata.email ||
                           !formdata.phone ||
                           !formdata.day ||
@@ -1457,6 +1457,15 @@ function Payment() {
                         ) {
                           toast({
                             title: "Please fill all details",
+                            status: "warning",
+                            position: "top",
+                            duration: 3000,
+                            isClosable: true,
+                          });
+                        } else {
+                          onOpen();
+                          toast({
+                            title: "5637",
                             status: "warning",
                             position: "top",
                             duration: 3000,
@@ -1515,6 +1524,10 @@ function Payment() {
                   <ModalOverlay />
                   <ModalContent w={"350px"} top={"22%"} py={"30px"}>
                     <ModalBody>
+                      <Button onClick={onClose}>
+                        <IoIosCloseCircleOutline size="lg" />
+                        {/* <Image src="https://imgs.search.brave.com/dSbPlj7zyBR__3E27gY7Y9Kpy-u0v-iceLkd0iBKRyk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvaW9uaWNvbnMv/NTEyL2ljb24tY2xv/c2UtNjQucG5n" /> */}
+                      </Button>
                       <VStack>
                         <Text fontSize={"25px"} fontWeight={"600"}>
                           OTP Verification
