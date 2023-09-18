@@ -147,9 +147,9 @@ function HomePage() {
                       title: "Magical Maldives",
                       price_per_day: 3900,
                       group_size: 1,
-                      act_price: 6900,
+                      act_price: 3900,
                       tour_length: 10,
-                      save_price: 6900 - 3900,
+                      save_price: 3900 - 3900,
                     })
                   );
                   nagivate("/payment");
@@ -176,9 +176,9 @@ function HomePage() {
                       title: "Dazzling dubai",
                       price_per_day: 3900,
                       group_size: 1,
-                      act_price: 6900,
+                      act_price: 3900,
                       tour_length: 10,
-                      save_price: 6900 - 3900,
+                      save_price: 3900 - 3900,
                     })
                   );
                   nagivate("/payment");
@@ -240,9 +240,9 @@ function HomePage() {
                       title: "Royal Rajasthan",
                       price_per_day: 3900,
                       group_size: 1,
-                      act_price: 6900,
+                      act_price: 3900,
                       tour_length: 10,
-                      save_price: 6900 - 3900,
+                      save_price: 3900 - 3900,
                     })
                   );
                   nagivate("/payment");
