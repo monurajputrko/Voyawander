@@ -82,7 +82,9 @@ function Payment() {
     cvv: "",
   });
 
-  const [payType, setPayType] = useState(true); // using single state var, by default card
+  if (!storedata.act_price) {
+    navigate("/");
+  }
 
   useEffect(() => {
     window.scrollTo({
