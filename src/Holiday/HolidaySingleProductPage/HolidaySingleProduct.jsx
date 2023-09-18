@@ -51,7 +51,7 @@ const HolidaySingleProduct = () => {
     "https://cdn.tourradar.com/s3/tour/1500x800/240404_63d8ea513adca.jpg",
     "https://cdn.tourradar.com/s3/tour/1500x800/240404_63d8ea513adc6.jpg",
     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1452674538/Kerala_333.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433835856/Alleppey_6.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433835856/Alleppey_6.jpg",
   ];
 
   const top_crousel_img1 = [
@@ -409,7 +409,7 @@ const HolidaySingleProduct = () => {
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433765669/Manali_12.jpg",
   ];
 
-  const top_crousel_img133 = [
+  const top_crousel_img33 = [
     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1461309470/Hampta_Pass4.jpg",
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1191249350/Holidays/India/Himachal%20Pradesh/Manali/29552C84_02A3_49B0_AC0B_FEA10F6332CE_jaumx9.jpeg",
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1654786415/Holidays/India/Himachal%20Pradesh/Manali/PHOTO_2020_09_16_13_36_18_owAFZK.jpg",
@@ -444,14 +444,14 @@ const HolidaySingleProduct = () => {
 
   const top_crousel_img36 = [
     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1461309470/Hampta_Pass4.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1560236583/AdvNation/ANN_TRP421/Hampta_Pass_Trip_ypEOW2.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1505470081/Hot_balloon_air_over_Manali.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1505371411/Tibetan_monastery_in_Manali_town.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1485345336/Manikaran1.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438851687/Manali_DSC_1909.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1510569389/Manali_Blog_1510569375.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433765667/Manali_3.jpg",
-  ]
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1560236583/AdvNation/ANN_TRP421/Hampta_Pass_Trip_ypEOW2.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1505470081/Hot_balloon_air_over_Manali.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1505371411/Tibetan_monastery_in_Manali_town.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1485345336/Manikaran1.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438851687/Manali_DSC_1909.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1510569389/Manali_Blog_1510569375.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433765667/Manali_3.jpg",
+  ];
   const top_crousel_img37 = [
     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v9866970298/MarketPlaceHolidays/India/Jammu%20and%20Kashmir/Leh/Manali_Zanskar_Leh_Manali_Biking_Trip_LUFg1B.jpg",
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v4099636582/MarketPlaceHolidays/India/Jammu%20and%20Kashmir/Leh/Manali_Zanskar_Leh_Manali_Bike_Tour_PxfTuh.jpg",
@@ -464,7 +464,7 @@ const HolidaySingleProduct = () => {
   ];
 
   const top_crousel_img38 = [
-   " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1461132516/Alleppey_Weather2.jpg",
+    " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1461132516/Alleppey_Weather2.jpg",
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1464956592/Alleppey_Activities_to_do_Houseboating_with_Kerala_Houseboats.jpg",
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836321/Munnar_1.jpg",
     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836353/Munnar_4.jpg",
@@ -473,16 +473,16 @@ const HolidaySingleProduct = () => {
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923759/Kochi_5.jpg",
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923773/Kochi_1.jpg",
   ];
-  
+
   const top_crousel_img39 = [
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836158/Kumarakom_9.jpg",
-      "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836344/Munnar_11.jpg",
-      "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836321/Munnar_1.jpg",
-      " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923764/Kochi_2.jpg",
-      "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433835856/Alleppey_6.jpg",
-      "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836786/Thekkady_1.jpg",
-      "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923759/Kochi_5.jpg",
-      "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923773/Kochi_1.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836344/Munnar_11.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836321/Munnar_1.jpg",
+    " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923764/Kochi_2.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433835856/Alleppey_6.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433836786/Thekkady_1.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923759/Kochi_5.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923773/Kochi_1.jpg",
   ];
 
   const top_crousel_img40 = [
@@ -497,18 +497,18 @@ const HolidaySingleProduct = () => {
   ];
 
   const top_crousel_img41 = [
-       " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433501896/Bangalore_2.jpg",
-       "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433501911/Bangalore_4.jpg",
-       "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433501915/Bangalore_44.jpg",
-       "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837780/Mysore_11.jpg",
-       "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837786/Mysore_13.jpg",
-       "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837772/Mysore_4.jpg",
-       "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837748/Mysore_7.jpg",
-       "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1436427639/Wayanad_69.jpg",
+    " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433501896/Bangalore_2.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433501911/Bangalore_4.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433501915/Bangalore_44.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837780/Mysore_11.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837786/Mysore_13.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837772/Mysore_4.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837748/Mysore_7.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1436427639/Wayanad_69.jpg",
   ];
 
   const top_crousel_img42 = [
-   " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1434118406/Mysore_bbu.jpg",
+    " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1434118406/Mysore_bbu.jpg",
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1526452354/Ooty_Blog_New_1526450761.jpg",
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433501906/Bangalore_3.jpg",
     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433837739/Mysore_8.jpg",
@@ -520,14 +520,14 @@ const HolidaySingleProduct = () => {
 
   const top_crousel_img43 = [
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1424763714/Domestic%20Holidays/Kerala/Miscellaneous/Kovlam_9.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438951815/People_standing_at_the_water_body_on_top_of_Athirapally_water_falls.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438951806/Athirapally_water_falls1.jpg",
-     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438951816/People_standing_at_the_water_body_on_top_of_Athirapally_water_falls_1.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438779510/Backwater_11.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1424763689/Domestic%20Holidays/Kerala/Miscellaneous/Kovlam_7.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1396180517/Domestic%20Holidays/Tamil%20Nadu/Mahabalipuram/shutterstock_44790466.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1396180647/Domestic%20Holidays/Tamil%20Nadu/Mahabalipuram/shutterstock_87641716.jpg",
-  ]
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438951815/People_standing_at_the_water_body_on_top_of_Athirapally_water_falls.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438951806/Athirapally_water_falls1.jpg",
+    " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438951816/People_standing_at_the_water_body_on_top_of_Athirapally_water_falls_1.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1438779510/Backwater_11.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1424763689/Domestic%20Holidays/Kerala/Miscellaneous/Kovlam_7.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1396180517/Domestic%20Holidays/Tamil%20Nadu/Mahabalipuram/shutterstock_44790466.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1396180647/Domestic%20Holidays/Tamil%20Nadu/Mahabalipuram/shutterstock_87641716.jpg",
+  ];
 
   const top_crousel_img44 = [
     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1436428333/Calicut_7.jpg",
@@ -542,15 +542,14 @@ const HolidaySingleProduct = () => {
 
   const top_crousel_img45 = [
     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1436426833/Kovalam_45.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1436426836/Kovalam_56.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1452674538/Kerala3222.jpg",
-     " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1452674538/Kerala_333.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433835856/Alleppey_6.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1463731660/Kovalam_overview.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923759/Kochi_5.jpg",
-     "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923773/Kochi_1.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1436426836/Kovalam_56.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1452674538/Kerala3222.jpg",
+    " https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1452674538/Kerala_333.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433835856/Alleppey_6.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1463731660/Kovalam_overview.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923759/Kochi_5.jpg",
+    "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_responsivedetailslargeimg/v1433923773/Kochi_1.jpg",
   ];
-
 
   console.log(top_crousel_img);
 
@@ -599,15 +598,14 @@ const HolidaySingleProduct = () => {
 
       <div className={styles.flexCrousal}>
         <div>
-        <div>
+          <div>
             {" "}
-            {id ===undefined &&
+            {id === undefined &&
               top_crousel_img.map((slideimg, index) => {
                 return (
                   <div
                     className={index === current ? "slide active" : "slide"}
-                    key={index}
-                  >
+                    key={index}>
                     {index === current && (
                       <img className={styles.crousalImg} src={slideimg} />
                     )}
@@ -622,8 +620,7 @@ const HolidaySingleProduct = () => {
                 return (
                   <div
                     className={index === current ? "slide active" : "slide"}
-                    key={index}
-                  >
+                    key={index}>
                     {index === current && (
                       <img className={styles.crousalImg} src={slideimg} />
                     )}
@@ -638,8 +635,7 @@ const HolidaySingleProduct = () => {
                 return (
                   <div
                     className={index === current ? "slide active" : "slide"}
-                    key={index}
-                  >
+                    key={index}>
                     {index === current && (
                       <img className={styles.crousalImg} src={slideimg} />
                     )}
@@ -654,8 +650,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -670,8 +665,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -686,8 +680,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -702,8 +695,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -718,8 +710,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -734,8 +725,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -750,8 +740,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -766,8 +755,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -782,8 +770,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -798,8 +785,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -813,8 +799,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -828,8 +813,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -844,8 +828,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -860,8 +843,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -876,8 +858,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -892,8 +873,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -908,8 +888,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -923,8 +902,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -938,8 +916,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -953,8 +930,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -963,16 +939,13 @@ const HolidaySingleProduct = () => {
                 })}
             </div>
 
-
-
             <div>
               {id === 24 &&
                 top_crousel_img24.map((slideimg, index) => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -986,8 +959,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1001,8 +973,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1016,8 +987,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1031,8 +1001,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1046,8 +1015,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1061,8 +1029,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1076,8 +1043,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1091,8 +1057,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1102,26 +1067,25 @@ const HolidaySingleProduct = () => {
             </div>
             <div>
               {id === 33 &&
-                top_crousel_img33.map((slideimg, index) => {
+                top_crousel_img33?.map((slideimg, index) => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
                     </div>
                   );
                 })}
-            </div><div>
+            </div>
+            <div>
               {id === 34 &&
                 top_crousel_img34.map((slideimg, index) => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1135,8 +1099,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1150,8 +1113,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1165,8 +1127,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1180,8 +1141,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1195,8 +1155,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1210,8 +1169,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1225,8 +1183,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1240,8 +1197,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1255,8 +1211,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1270,8 +1225,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1285,8 +1239,7 @@ const HolidaySingleProduct = () => {
                   return (
                     <div
                       className={index === current ? "slide active" : "slide"}
-                      key={index}
-                    >
+                      key={index}>
                       {index === current && (
                         <img className={styles.crousalImg} src={slideimg} />
                       )}
@@ -1294,7 +1247,6 @@ const HolidaySingleProduct = () => {
                   );
                 })}
             </div>
-
 
             <div className="forback-btn">
               <button className="prev" onClick={prevSlide}>
