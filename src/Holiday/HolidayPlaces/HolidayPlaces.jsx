@@ -58,7 +58,7 @@ const HolidayPlaces = () => {
           </select>
         </div>
         <div className={styles.search}>
-          <label>Search Place:</label>
+          <label>Search Place : </label>
           <input placeholder="Search places" onChange={handleSearch} />
           <button className={styles.button} onClick={handleSearchSubmit}>Search</button>
         </div>

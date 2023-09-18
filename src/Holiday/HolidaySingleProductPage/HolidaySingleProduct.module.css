@@ -3,6 +3,7 @@
  width: 90%;
  margin-left: 10%;
  overflow-x: hidden;
+ padding-bottom: 50px;
 }
 .form{
     display: flex;
@@ -76,10 +77,11 @@
 }
 .about{
     display: flex;
-    gap:10px
+    gap:10px;
+    margin-bottom:20px
 }
 .about img{
-    margin-top: 35px;
+    padding-top: 25px;
 }
 .querryBtn{
   background-color: #000000;
@@ -98,4 +100,11 @@ margin-left: 5px;
 .flexAbout{
   display: flex;
   gap:20px;
+}
+.flexAbout h3{
+  font-size: medium;
+  font-weight: 300;
+}
+.next{
+  padding-left: 25%;
 }
