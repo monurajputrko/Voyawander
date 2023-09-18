@@ -1378,3 +1378,5 @@ const HolidaySingleProduct = () => {
 };
 
 export default HolidaySingleProduct;
+
+// Product Page for Holiday
