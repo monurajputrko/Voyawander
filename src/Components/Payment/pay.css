@@ -1,0 +1,25 @@
+.inpt:focus-visible,
+.inpt:focus {
+  z-index: 0 !important;
+}
+
+.btn > button {
+  /* padding: 16px 40px; */
+  background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+  /* border-radius: 30px; */
+  /* font-size: 18px; */
+  color: white;
+  /* margin-top: 8px; */
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn > button:hover {
+  /* animation-name: animate_learn_more; */
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
