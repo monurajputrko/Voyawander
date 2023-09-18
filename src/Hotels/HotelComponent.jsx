@@ -2,16 +2,21 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateSingleProduct } from "../Redux/payment/action-creator";
 import styles from "./HotelComponent.module.css";
+import { useConst } from "@chakra-ui/react";
+import HolidayContext from "../Holiday/HolidayContext";
+import { useContext } from "react";
 
 const HotelComponent = ({
-  hotel: { title, image, price, rating, location, city, category, reviewCount },
+  hotel: { title, image, price, rating, location, city, category, reviewCount,id },
   group_size,
 }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const {fetchHotelSingleData} = useContext(HolidayContext);
+  
 
   return (
-    <div className={styles.hotel_component}>
+    <div className={styles.hotel_component} onClick={()=>fetchHotelSingleData(id)} >
       <div>
         <img src={image} alt={title} />
       </div>
@@ -36,7 +41,8 @@ const HotelComponent = ({
               })
             );
             navigate("/payment");
-          }}>
+          }}
+        >
           Book Now
         </button>
       </div>

@@ -82,6 +82,9 @@ function Payment() {
     cvv: "",
   });
 
+  const [payType, setPayType] = useState(true); // using single state var, by default card
+
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -1614,7 +1617,6 @@ function Payment() {
                     </Button>
                   </ModalContent>
                 </Modal>
-
                 <Box w={"50%"} m={"auto"} textAlign={"center"} mt={"20px"}>
                   <Text fontSize={"13px"} fontWeight={"700"}>
                     No booking fees!{" "}
