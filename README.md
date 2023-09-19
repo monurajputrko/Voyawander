@@ -6,35 +6,35 @@ Welcome to the Voyawander Hotel Booking Website project! This open-source projec
 
 ### Sign up / Log in
 
-![Sign Up Page](https://github.com/monurajputrko/Voyawander/blob/main/signup.png)
+![Sign Up Page](https://github.com/monurajputrko/Voyawander/blob/main/images/signup.png)
 
 - Sign up if you are visiting the site for the first time.
 
-![Login Page](https://github.com/monurajputrko/Voyawander/blob/main/login.png)
+![Login Page](https://github.com/monurajputrko/Voyawander/blob/main/images/login.png)
 
 - Login if you already signed up.
 
 ### Home
 
-![Home](https://github.com/monurajputrko/Voyawander/blob/main/homepage.png)
+![Home](https://github.com/monurajputrko/Voyawander/blob/main/images/homepage.png)
 
 - 'Home' page is the landing page of the website.
 
 ### Hotels
 
-![Hotels](<https://github.com/monurajputrko/Voyawander/blob/main/hotels%20(1).png>)
+![Hotels](https://github.com/monurajputrko/Voyawander/blob/main/images/hotels.png)
 
 - 'Hotels' page contains list of all hotels. The user can search and sort the hotels based on location, price, name and ratings.
 
 ### Hotel Description
 
-![Hotels Description](<https://github.com/monurajputrko/Voyawander/blob/main/single%20(1).png>)
+![Hotels Description](https://github.com/monurajputrko/Voyawander/blob/main/images/single.png)
 
 - 'Hotel Description' page contains additional information about the hotel like pricing, aminities, reviews, highlights, etc,.
 
 ### Checkout
 
-![Checkout](https://github.com/monurajputrko/Voyawander/blob/main/checkout.png)
+![Checkout](https://github.com/monurajputrko/Voyawander/blob/main/images/checkout.png)
 
 - 'Checkout' page will allow the user to pay for the hotel room using different payment methods.
 
