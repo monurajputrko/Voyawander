@@ -67,10 +67,11 @@ Before you begin, make sure you have the following installed:
 
 1. React js
 2. Chakra UI
-3. React-Redux
-4. Netlify
-5. Cyclic
-6. GitHub
+3. Frammer-Motion
+4. React-Redux
+5. Netlify
+6. Render
+7. GitHub
 
 ## Usage
 
