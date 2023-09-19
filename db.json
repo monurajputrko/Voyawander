@@ -1689,7 +1689,15 @@
       "location": "Juhu, Mumbai",
       "city": "Mumbai",
       "category": "hotel",
-      "reviewCount": "1256"
+      "reviewCount": "1256",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4269/42695/images/b7b38c4c_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4269/42695/images/09502849_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4269/42695/images/a4014f9a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4269/42695/images/ed7fd9a3_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4269/42695/images/36707e34_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4269/42695/images/b15d4765_z.jpg"
+      ]
     },
     {
       "id": 2,
@@ -1699,7 +1707,15 @@
       "rating": 4.5,
       "location": "J B Nagar, Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2050/2050772/images/image_2954095_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2050/2050772/images/image_2954122_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2050/2050772/images/image_2954116_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2050/2050772/images/image_2954096_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2050/2050772/images/image_2954115_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/2050/2050772/images/image_2954111_original.jpg"
+      ]
     },
     {
       "id": 3,
@@ -1709,7 +1725,15 @@
       "rating": 4.6,
       "location": "Mumbai Domestic Airport, Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4192/41924/images/image_3195009_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4192/41924/images/image_3195008_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4192/41924/images/image_2815310_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4192/41924/images/image_2815312_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4192/41924/images/image_2815313_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4192/41924/images/image_2815316_original.jpg"
+      ]
     },
     {
       "id": 4,
@@ -1719,7 +1743,15 @@
       "rating": 4.2,
       "location": "Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3776/377643/images/20216722_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3776/377643/images/270bf98e_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3776/377643/images/254aa86f_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3776/377643/images/4fcc82f8_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3776/377643/images/07b59923_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3776/377643/images/0120a288_z.jpg"
+      ]
     },
     {
       "id": 5,
@@ -1729,7 +1761,15 @@
       "rating": 4.5,
       "location": "Near Domestic Airport, Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7937/79372/images/image_3195557_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7937/79372/images/image_3195562_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7937/79372/images/image_3195575_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7937/79372/images/image_3195566_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7937/79372/images/image_3195573_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7937/79372/images/image_3195576_original.jpg"
+      ]
     },
     {
       "id": 6,
@@ -1739,7 +1779,15 @@
       "rating": 3.9,
       "location": "Santacruz, Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7918/791826/images/image_4001445_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7918/791826/images/image_4001448_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7918/791826/images/image_4001440_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7918/791826/images/image_4001453_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7918/791826/images/image_4001434_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7918/791826/images/image_4001458_original.jpg"
+      ]
     },
     {
       "id": 7,
@@ -1749,7 +1797,15 @@
       "rating": 3.6,
       "location": "Marine Drive, Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7161/716138/images/image_2954421_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7161/716138/images/image_2954428_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7161/716138/images/image_2954438_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7161/716138/images/image_2954413_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7161/716138/images/image_2954420_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/7161/716138/images/image_2954404_original.jpg"
+      ]
     },
     {
       "id": 8,
@@ -1759,7 +1815,15 @@
       "rating": 3.5,
       "location": "Ghatkopar West, Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3290/329098/images/image_2620651_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3290/329098/images/image_2620657_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3290/329098/images/image_2620658_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3290/329098/images/image_2620656_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3290/329098/images/image_2620660_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3290/329098/images/image_2620659_original.jpg"
+      ]
     },
     {
       "id": 9,
@@ -1769,7 +1833,15 @@
       "rating": 4.2,
       "location": "Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4065/4065146/images/f466d1d5_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4065/4065146/images/bbcb39f0_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4065/4065146/images/a7c5d03d_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4065/4065146/images/af6e7efd_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4065/4065146/images/e03afdec_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/4065/4065146/images/66a29789_z.jpg"
+      ]
     },
     {
       "id": 10,
@@ -1779,7 +1851,15 @@
       "rating": 4.8,
       "location": "Goregaon, Mumbai",
       "city": "Mumbai",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1361/1361468/images/image_2353363_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1361/1361468/images/image_2353356_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1361/1361468/images/image_2353361_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1361/1361468/images/image_2353364_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1361/1361468/images/image_2353357_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/1361/1361468/images/image_2353362_original.jpg"
+      ]
     },
     {
       "id": 11,
@@ -1789,7 +1869,15 @@
       "rating": 4.1,
       "location": "Cunningham Road, Bangalore",
       "city": "Bangalore",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3296/329680/images/image_2332458_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3296/329680/images/image_2332437_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3296/329680/images/image_2332459_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3296/329680/images/image_2332451_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3296/329680/images/image_2916108_original.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3296/329680/images/image_2916107_original.jpg"
+      ]
     },
     {
       "id": 12,
@@ -1799,7 +1887,15 @@
       "rating": 4.6,
       "location": "47 9th Cross Road, Sarakki, Bangalore",
       "city": "Bangalore",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 13,
@@ -1809,7 +1905,15 @@
       "rating": 3.8,
       "location": "Octave Studio Hotel",
       "city": "Bangalore",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 14,
@@ -1819,7 +1923,15 @@
       "rating": 2.6,
       "location": "Bangalore",
       "city": "Bangalore",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 15,
@@ -1829,7 +1941,15 @@
       "rating": 5.0,
       "location": "MG Road , Bangalore",
       "city": "Bangalore",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 16,
@@ -1839,7 +1959,15 @@
       "rating": 4.1,
       "location": "Majestic, Bangalore",
       "city": "Bangalore",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 17,
@@ -1849,7 +1977,15 @@
       "rating": 4.1,
       "location": "Hitech City, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 18,
@@ -1859,7 +1995,15 @@
       "rating": 3.1,
       "location": "Gachibowli, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 19,
@@ -1869,7 +2013,15 @@
       "rating": 5.0,
       "location": "Madhapur, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 20,
@@ -1879,7 +2031,15 @@
       "rating": 4.9,
       "location": "Banjara Hills, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 21,
@@ -1889,7 +2049,15 @@
       "rating": 2.9,
       "location": "Gachibowli, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 22,
@@ -1899,7 +2067,15 @@
       "rating": 2.9,
       "location": "Taj Krishna",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 23,
@@ -1909,7 +2085,15 @@
       "rating": 3.8,
       "location": "Kukatpally, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 24,
@@ -1919,7 +2103,15 @@
       "rating": 3.4,
       "location": "Hitech City, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 25,
@@ -1929,7 +2121,15 @@
       "rating": 4.1,
       "location": "Hitech City, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 26,
@@ -1939,7 +2139,15 @@
       "rating": 5.0,
       "location": "Gachibowli",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     },
     {
       "id": 27,
@@ -1949,7 +2157,15 @@
       "rating": 4.1,
       "location": "Medchal, Hyderabad",
       "city": "Hyderabad",
-      "category": "hotel"
+      "category": "hotel",
+      "carousel" : [
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/2be175ee_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/27cd3faa_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c7881667_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/1f5c1e89_z.jpg",
+        "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/222df449_z.jpg"
+      ]
     }
   ]
 }
