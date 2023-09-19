@@ -1,12 +1,27 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './HotelSingleInfo.module.css'
 import Carousel from './Carousel';
+import { useNavigate } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { useContext } from 'react';
+import HolidayContext from '../Holiday/HolidayContext';
+import { updateSingleProduct } from '../Redux/payment/action-creator';
+import { useParams } from 'react-router';
 
 const HotelSingleInfo = () => {
 
     const [inDate, setInDate] = useState(null);
     const [outDate, setOutDate] = useState(null);
     const [people, setPeople] = useState(0);
+    const {id} = useParams();
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const {fetchHotelSingleData, hotelSingleData} = useContext(HolidayContext);
+
+    // useEffect(() => {
+    //     const data = fetchHotelSingleData(id);
+    // })
 
     const carousel = [
         "https://fastui.cltpstatic.com/image/upload/w_1016,h_624,fl_progressive,e_sharpen:80,c_fill/hotels/places/hotels/cms/3934/3934837/images/c5bb318a_z.jpg",
@@ -30,27 +45,46 @@ const HotelSingleInfo = () => {
                 <Carousel images = {carousel}/>
             </div>
             <div className={styles.hotel_data}>
-                <h1>Hotel Name</h1>
-                <h2>Location</h2>
-                <h2>Reviews</h2>
-                <h2>Check-In</h2>
-                <h2>Check-Out</h2>
-                
-                
-            </div>
-        </div>
+                <h1>{hotelSingleData.title}</h1>
+                <h2>{hotelSingleData.location}</h2>
+                <h2>Rating: {hotelSingleData.rating}</h2>
+                <h2>Price: {hotelSingleData.price}</h2>
+            {/* </div> */}
 
-        {/* <div className={styles.check_availability}>
+        {/* <div className={styles.check_availability}> */}
             <form onSubmit={isAvailable}>
                 <label htmlFor="">Check-In</label>
-                <input onChange={(e) => setInDate(e.target.value)} type="date" name="" id="" />
+                <input onChange={(e) => setInDate(e.target.value)} type="date" name="" id="" /><br/>
                 <label htmlFor="">Check-Out</label>
-                <input onChange={(e) => setOutDate(e.target.value)} type="date" name="" id="" />
+                <input onChange={(e) => setOutDate(e.target.value)} type="date" name="" id="" /><br/>
                 <label htmlFor="">Guests</label>
-                <input onChange={(e) => setPeople(e.target.value)} type="number" name="" id="" />
+                <input onChange={(e) => setPeople(e.target.value)} type="number" name="" id="" /><br/>
                 <button>Check Availability</button>
             </form>
-        </div> */}
+        
+                <h2>Check-In: 2.00 PM</h2>
+                <h2>Check-Out: 11.00AM</h2>
+                <button
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        dispatch(
+                        updateSingleProduct({
+                            title: hotelSingleData.title,
+                            price_per_day: hotelSingleData.price,
+                            // group_size: group_size,
+                            act_price: hotelSingleData.price,
+                            tour_length: 10,
+                            save_price: hotelSingleData.price - hotelSingleData.price,
+                        })
+                        );
+                        navigate("/payment");
+                    }}
+                    >
+                    Book Now
+                    </button>
+                    </div>
+            </div>
+        
         <h1>HOTEL AMENITIES</h1>
         <div className={styles.hotel_aminities}>
             <div className={styles.activities}>
