@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import HolidayContext from "../Holiday/HolidayContext";
 
-
 const Hotel = () => {
   let [searchParams, setSearchParams] = useSearchParams();
   // const {id} = useParams();
@@ -106,12 +105,11 @@ const Hotel = () => {
 
   const debounceSearch = debounce(800);
 
-  const {hotelSingleData} = useContext(HolidayContext);
-
+  const { hotelSingleData } = useContext(HolidayContext);
 
   const navigatePageTo = (id) => {
     navigate(`/hotelsingleinfo/:${id}`);
-  }
+  };
 
   return (
     /*isLoading ? <h1 className={styles.loading}>Page Loading, Please Wait a Moment !</h1> : */
@@ -157,13 +155,11 @@ const Hotel = () => {
           <div className={styles.allhotels}>
             {apiData?.map((hotel) => {
               return (
-                <div onClick={() => navigatePageTo(hotel.id)}>
-                  <HotelComponent
-                    group_size={people}
-                    key={hotel.title}
-                    hotel={hotel}
-                  />
-                </div>
+                <HotelComponent
+                  group_size={people}
+                  key={hotel.title}
+                  hotel={hotel}
+                />
               );
             })}
           </div>

@@ -50,7 +50,7 @@ function Payment() {
   const [start, setstart] = useState("");
   const [end, setend] = useState("");
   const len = storedata?.destinations?.length;
-  const [traveller, settraveller] = useState(1);
+  const [traveller, settraveller] = useState(storedata.group_size || 1);
   const toast = useToast();
   const navigate = useNavigate();
   const [chk, setchk] = useState(false);
@@ -82,9 +82,7 @@ function Payment() {
     cvv: "",
   });
 
-  if (!storedata.act_price) {
-    navigate("/");
-  }
+  const [payType, setPayType] = useState(true); // using single state var, by default card
 
   useEffect(() => {
     window.scrollTo({
@@ -127,7 +125,6 @@ function Payment() {
         navigate("/Payment-Success");
         console.log(response);
         // dispatch(removeSingleProduct());
-        navigate("/Payment-Success");
         // Update the state to indicate payment completion
       },
     };
@@ -1612,8 +1609,8 @@ function Pricediv({ theme, storedata, traveller }) {
         <Text fontSize={"20px"} fontWeight={"700"}>
           ₹{" "}
           {(
-            traveller *
-            (storedata?.act_price - storedata?.act_price * 0.3)
+            traveller * storedata?.act_price -
+            storedata?.act_price * 0.3
           )?.toLocaleString("en-US")}
         </Text>
       </Flex>
@@ -1636,6 +1633,13 @@ function Pricediv({ theme, storedata, traveller }) {
             )?.toLocaleString("en-US")}
           </Text>
         </Flex>
+        {/* <Flex>
+          <Text>Due on 1 Oct, 2023</Text>
+          <Spacer />
+          <Text>
+            ₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}
+          </Text>
+        </Flex> */}
       </Flex>
     </Box>
   );

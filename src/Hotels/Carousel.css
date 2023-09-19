@@ -15,9 +15,9 @@
   display: flex;
   justify-content: space-between;
 }
+
 .left,
 .right {
-  background-color: #fb666675;
   color: #fff;
   padding: 10px 8px 8px 13px;
   margin: 0 20px;
@@ -28,6 +28,7 @@
   margin: auto 10px;
   height: 25px;
   width: 25px;
+  cursor: pointer;
 }
 .left {
   left: 0;
@@ -35,18 +36,37 @@
 .right {
   right: 0;
 }
+
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 157, 255, 0.5);
+}
+
+.left > *,
+.right > * {
+  filter: invert(100%);
+}
+
+.left:hover,
+.right:hover {
+  background-color: rgb(0, 157, 255, 0.5) !important;
+}
+
 .carousel-indicator {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 .dot {
   background-color: #333;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
 }
 .active {
-  background-color: #fa2020;
+  background-color: rgb(0, 175, 255);
 }

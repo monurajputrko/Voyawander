@@ -5,19 +5,44 @@ import styles from "./HotelComponent.module.css";
 import { useConst } from "@chakra-ui/react";
 import HolidayContext from "../Holiday/HolidayContext";
 import { useContext } from "react";
+import { setSingleProduct } from "../Redux/singleproduct/action-creator";
 
 const HotelComponent = ({
-  hotel: { title, image, price, rating, location, city, category, reviewCount,id },
+  hotel: {
+    title,
+    image,
+    price,
+    rating,
+    location,
+    city,
+    category,
+    reviewCount,
+    id,
+  },
   group_size,
 }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const {fetchHotelSingleData} = useContext(HolidayContext);
-  // const {id} = useParams();
-  
+
+  const handleSinglePage = () => {};
 
   return (
-    <div className={styles.hotel_component} onClick={()=>fetchHotelSingleData(id)} >
+    <div
+      className={styles.hotel_component}
+      onClick={() => {
+        dispatch(
+          setSingleProduct({
+            title: title,
+            price_per_day: price,
+            group_size: 1,
+            act_price: price,
+            tour_length: 10,
+            save_price: price - price,
+            location: location,
+          })
+        );
+        navigate("/singlepage");
+      }}>
       <div>
         <img src={image} alt={title} />
       </div>
@@ -35,15 +60,15 @@ const HotelComponent = ({
               updateSingleProduct({
                 title: title,
                 price_per_day: price,
-                group_size: group_size,
+                group_size: 1,
                 act_price: price,
                 tour_length: 10,
                 save_price: price - price,
+                location: location,
               })
             );
             navigate("/payment");
-          }}
-        >
+          }}>
           Book Now
         </button>
       </div>
