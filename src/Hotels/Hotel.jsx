@@ -1,14 +1,20 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import HotelComponent from "./HotelComponent";
 import styles from "../Hotels/HotelComponent.module.css";
 import { useSearchParams } from "react-router-dom";
 import BorderBox from "../Components/common-styles/BorderBox";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import HolidayContext from "../Holiday/HolidayContext";
+
 
 const Hotel = () => {
   let [searchParams, setSearchParams] = useSearchParams();
+  // const {id} = useParams();
 
   console.log(searchParams.get("location"));
+  const navigate = useNavigate();
 
   const initialData = [];
 
@@ -100,6 +106,13 @@ const Hotel = () => {
 
   const debounceSearch = debounce(800);
 
+  const {hotelSingleData} = useContext(HolidayContext);
+
+
+  const navigatePageTo = (id) => {
+    navigate(`/hotelsingleinfo/:${id}`);
+  }
+
   return (
     /*isLoading ? <h1 className={styles.loading}>Page Loading, Please Wait a Moment !</h1> : */
     <BorderBox>
@@ -144,7 +157,7 @@ const Hotel = () => {
           <div className={styles.allhotels}>
             {apiData?.map((hotel) => {
               return (
-                <div>
+                <div onClick={() => navigatePageTo(hotel.id)}>
                   <HotelComponent
                     group_size={people}
                     key={hotel.title}

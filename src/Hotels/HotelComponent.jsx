@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { updateSingleProduct } from "../Redux/payment/action-creator";
 import styles from "./HotelComponent.module.css";
 import { useConst } from "@chakra-ui/react";
@@ -13,6 +13,7 @@ const HotelComponent = ({
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const {fetchHotelSingleData} = useContext(HolidayContext);
+  // const {id} = useParams();
   
 
   return (
