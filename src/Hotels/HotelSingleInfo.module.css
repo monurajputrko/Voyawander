@@ -1,0 +1,48 @@
+.main_container {
+  margin-top: 100px;
+  margin-left: 120px;
+  margin-right: 120px;
+  }
+
+  .hotel_aminities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+  }
+
+  .highlights, .hotel_policies, .faq {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .top_portion_review {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .single_review {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px;
+    margin: 25px;
+    /* margin-bottom: 25px; */
+  }
+
+  .hotel_info {
+    display: grid;
+    grid-template-columns: 70% auto;
+  }
+
+  .hotel_data {
+    padding: 40px;
+  }
