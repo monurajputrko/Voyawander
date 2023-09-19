@@ -16,7 +16,7 @@ Welcome to the Voyawander Hotel Booking Website project! This open-source projec
 
 ### Home
 
-![Home]()
+![Home](https://github.com/monurajputrko/Voyawander/blob/Hotels/images/homepage.png)
 
 - 'Home' page is the landing page of the website.
 
