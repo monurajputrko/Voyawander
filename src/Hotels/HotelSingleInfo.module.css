@@ -1,52 +1,160 @@
-* {
-  /* font-family:sans-serif; */
+.headline {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .main_container {
   margin-top: 100px;
   margin-left: 120px;
   margin-right: 120px;
-  }
+}
 
-  .hotel_aminities {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 25px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 25px;
-  }
+.hotel_aminities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 25px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 25px;
+}
 
-  .highlights, .hotel_policies, .faq {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 25px;
-    margin-bottom: 25px;
-  }
+.highlights,
+.hotel_policies,
+.faq {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
 
-  .top_portion_review {
-    display: flex;
-    justify-content: space-between;
-  }
+.top_portion_review {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .reviews {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 25px;
-    margin-bottom: 25px;
-  }
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
 
-  .single_review {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 25px;
-    margin: 25px;
-    /* margin-bottom: 25px; */
-  }
+.single_review {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 25px;
+  margin: 25px;
+}
 
-  .hotel_info {
-    display: grid;
-    grid-template-columns: 70% auto;
-  }
+.hotel_info {
+  display: grid;
+  grid-template-columns: 70% auto;
+}
 
-  .hotel_data {
-    padding: 40px;
-  }
+.hotel_data {
+  padding: 40px;
+  padding-top: 0px;
+  border-radius: 10px;
+}
+
+.hotel_data p:not(.headline) {
+  text-indent: 5px;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 8px 0px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: center;
+}
+
+.hotel_data > p:first-child {
+  font-size: 27px;
+  margin: 0px;
+}
+
+.location {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hotel_data > button {
+  background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+  padding: 15px 0px;
+  width: 380px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.hotel_data > button:hover {
+  transition-duration: 200ms;
+  background: linear-gradient(to right, rgb(2, 232, 255), rgb(0, 168, 255));
+}
+
+.hotel_data > form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  /* background-color: rgb(239, 226, 208); */
+  width: fit-content;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.hotel_data > form > label {
+  font-size: 15px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hotel_data > form > input {
+  height: 35px;
+  padding: 0px 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+/* .hotel_data > form > button {
+  padding: 14px 0px;
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+  background-color: orange;
+  border: none;
+  cursor: pointer;
+} */
+.hotel_data > form > button {
+  background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+  padding: 13px 0px;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.hotel_data > form > button:hover {
+  transition-duration: 200ms;
+  background: linear-gradient(to right, rgb(2, 232, 255), rgb(0, 168, 255));
+}
+/* .hotel_data > form > button:hover {
+  background-color: rgb(224, 155, 26);
+} */
