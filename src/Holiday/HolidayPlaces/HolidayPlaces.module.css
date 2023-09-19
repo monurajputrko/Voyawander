@@ -1,16 +1,36 @@
 .place{
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
 }
 .HolidayPlaces_Div{
     width: 100%;
     background-color: aliceblue;
-    /* position: fixed; */
-    margin-top: -82px;
-    padding-top: 30px;
+     position: fixed;
+    margin-top: -84px;
     padding-bottom: 20px;
+  
 }
 
+.place button{
+  background-color: #007bff;
+  font-weight: 400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.place button:hover{
+  background-color: white;
+  font-weight: 400;
+  color: blue;
+  font-size: large;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
 
 .button {
     background-color: #007bff;

@@ -1,6 +1,10 @@
 .HolidayComponent {
-  margin-top: 154px;
+  margin-top: 140px;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+  
 }
+
 
 .holidayDiv {
   width: 60%;
